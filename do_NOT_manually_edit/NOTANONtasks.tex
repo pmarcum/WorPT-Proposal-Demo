@@ -1,0 +1,46 @@
+%======================================================
+%       H O W   T O   U S E   T H I S   F I L E
+% (1)  add the following in the preamble of your main paper:
+%          \makeatletter \def\expinput#1{\@@input#1} \makeatother
+%          \usepackage[flushleft]{threeparttable}
+% (2) type the following into the main latex file where you want to put this table:
+%\addtocounter{table}{-1}  % corrects double-counting by table and longtable combination
+%\begin{table}[h]
+%   \renewcommand{\arraystretch}{1}  % changes vertical space bet/ rows
+%   \setlength{\tabcolsep}{1pt}  % changes horizontal spacing bet/ columns
+%   \centerline{
+%      \begin{minipage}{1.0\textwidth} % wide table needs to use some of the margins? comment out, change the 1.5
+%         \begin{longtable} {|p{3.9in}||c!{\color{gray!40}\vrule}c!{\color{gray!40} \vrule}!{\color{gray!40}\vrule}c!{\color{gray!40}\vrule}c||l!{\color{gray!40}\vrule}p{0.3in}|}
+%            \expinput{do_NOT_manually_edit/NOTANONtasks}
+%         \end{longtable}
+%      \end{minipage}
+%   } %close \centerline
+%   \caption{Task Management and Team Responsibilities \label{tab:NOTANONtasks}}
+%   \begin{tablenotes}[flushleft] The tasks (gray headers) and sub-tasks (left), with specific assignments for the roles of task lead (middle) and expertise / analysis assistance (right).  \end{tablenotes}
+%\end{table}
+%======================================================
+\hline
+\textbf{\cellcolor{Blue}\color{White}Tasks} & \textbf{\cellcolor{Blue}\color{White}Lead}  &\textbf{\cellcolor{Blue}\color{White}Expertise}\\
+\hline
+\multicolumn{3}{|c|}{\cellcolor{gray!40}\color{black}\textbf{Task A: Data and models preparation}}\\
+\hline
+A1: {Generate simulated data} & Smith & Dent{\'{o}}n, Marcum\\
+\hline
+A2: {Make emission maps} & Dent{\'{o}}n & Smith\\
+\hline
+A3: {Incorporate thermal emission models} & Smith & Marcum\\
+\hline
+\multicolumn{3}{|c|}{\cellcolor{gray!40}\color{black}\textbf{Task B: Application to archive}}\\
+\hline
+B1: {Determine fields of interest} & Marcum & Smith, Dent{\'{o}}n\\
+\hline
+B2: {Reduction of image mosaics} & Dent{\'{o}}n & Smith\\
+\hline
+\multicolumn{3}{|c|}{\cellcolor{gray!40}\color{black}\textbf{Task C: Documentation and publications}}\\
+\hline
+C1: {Code documentation and user system verification} & Smith & Marcum, Dent{\'{o}}n\\
+\hline
+C2: {Pub 1: pipeline and improved images} & Dent{\'{o}}n & Smith, Marcum\\
+\hline
+C3: {Pub 2: galaxy identification} & Marcum & Smith, Dent{\'{o}}n
+\\ \hline
