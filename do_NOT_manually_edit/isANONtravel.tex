@@ -1,0 +1,39 @@
+%======================================================
+%     H O W   T O   U S E   T H I S   F I L E
+% (1) type the following into the main latex file where you want to put this table:
+%The below table provides travel costs:
+%\begin{table*}[h!]
+%   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
+%   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
+%   \begin{tabular}{|lcl >{\columncolor[gray]{0.85}[\tabcolsep][7pt]}c>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}c>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}l>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}l>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}ll|}
+%       \expinput{do_NOT_manually_edit/isANONtravel}
+%    \end{tabular}
+%   \caption{\normalsize
+%      \newline \newline
+%      \textbf{Notes and assumptions}:
+%      \newline \newline
+%      While final destinations are not known at this time, domestic and international costs are estimated based on values taken from NASA Travel Guidebook using historical averages for a 5-- and 5--day conference for U.S. and European cities, resp.,  likely to host topical meetings aligned with the science of the proposed work. Domestic lodging and per diem rates are set by the GSA; international lodging and per diem are set by the Dept. of State (note that M\&IE is included in the per diem values shown here).
+%      \newline \newline\noindent {\color{red} Yrs~1-2 funds will be used to present pre-publication findings at science conferences and potentially to fund trips for collaboration with team members (i.e., NASA/GSFC).}
+%      \newline \newline\underline{\scshape{domestic}}: per diem$+$M\&IE, car rental/day   at \$264 and \$60, resp.
+%      \newline \newline\underline{\scshape{international}}: per diem$+$M\&IE, public transport/day estimated at \$320 and \$100, resp.
+%      \newline \newline \underline{\scshape{Travel Per Team Member}} (summed over 3-year grant):\newline
+%      \smallIndent \textbf{PI:} 5 domestic trips; 2 intern'l trips;\newline
+%      \smallIndent \textbf{co-I(1):} 4 domestic trips; 1 intern'l trips;\newline
+%      \smallIndent \textbf{Sci-PI:} 6 domestic trips; 3 intern'l trips;\newline
+%      \newline
+%      All travel will be to present science results of this project at conferences and/or visits to home institutions of the team members for in-person collaboration. Note that above values above do not include institutional overhead.}
+%   \label{tab:isANONtravel}
+%\end{table*}
+%======================================================
+\multicolumn{9}{|@{}c@{}|}{\cellcolor{Blue}\color{White}\textbf{Travel Cost Details}}\\  % top header line
+\multicolumn{3}{|c}{} & \multicolumn{5}{>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}c}{\color{Blue}\emph{\textbf{per trip}}} & \\
+\cline{4-8}
+\textbf{\color{Blue}{Year}} & \textbf{\color{Blue}{\#Trips}} & \textbf{\color{Blue}{Dest.}} & \textbf{\color{Blue}{Airfare}} & {\textbf{\color{Blue}{per}}} & {\textbf{\color{Blue}{Conf.}}} & {\textbf{ \color{Blue}{Ground}}} & {\textbf{\color{Blue}{per}}} & \textbf{\color{Blue}{Total}}\\ %middle header
+\textbf{} & \textbf{} & \textbf{} & {\textbf{}} & {\textbf{\color{Blue}{diem}}} & {\textbf{\color{Blue}{Fee}}} & {\textbf{ \color{Blue}{Transp.}}} & {\textbf{\color{Blue}{trip}}} & \\%bottom header line
+\hline \hline
+\textbf{Yr1} & 4 & {domestic} & {\$700} & {\$1,320} & {\$500} & {\$300} & {\$2,820} & {\$11,280}\\
+ & 2 & {internat'l} & {\$1,750} & {\$1,600} & {\$800} & {\$500} & {\$4,650} & {\$9,300}\\\hline
+\textbf{Yr2} & 6 & {domestic} & {\$700} & {\$1,320} & {\$500} & {\$300} & {\$2,820} & {\$16,920}\\
+ & 2 & {internat'l} & {\$1,750} & {\$1,600} & {\$800} & {\$500} & {\$4,650} & {\$9,300}\\\hline
+\textbf{Yr3} & 5 & {domestic} & {\$700} & {\$1,320} & {\$500} & {\$300} & {\$2,820} & {\$14,100}\\
+ & 2 & {internat'l} & {\$1,750} & {\$1,600} & {\$800} & {\$500} & {\$4,650} & {\$9,300}\\\hline
