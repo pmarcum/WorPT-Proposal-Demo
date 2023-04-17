@@ -1,0 +1,25 @@
+%======================================================
+%     H O W   T O   U S E   T H I S   F I L E
+% (1)  add the following in the preamble of your main paper:
+%          \makeatletter \def\expinput#1{\@@input#1} \makeatother
+% (2) type the following into the main latex file where you want to put this table:
+%\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+%{
+%   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
+%   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
+%   \begin{longtable}{
+%      |L{1.8in}!{\color{lightgray}\vrule}L{1.3in}!{\color{lightgray}\vrule}L{2.5in}!{\color{lightgray}\vrule}p{0.10in}!{\color{lightgray}\vrule}p{0.28in}|
+%      }
+%      \caption{Work Effort for All Team Members \label{tab:NOTANONhst}}\\
+%      \multicolumn{5}{l}{\textbf{Program \#:} HST-xx-xxxxx (Cycle XX)}\\
+#N/A
+%      \multicolumn{5}{l}{\textbf{Science PI:} Dr. Sally Smith}\\
+%      \expinput{do_NOT_manually_edit/NOTANONhst}
+%   \end{longtable}
+%}
+%======================================================
+\textbf{\cellcolor{Blue}\color{White}Contributor} & \textbf{\cellcolor{Blue}\color{White}Position} \newline{\textbf{\cellcolor{Blue}\color{White}Institution}\newline{\textbf{\cellcolor{Blue}\color{White}US/Foreign}}} & \textbf{\cellcolor{Blue}\color{White}Role} & \textbf{\cellcolor{Blue}\color{White}\$?} & \textbf{\cellcolor{Blue}\color{White}FTE}\\
+\hline\hline
+Dan J. Dent{\'{o}}n, III \newline{Principal Investigator} &  professor \newline{University of CBA} \newline{US} & will lead production of emission maps, image mosaic reduction, and paper~\#1; will assist with generating simulated data, identifying fields of interest, code documentation and with paper \#2. & Y & 0.70\hline
+Sally K. Smith \newline{Science PI} &  postdoc \newline{University of CBA} \newline{US} & will lead simulated data for model input and thermal model incorporation, and code documentation. and will assist with emission maps, image mosaics and field identification, and papers~1-2 writing. & Y & 0.85\hline
+Pamela M. Marcum \newline{co-Investigator} &  research scientist \newline{NASA ARC} \newline{US} & will lead identification of fields and paper~\#2, and assist with simulated data, thermal emission models, paper \#1 and code documentation. & Y & 0.50\hline
