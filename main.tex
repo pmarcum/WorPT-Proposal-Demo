@@ -9,6 +9,7 @@
 \begin{document}
 How to use {\texttt{WorPT}}
 
+\newpage
 %======================================================
 %     H O W   T O   U S E   T H I S   F I L E
 % (1) download or connect to https://github.com/pmarcum/LaTex-Formatting and select the
@@ -29,11 +30,12 @@ How to use {\texttt{WorPT}}
  }
 %======================================================
 
+\newpage
 %======================================================
 %     H O W   T O   U S E   T H I S   F I L E
 % (1) type the following into the main latex file where you want to put this table:
 Table\,\ref{tab:isANONnonlabor} shows rolled-up values for travel costs and other non-labor costs. Travel cost details, including costing assumptions used, are presented in Table\,\ref{tab:isANONtravel}.
-\begin{table*}[h!]
+\begin{table*}[t!]
    \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
    \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
    \begin{tabular}{|l|*{4}{c|}}
@@ -51,6 +53,7 @@ Table\,\ref{tab:isANONnonlabor} shows rolled-up values for travel costs and othe
 \end{table*}
 %======================================================
 
+\newpage
 %======================================================
 %     H O W   T O   U S E   T H I S   F I L E
 % (1) download or connect to https://github.com/pmarcum/LaTex-Formatting and select the
@@ -62,7 +65,7 @@ Table\,\ref{tab:isANONnonlabor} shows rolled-up values for travel costs and othe
 %\usepackage{FUnewCommands} % not needed by WorPT files but generally useful
 % (2) type the following into the main latex file where you want to put this table:
 \addtocounter{table}{-1} % corrects double-counting of longtable and table combination
-\begin{table*}[h!] %table is needed so that table caption at bottom has same width as table
+\begin{table*}[t!] %table is needed so that table caption at bottom has same width as table
    \renewcommand{\arraystretch}{0.7} %adjust to control vertical row separation/spacing
    \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing
    \begin{longtable}{|p{3.3in}||c!{\color{lightgray}\vrule}c!{\color{lightgray}\vrule}!{\color{lightgray}\vrule}c!{\color{lightgray}\vrule}c||p{0.45in}!{\color{lightgray}\vrule}p{1.2in}|}
@@ -72,11 +75,12 @@ Table\,\ref{tab:isANONnonlabor} shows rolled-up values for travel costs and othe
 \end{table*}
 %======================================================
 
+\newpage
 %======================================================
 %     H O W   T O   U S E   T H I S   F I L E
 % (1) type the following into the main latex file where you want to put this table:
 The below table provides travel costs:
-\begin{table*}[h!]
+\begin{table*}[t!]
    \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
    \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
    \begin{tabular}{|lcl >{\columncolor[gray]{0.85}[\tabcolsep][7pt]}c>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}c>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}l>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}l>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}ll|}
@@ -100,7 +104,7 @@ The below table provides travel costs:
 \end{table*}
 %======================================================
 
-\newpage
+\clearpage
 %======================================================
 %     H O W   T O   U S E   T H I S   F I L E
 % (1) download or connect to https://github.com/pmarcum/LaTex-Formatting and select the
@@ -111,8 +115,8 @@ The below table provides travel costs:
 %\usepackage{FUformatting}
 %\usepackage{FUnewCommands} % not needed by WorPT files but generally useful
 % (2) type the following into the main latex file where you want to put this section of text (it is not a table):
-\expinput{do_NOT_manually_edit/NOTANONbiosketches}
-%======================================================
+\input{do_NOT_manually_edit/NOTANONbiosketches}
+%================ E N D   I N S T R U C T I O N S ===============
 
 \end{document}
 
