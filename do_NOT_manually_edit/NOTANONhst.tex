@@ -1,7 +1,12 @@
 %======================================================
 %     H O W   T O   U S E   T H I S   F I L E
-% (1)  add the following in the preamble of your main paper:
-%          \makeatletter \def\expinput#1{\@@input#1} \makeatother
+% (1) download or connect to https://github.com/pmarcum/LaTex-Formatting and select the
+%        set of files (aas-style or general) that meet your situation, you can either download the files or link
+%        Overleaf to the needed files in the GitHub repository through URL, and then add the following to
+%        the preamble of your main paper
+%\usepackage{FUpackages}
+%\usepackage{FUformatting}
+%\usepackage{FUnewCommands} % not needed by WorPT files but generally useful
 % (2) type the following into the main latex file where you want to put this table:
 %\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 %{
@@ -12,7 +17,7 @@
 %      }
 %      \caption{Work Effort for All Team Members \label{tab:NOTANONhst}}\\
 %      \multicolumn{5}{l}{\textbf{Program \#:} HST-xx-xxxxx (Cycle XX)}\\
-#N/A
+%
 %      \multicolumn{5}{l}{\textbf{Science PI:} Dr. Sally Smith}\\
 %      \expinput{do_NOT_manually_edit/NOTANONhst}
 %   \end{longtable}
