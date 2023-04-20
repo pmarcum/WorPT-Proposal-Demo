@@ -1,6 +1,30 @@
-\documentclass{article}
+\documentclass[]{article}
+\usepackage{CLASS_FILES/FUpackages}  % applying Frequently-Used packages
+\usepackage{natbib}
+
+\usepackage{CLASS_FILES/FUformatting}  % applying Frequently-Used packages
+\makeatletter \def\expinput#1{\@@input#1} \makeatother
+\usepackage{longtable}
+
+%      S T A R T  D O C U M E N T 
 \begin{document}
 How to use {\texttt{WorPT}}
+
+%======================================================
+%     H O W   T O   U S E   T H I S   F I L E
+% (1)  add the following in the preamble of your main paper:
+%          \makeatletter \def\expinput#1{\@@input#1} \makeatother
+% (2) type the following into the main latex file where you want to put this table:
+{
+   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
+   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
+   \begin{longtable}{|l|*{4}{c|}}
+      \expinput{do_NOT_manually_edit/isANONfte}
+      \caption{\label{tab:isANONfte} Details of work efforts per member to be funded for the present proposal; {\color{red}Detailed responsibilities, tied to tasks and science goals, are provided in Sec.\,\ref{Subsec:tmeline}.}}
+   \end{longtable}
+ }
+%======================================================
+
 
 
 \end{document}
