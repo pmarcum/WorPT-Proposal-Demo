@@ -11,29 +11,29 @@
 %{
 %   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
 %   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
-%
+%   \begin{longtable}{|l|l|*{4}{c|}}
 %      \expinput{do_NOT_manually_edit/NOTANONfte}
 %      \caption{\label{tab:NOTANONfte} FTE/WYE for all team members.}
 %   \end{longtable}
 %}
 %======================================================
 \hline
-%
-%
-%
-%
+\multirow{2}{*}{\textbf{Name}} & \multirow{2}{*}{\textbf{Role}} & \multicolumn{4}{c|}{\textbf{Commitment (FTE)}}\\
+\cline{3-6}
+{} & {} & \textbf{Y1} & \textbf{Y2} & \textbf{Y3} & \textbf{Total}\\
+\multicolumn{6}{|c|}{\cellcolor{Blue}\color{White}\textbf{Work Efforts To Be Funded By This Proposal}}\\
 Dan J. Dent{\'{o}}n, III  & PI  & 0.20 & 0.30 & 0.20 & 0.70\\
 Sally K. Smith  & Sci-PI  & 0.36 & 0.25 & 0.20 & 0.81\\
 Pamela M. Marcum  & co-I(1)  & 0.05 & 0.05 & 0.17 & 0.27\\
-%
-%
+\multicolumn{2}{|l}{\textbf{\color{blue}Total Funded Work Effort}} & \multicolumn{1}{c}{\color{blue}0.61} & \multicolumn{1}{c}{\color{blue}0.60} & \multicolumn{1}{c}{\color{blue}0.57} & \multicolumn{1}{c|}{\color{blue}1.78}\\
+\multicolumn{6}{|c|}{\cellcolor{Blue}\color{White}\textbf{Work Efforts Proposed but NOT to Be Funded By This Proposal}}\\
 Dan J. Dent{\'{o}}n, III  & PI  & 0.00 & 0.00 & 0.00 & 0.00\\
 Sally K. Smith  & Sci-PI  & 0.04 & 0.00 & 0.00 & 0.04\\
 Pamela M. Marcum  & co-I(1)  & 0.10 & 0.10 & 0.03 & 0.23\\
-%
-%
+\multicolumn{2}{|l}{\textbf{\color{blue}Total Unfunded Work Effort}} & \multicolumn{1}{c}{\color{blue}0.14} & \multicolumn{1}{c}{\color{blue}0.10} & \multicolumn{1}{c}{\color{blue}0.03} & \multicolumn{1}{c|}{\color{blue}0.27}\\
+\multicolumn{6}{|c|}{\cellcolor{Blue}\color{White}\textbf{Total Work Efforts Proposed (Funded $+$ Unfunded)}}\\
 Dan J. Dent{\'{o}}n, III  & PI  & 0.20 & 0.30 & 0.20 & 0.70\\
 Sally K. Smith  & Sci-PI  & 0.40 & 0.25 & 0.20 & 0.85\\
 Pamela M. Marcum  & co-I(1)  & 0.15 & 0.15 & 0.20 & 0.50\\
-%
+\multicolumn{2}{|l}{\textbf{\color{blue}Total Funded $+$ Unfunded Work Effort}} & \multicolumn{1}{c}{\color{blue}0.75} & \multicolumn{1}{c}{\color{blue}0.70} & \multicolumn{1}{c}{\color{blue}0.60} & \multicolumn{1}{c|}{\color{blue}2.05}\\
 \hline
