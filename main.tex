@@ -134,6 +134,131 @@ The below table provides travel costs:
 \end{longtable}
 %================ E N D   I N S T R U C T I O N S ===============
 
+\newpage
+%======================================================
+%   H O W   T O   U S E   T H I S   F I L E
+% (1) download or connect to https://github.com/pmarcum/LaTex-Formatting and select the
+%        set of files (aas-style or general) that meet your situation, you can either download the files or link
+%        Overleaf to the needed files in the GitHub repository through URL, and then add the following to
+%        the preamble of your main paper
+%\usepackage{FUpackages}
+%\usepackage{FUformatting}
+%\usepackage{FUnewCommands} % not needed by WorPT files but generally useful
+% (2) type the following into the main latex file where you want to put this table:
+{
+   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
+   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
+   \begin{longtable}{|l|l|*{4}{c|}}
+      \expinput{do_NOT_manually_edit/NOTANONfte}
+      \caption{\label{tab:NOTANONfte} FTE/WYE for all team members.}
+   \end{longtable}
+}
+%======================================================
+
+\newpage
+%======================================================
+%     H O W   T O   U S E   T H I S   F I L E
+% (1) download or connect to https://github.com/pmarcum/LaTex-Formatting and select the
+%        set of files (aas-style or general) that meet your situation, you can either download the files or link
+%        Overleaf to the needed files in the GitHub repository through URL, and then add the following to
+%        the preamble of your main paper
+%\usepackage{FUpackages}
+%\usepackage{FUformatting}
+%\usepackage{FUnewCommands} % not needed by WorPT files but generally useful
+% (2) type the following into the main latex file where you want to put this table:
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+{
+   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
+   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
+   \begin{longtable}{
+      |L{1.8in}!{\color{lightgray}\vrule}L{1.3in}!{\color{lightgray}\vrule}L{2.5in}!{\color{lightgray}\vrule}p{0.10in}!{\color{lightgray}\vrule}p{0.28in}|
+      }
+      \caption{Work Effort for All Team Members \label{tab:NOTANONhst}}\\
+      \multicolumn{5}{l}{\textbf{Program \#:} HST-xx-xxxxx (Cycle XX)}\\
+%
+      \multicolumn{5}{l}{\textbf{Science PI:} Dr. Sally Smith}\\
+      \expinput{do_NOT_manually_edit/NOTANONhst}
+   \end{longtable}
+}
+%======================================================
+
+\newpage
+%======================================================
+%     H O W   T O   U S E   T H I S   F I L E
+%  if you want to re-size the fonts in any of the columns, change the fontsize by un-hiding the NOTANONschedule tab in the Work Plan googlesheet,
+%  then making the desired edits to the text in the yellow blocks, which are used to construct the latex code.
+% A fontsize-selection menu is on that page for quick editing of fontsizes alone, but for color and other format changes,
+% you will need to find the specific area on that sheet to edit
+% .... also ...
+% (1) download or connect to https://github.com/pmarcum/LaTex-Formatting and select the
+%        set of files (aas-style or general) that meet your situation, you can either download the files or link
+%        Overleaf to the needed files in the GitHub repository through URL, and then add the following to
+%        the preamble of your main paper
+%\usepackage{FUpackages}
+%\usepackage{FUformatting}
+%\usepackage{FUnewCommands} % not needed by WorPT files but generally useful
+% (2) type the following into the main latex file where you want to put this table:
+\addtocounter{table}{-1} %corrects double-counting of sidewaystable and longtable combination
+\begin{sidewaystable}  %comment out if not needed
+   \begingroup
+      \setlength{\tabcolsep}{1pt}  % changes horizontal spacing between columns
+      \renewcommand{\arraystretch}{0.8} %changes vertical space between rows
+      \centerline{
+         \begin{minipage}{1.5\textwidth}  %wide table needs some of the margin?  change 1.5 to whatever
+            \begin{longtable} {|>{\raggedright\arraybackslash}p{4.1in} % title column
+               *{3}{|p{1ex}!{\color{lightgray}\vrule}*{2}{p{1ex}!{\color{lightgray}\vrule}}p{1ex}}%year
+               |>{\raggedright\arraybackslash}p{24ex}%task assignments (ID and \#Weeks)
+               |p{5ex}!{\color{lightgray}\vrule}p{5ex}!{\color{lightgray}\vrule}c|%TOTAL FTE columns
+               }
+               \expinput{do_NOT_manually_edit/NOTANONschedule}
+            \end{longtable}
+         \end{minipage}
+      }
+   \endgroup
+   \caption{\label{tab:NOTANONschedule} Resource-loaded project schedule, where: {\raisebox{-0.3\normalbaselineskip}[0pt][0pt]{\begin{tikzpicture} \draw[fill=white,draw=red,line width=0.4mm] (0,0) circle[radius=0.2]; \draw[line width=0.4mm,red] node[midway,black]{\faDollar} (0.15,0.15) -- (-0.15,-0.15);  \draw[line width=0.4mm,red] (0.15,0.15) -- (-0.15,-0.15);  \end{tikzpicture}}} Not funded by this grant,  {\raisebox{-0.3\normalbaselineskip}[0pt][0pt]{\begin{tikzpicture}  \draw[fill=green,draw=black] (0,0) circle[radius=0.2];  \draw[draw=green] (-0.015,0.015) -- (0.015,-0.015) node[midway]{\faDollar};  \end{tikzpicture}}} funded by this grant, {\textbf{\large{$\Sigma$}}} funded $+$ unfunded; Tasks are listed (left side), with duration of task activity indicated in blue-colored timelines  that measure quarter-years (1,2,3,4). Task assignments identify specific team members responsible for  implementation with associated work weeks, where color indicates institutional affiliation  (blue$=$funded/U.S., black$=$not funded/U.S., red=international). "Total FTE" (right side) are integrated work-weeks converted into FTE per task (1~FTE$=$12~months), displayed as "total",  "unfunded by this grant", and "funded by this grant", resp.  Asignment identities:  {\textbf{dd}}: Dan.Dent{\'{o}}n, {\textbf{pm}}: Pamela.Marcum, {\textbf{ss}}: Sally.Smith}
+\end{sidewaystable}  % comment out if not used
+%======================================================
+
+\newpage
+%======================================================
+%       H O W   T O   U S E   T H I S   F I L E
+% (1) download or connect to https://github.com/pmarcum/LaTex-Formatting and select the
+%        set of files (aas-style or general) that meet your situation, you can either download the files or link
+%        Overleaf to the needed files in the GitHub repository through URL, and then add the following to
+%        the preamble of your main paper
+%\usepackage{FUpackages}
+%\usepackage{FUformatting}
+%\usepackage{FUnewCommands} % not needed by WorPT files but generally useful
+% (2) type the following into the main latex file where you want to put this table:
+\addtocounter{table}{-1}  % corrects double-counting by table and longtable combination
+\begin{table}[h]
+   \renewcommand{\arraystretch}{1}  % changes vertical space bet/ rows
+   \setlength{\tabcolsep}{1pt}  % changes horizontal spacing bet/ columns
+   \centerline{
+      \begin{minipage}{1.0\textwidth} % wide table needs to use some of the margins? comment out, change the 1.5
+         \begin{longtable} {|p{3.9in}||c!{\color{gray!40}\vrule}c!{\color{gray!40} \vrule}!{\color{gray!40}\vrule}c!{\color{gray!40}\vrule}c||l!{\color{gray!40}\vrule}p{0.3in}|}
+            \expinput{do_NOT_manually_edit/NOTANONtasks}
+         \end{longtable}
+      \end{minipage}
+   } %close \centerline
+   \caption{Task Management and Team Responsibilities \label{tab:NOTANONtasks}}
+   \begin{tablenotes}[flushleft] The tasks (gray headers) and sub-tasks (left), with specific assignments for the roles of task lead (middle) and expertise / analysis assistance (right).  \end{tablenotes}
+\end{table}
+%======================================================
+
+\clearpage
+%======================================================
+%     H O W   T O   U S E   T H I S   F I L E
+% (1) download or connect to https://github.com/pmarcum/LaTex-Formatting and select the
+%        set of files (aas-style or general) that meet your situation, you can either download the files or link
+%        Overleaf to the needed files in the GitHub repository through URL, and then add the following to
+%        the preamble of your main paper
+%\usepackage{FUpackages}
+%\usepackage{FUformatting}
+%\usepackage{FUnewCommands} % not needed by WorPT files but generally useful
+% (2) type the following into the main latex file where you want to put this section of text (it is not a table):
+\input{do_NOT_manually_edit/NOTANONteamSummaries}
+%======================================================
 
 \end{document}
 
