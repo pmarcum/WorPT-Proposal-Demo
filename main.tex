@@ -115,15 +115,15 @@ The most recent version of the \href{https://docs.google.com/spreadsheets/d/1J9s
 \newpage
 \subsection{\textbf{Not} Anonymous Detailed Resource-Loaded Task Timeline w/ Assignments (``NOTANONschedule.tex'')}
 \addtocounter{table}{-1} %corrects double-counting of sidewaystable and longtable combination
-\begin{sidewaystable}  %comment out if not needed
+%\begin{sidewaystable}  %comment out if not needed
    \begingroup
       \setlength{\tabcolsep}{1pt}  % changes horizontal spacing between columns
       \renewcommand{\arraystretch}{0.8} %changes vertical space between rows
       \centerline{
          \begin{minipage}{1.5\textwidth}  %wide table needs some of the margin?  change 1.5 to whatever
-            \begin{longtable} {|>{\raggedright\arraybackslash}p{4.1in} % title column
+            \begin{longtable} {|>{\raggedright\arraybackslash}p{3.8in} % title column
                *{3}{|p{1ex}!{\color{lightgray}\vrule}*{2}{p{1ex}!{\color{lightgray}\vrule}}p{1ex}}%year
-               |>{\raggedright\arraybackslash}p{24ex}%task assignments (ID and \#Weeks)
+               |>{\raggedright\arraybackslash}p{15ex}%task assignments (ID and \#Weeks)
                |p{5ex}!{\color{lightgray}\vrule}p{5ex}!{\color{lightgray}\vrule}c|%TOTAL FTE columns
                }
                \expinput{do_NOT_manually_edit/NOTANONschedule}
@@ -132,7 +132,7 @@ The most recent version of the \href{https://docs.google.com/spreadsheets/d/1J9s
       }
    \endgroup
    \caption{\label{tab:NOTANONschedule} Resource-loaded project schedule, where: {\raisebox{-0.3\normalbaselineskip}[0pt][0pt]{\begin{tikzpicture} \draw[fill=white,draw=red,line width=0.4mm] (0,0) circle[radius=0.2]; \draw[line width=0.4mm,red] node[midway,black]{\faDollar} (0.15,0.15) -- (-0.15,-0.15);  \draw[line width=0.4mm,red] (0.15,0.15) -- (-0.15,-0.15);  \end{tikzpicture}}} Not funded by this grant,  {\raisebox{-0.3\normalbaselineskip}[0pt][0pt]{\begin{tikzpicture}  \draw[fill=green,draw=black] (0,0) circle[radius=0.2];  \draw[draw=green] (-0.015,0.015) -- (0.015,-0.015) node[midway]{\faDollar};  \end{tikzpicture}}} funded by this grant, {\textbf{\large{$\Sigma$}}} funded $+$ unfunded; Tasks are listed (left side), with duration of task activity indicated in blue-colored timelines  that measure quarter-years (1,2,3,4). Task assignments identify specific team members responsible for  implementation with associated work weeks, where color indicates institutional affiliation  (blue$=$funded/U.S., black$=$not funded/U.S., red=international). "Total FTE" (right side) are integrated work-weeks converted into FTE per task (1~FTE$=$12~months), displayed as "total",  "unfunded by this grant", and "funded by this grant", resp.  Asignment identities:  {\textbf{dd}}: Dan.Dent{\'{o}}n, {\textbf{pm}}: Pamela.Marcum, {\textbf{ss}}: Sally.Smith}
-\end{sidewaystable}  % comment out if not used
+%\end{sidewaystable}  % comment out if not used
 
 % @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 % @@@@@@@@@@@@@@@@@ T A S K   A S S I G N M E N T S @@@@@@@@@@@@@@@@@@@@@@@@@@@@
