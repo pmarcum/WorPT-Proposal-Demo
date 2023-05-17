@@ -14,138 +14,140 @@
 %% > > > > > > > > > > > > > < < < < < < < < < < < < < <
 %% Block of code to be uncommented by removing the *first* percent-sign at the beginning of the following lines below (leave intentional comments with at least 1 percent sign to keep them commented!)
 %% The next couple of lines define cell and font colors that can be changed if desired (keep this comment line commented-out!)
-%\def\bannerColor{Blue} % Color of banner at top of each person's Current/Pending section
-%\def\nameColor{White} % Color of font color for the name appearing at the top of each person's Current/Pending section
-%\def\sectionColor{lightgray} % Color of separators ("Current Support" and "Pending Grant Support") within each Current/Pending section
-%\def\sectionFontColor{Black} % Color of separators font ("Current Support" and "Pending Grant Support") within each Current/Pending section
-%\def\thisProposalColor{NavyBlue} % Color of text "(this proposal)" listed as "pending" in the Current/Pending section
-%\def\leftBoldface#1{\textbf{#1}} % Makes left column words bold-faced; change {\textbf{#1}} to {} or to other preference.
+%\def\myBannerColor{Blue} % Color of banner at top of each person's Current/Pending section
+%\def\myNameColor{White} % Color of font color for the name appearing at the top of each person's Current/Pending section
+%\def\mySectionColor{lightgray} % Color of separators ("Current Support" and "Pending Grant Support") within each Current/Pending section
+%\def\mySectionFontColor{Black} % Color of separators font ("Current Support" and "Pending Grant Support") within each Current/Pending section
+%\def\myThisProposalColor{NavyBlue} % Color of text "(this proposal)" listed as "pending" in the Current/Pending section
+%\def\myLeftBoldface#1{\textbf{#1}} % Makes left column words bold-faced; change {\textbf{#1}} to {#1} or to other preference.
+%\def\mySectionBoldface#1{\textbf{#1}} % Makes section separator words (Current Support, Pending Grant Support) bold-faced; change {\textbf{#1}} to {#1} or to other preference.
+%\def\myNameBoldface#1{\textbf{#1}} % Makes name in banner bold-faced; change {\textbf{#1}} to {#1} or to other preference.
 %%
 %\begin{longtable}{|l|p{5in}|}
 %   \expinput{do_NOT_manually_edit/NOTANONcurrentpending}
 %\end{longtable}
 %%================ E N D   I N S T R U C T I O N S =============== (leave this line commented out!)
 \hline
-\multicolumn{2}{|c|}{\cellcolor{\bannerColor}\color{\nameColor}\textbf{Dr. Daniel Dent{\'o}n (Principal Investigator)}}\\
+\multicolumn{2}{|c|}{\cellcolor{\myBannerColor}\color{\myNameColor}\myNameBoldface{Dr. Daniel Dent{\'o}n (Principal Investigator)}}\\
 \hline
 \hline
-\multicolumn{2}{|c|}{\cellcolor{\sectionColor}\color{\sectionFontColor}\textbf{Current Support}}\\
+\multicolumn{2}{|c|}{\cellcolor{\mySectionColor}\color{\mySectionFontColor}\mySectionBoldface{Current Support}}\\
 \hline
-\leftBoldface{Title}&NSF Proposal 4\\
-\leftBoldface{Source of Support}&NSF/WVU\\
-\leftBoldface{Program POC}&Rick Rodgers; rrodgers@nsf.gov\\
-\leftBoldface{Sci PI}&Dan Denton; University of CBA\\
-\leftBoldface{Admin PI}&Ken Kraft; University of CBA\\
-\leftBoldface{Award Period}&05/01/2023$-$05/01/2024\\
-\leftBoldface{Award Amount}&\$120,000\\
-\leftBoldface{FTE}&0.2\\
+\myLeftBoldface{Title}&NSF Proposal 4\\
+\myLeftBoldface{Source of Support}&NSF/WVU\\
+\myLeftBoldface{Program POC}&Rick Rodgers; rrodgers@nsf.gov\\
+\myLeftBoldface{Sci PI}&Dan Denton; University of CBA\\
+\myLeftBoldface{Admin PI}&Ken Kraft; University of CBA\\
+\myLeftBoldface{Award Period}&05/01/2023$-$05/01/2024\\
+\myLeftBoldface{Award Amount}&\$120,000\\
+\myLeftBoldface{FTE}&0.2\\
 \hline
-\multicolumn{2}{|c|}{\cellcolor{\sectionColor}\color{\sectionFontColor}\textbf{Pending Grant Support }}\\
+\multicolumn{2}{|c|}{\cellcolor{\mySectionColor}\color{\mySectionFontColor}\mySectionBoldface{Pending Grant Support }}\\
 \hline
-\leftBoldface{Title}&{\color{\thisProposalColor}(this proposal) }WorPT Proposal Demo\\
-\leftBoldface{Source of Support}&NASA/123\\
-\leftBoldface{Program POC}&Cat Candice; ccandice@nasa.gov\\
-\leftBoldface{PI}&Dan Denton; University of CBA\\
-\leftBoldface{Sci PI}&Sally Smith, University of CBA\\
-\leftBoldface{Award Period}&04/01/2024$-$04/01/2026\\
-\leftBoldface{Award Amount}&\$360,000\\
-\leftBoldface{FTE}&0.2, 0.2 (Yrs 1,2 resp.)\\
+\myLeftBoldface{Title}&{\color{\myThisProposalColor}(this proposal) }WorPT Proposal Demo\\
+\myLeftBoldface{Source of Support}&NASA/123\\
+\myLeftBoldface{Program POC}&Cat Candice; ccandice@nasa.gov\\
+\myLeftBoldface{PI}&Dan Denton; University of CBA\\
+\myLeftBoldface{Sci PI}&Sally Smith, University of CBA\\
+\myLeftBoldface{Award Period}&04/01/2024$-$04/01/2026\\
+\myLeftBoldface{Award Amount}&\$360,000\\
+\myLeftBoldface{FTE}&0.2, 0.2 (Yrs 1,2 resp.)\\
 \hline
-\leftBoldface{Title}&NSF Proposal 5\\
-\leftBoldface{Source of Support}&NSF/ABC\\
-\leftBoldface{Program POC}&Bobby Barker; bbarker@nsf.gov\\
-\leftBoldface{PI}&Ken Kraft; University of CBA\\
-\leftBoldface{Sci PI}&Dan Denton; University of CBA\\
-\leftBoldface{Award Period}&01/01/2024$-$01/01/2027\\
-\leftBoldface{Award Amount}&\$520,000\\
-\leftBoldface{FTE}&0.3, 0.2, 0.4 (Yrs 1,2,3, resp.)\\
-\hline
-\multicolumn{2}{}{}\\
-\hline
-\multicolumn{2}{|c|}{\cellcolor{\bannerColor}\color{\nameColor}\textbf{Dr. Sally Smith (Science PI)}}\\
-\hline
-\hline
-\multicolumn{2}{|c|}{\cellcolor{\sectionColor}\color{\sectionFontColor}\textbf{Current Support}}\\
-\hline
-\leftBoldface{Title}&NSF Proposal 4\\
-\leftBoldface{Source of Support}&NSF/WVU\\
-\leftBoldface{Program POC}&Rick Rodgers; rrodgers@nsf.gov\\
-\leftBoldface{Sci PI}&Dan Denton; University of CBA\\
-\leftBoldface{Admin PI}&Ken Kraft; University of CBA\\
-\leftBoldface{Award Period}&05/01/2023$-$05/01/2024\\
-\leftBoldface{Award Amount}&\$120,000\\
-\leftBoldface{FTE}&0.2\\
-\hline
-\multicolumn{2}{|c|}{\cellcolor{\sectionColor}\color{\sectionFontColor}\textbf{Pending Grant Support }}\\
-\hline
-\leftBoldface{Title}&{\color{\thisProposalColor}(this proposal) }WorPT Proposal Demo\\
-\leftBoldface{Source of Support}&NASA/123\\
-\leftBoldface{Program POC}&Cat Candice; ccandice@nasa.gov\\
-\leftBoldface{PI}&Dan Denton; University of CBA\\
-\leftBoldface{Sci PI}&Sally Smith, University of CBA\\
-\leftBoldface{Award Period}&04/01/2024$-$04/01/2026\\
-\leftBoldface{Award Amount}&\$360,000\\
-\leftBoldface{FTE}&0.2, 0.2 (Yrs 1,2 resp.)\\
-\hline
-\leftBoldface{Title}&NSF Proposal 5\\
-\leftBoldface{Source of Support}&NSF/ABC\\
-\leftBoldface{Program POC}&Bobby Barker; bbarker@nsf.gov\\
-\leftBoldface{PI}&Ken Kraft; University of CBA\\
-\leftBoldface{Sci PI}&Dan Denton; University of CBA\\
-\leftBoldface{Award Period}&01/01/2024$-$01/01/2027\\
-\leftBoldface{Award Amount}&\$520,000\\
-\leftBoldface{FTE}&0.3, 0.2, 0.4 (Yrs 1,2,3, resp.)\\
+\myLeftBoldface{Title}&NSF Proposal 5\\
+\myLeftBoldface{Source of Support}&NSF/ABC\\
+\myLeftBoldface{Program POC}&Bobby Barker; bbarker@nsf.gov\\
+\myLeftBoldface{PI}&Ken Kraft; University of CBA\\
+\myLeftBoldface{Sci PI}&Dan Denton; University of CBA\\
+\myLeftBoldface{Award Period}&01/01/2024$-$01/01/2027\\
+\myLeftBoldface{Award Amount}&\$520,000\\
+\myLeftBoldface{FTE}&0.3, 0.2, 0.4 (Yrs 1,2,3, resp.)\\
 \hline
 \multicolumn{2}{}{}\\
 \hline
-\multicolumn{2}{|c|}{\cellcolor{\bannerColor}\color{\nameColor}\textbf{Dr. Pamela M. Marcum (co-Investigator)}}\\
+\multicolumn{2}{|c|}{\cellcolor{\myBannerColor}\color{\myNameColor}\myNameBoldface{Dr. Sally Smith (Science PI)}}\\
 \hline
 \hline
-\multicolumn{2}{|c|}{\cellcolor{\sectionColor}\color{\sectionFontColor}\textbf{Current Support}}\\
+\multicolumn{2}{|c|}{\cellcolor{\mySectionColor}\color{\mySectionFontColor}\mySectionBoldface{Current Support}}\\
 \hline
-\leftBoldface{Title}&Extended Hot Gas Halos of Galaxies\\
-\leftBoldface{Source of Support}&NASA/ADAP\\
-\leftBoldface{Program POC}&Douglas Hudgins; (202) 358-0988; douglas.m.hudgins@nasa.gov\\
-\leftBoldface{PI}&Pamela Marcum\\
-\leftBoldface{Sci PI}&Alex Borlaff\\
-\leftBoldface{Award Period}&(anticipated) 04/15/2023$-$04/15/2026\\
-\leftBoldface{Award Amount}&\$995,417\\
-\leftBoldface{FTE}&0.35, 0.25, 0.40 (Years 1, 2, 3 resp.)\\
+\myLeftBoldface{Title}&NSF Proposal 4\\
+\myLeftBoldface{Source of Support}&NSF/WVU\\
+\myLeftBoldface{Program POC}&Rick Rodgers; rrodgers@nsf.gov\\
+\myLeftBoldface{Sci PI}&Dan Denton; University of CBA\\
+\myLeftBoldface{Admin PI}&Ken Kraft; University of CBA\\
+\myLeftBoldface{Award Period}&05/01/2023$-$05/01/2024\\
+\myLeftBoldface{Award Amount}&\$120,000\\
+\myLeftBoldface{FTE}&0.2\\
 \hline
-\leftBoldface{Title}&STRAYCOR: Stray-light Background Correction for HST ACS and WFC3\\
-\leftBoldface{Source of Support}&NASA/HST Archive\\
-\leftBoldface{Program POC}&STScI/AURA; (410) 338-4200; gms\_mail@stsci.edu\\
-\leftBoldface{Sci PI}&Alex Borlaff\\
-\leftBoldface{Admin PI}&Pamela Marcum\\
-\leftBoldface{Award Period}&(anticipated) 03/20/2023$-$03/20/2025\\
-\leftBoldface{Award Amount}&\$368,868\\
-\leftBoldface{FTE}&0.25, 0.25 (Years 1, 2, resp.)\\
+\multicolumn{2}{|c|}{\cellcolor{\mySectionColor}\color{\mySectionFontColor}\mySectionBoldface{Pending Grant Support }}\\
 \hline
-\leftBoldface{Title}&Exploring the Origin of Lenticular Galaxies With Chandra/ACIS\\
-\leftBoldface{Source of Support}&NASA/Chandra Archive\\
-\leftBoldface{Program POC}&Michael McCarthy; mmcarthy@cfa.harvard.edu; 617-495-7262\\
-\leftBoldface{PI}&Alex Borlaff\\
-\leftBoldface{Admin PI}&Pamela Marcum\\
-\leftBoldface{Award Period}&01/20/2023$-$01/20/2024\\
-\leftBoldface{Award Amount}&\$215,800\\
-\leftBoldface{FTE}&0.15 (Year 1)\\
+\myLeftBoldface{Title}&{\color{\myThisProposalColor}(this proposal) }WorPT Proposal Demo\\
+\myLeftBoldface{Source of Support}&NASA/123\\
+\myLeftBoldface{Program POC}&Cat Candice; ccandice@nasa.gov\\
+\myLeftBoldface{PI}&Dan Denton; University of CBA\\
+\myLeftBoldface{Sci PI}&Sally Smith, University of CBA\\
+\myLeftBoldface{Award Period}&04/01/2024$-$04/01/2026\\
+\myLeftBoldface{Award Amount}&\$360,000\\
+\myLeftBoldface{FTE}&0.2, 0.2 (Yrs 1,2 resp.)\\
 \hline
-\multicolumn{2}{|c|}{\cellcolor{\sectionColor}\color{\sectionFontColor}\textbf{Pending Grant Support }}\\
+\myLeftBoldface{Title}&NSF Proposal 5\\
+\myLeftBoldface{Source of Support}&NSF/ABC\\
+\myLeftBoldface{Program POC}&Bobby Barker; bbarker@nsf.gov\\
+\myLeftBoldface{PI}&Ken Kraft; University of CBA\\
+\myLeftBoldface{Sci PI}&Dan Denton; University of CBA\\
+\myLeftBoldface{Award Period}&01/01/2024$-$01/01/2027\\
+\myLeftBoldface{Award Amount}&\$520,000\\
+\myLeftBoldface{FTE}&0.3, 0.2, 0.4 (Yrs 1,2,3, resp.)\\
 \hline
-\leftBoldface{Title}&{\color{\thisProposalColor}(this proposal) }WorPT Proposal Demo\\
-\leftBoldface{Source of Support}&NASA/123\\
-\leftBoldface{Program POC}&Cat Candice; ccandice@nasa.gov\\
-\leftBoldface{PI}&Dan Denton; University of CBA\\
-\leftBoldface{Sci PI}&Sally Smith, University of CBA\\
-\leftBoldface{Award Period}&04/01/2024$-$04/01/2026\\
-\leftBoldface{Award Amount}&\$360,000\\
-\leftBoldface{FTE}&0.2, 0.2 (Yrs 1,2 resp.)\\
+\multicolumn{2}{}{}\\
 \hline
-\leftBoldface{Title}&ROSALIA: Roman's Sky Analyst for LSB Imaging \& Astronomy\\
-\leftBoldface{Source of Support}&NASA/Roman Research \& Support\\
-\leftBoldface{Program POC}&Dominic Benford; dominic.j.benford@nasa.gov\\
-\leftBoldface{Sci PI}&Alex Borlaff\\
-\leftBoldface{Admin PI}&Pamela Marcum\\
-\leftBoldface{Award Period}&09/01/2023$-$09/01/2027\\
-\leftBoldface{FTE}&0.25, 0.2, 0.2, 0.25 (Years 1,2,3,4 resp.)\\
+\multicolumn{2}{|c|}{\cellcolor{\myBannerColor}\color{\myNameColor}\myNameBoldface{Dr. Pamela M. Marcum (co-Investigator)}}\\
+\hline
+\hline
+\multicolumn{2}{|c|}{\cellcolor{\mySectionColor}\color{\mySectionFontColor}\mySectionBoldface{Current Support}}\\
+\hline
+\myLeftBoldface{Title}&Extended Hot Gas Halos of Galaxies\\
+\myLeftBoldface{Source of Support}&NASA/ADAP\\
+\myLeftBoldface{Program POC}&Douglas Hudgins; (202) 358-0988; douglas.m.hudgins@nasa.gov\\
+\myLeftBoldface{PI}&Pamela Marcum\\
+\myLeftBoldface{Sci PI}&Alex Borlaff\\
+\myLeftBoldface{Award Period}&(anticipated) 04/15/2023$-$04/15/2026\\
+\myLeftBoldface{Award Amount}&\$995,417\\
+\myLeftBoldface{FTE}&0.35, 0.25, 0.40 (Years 1, 2, 3 resp.)\\
+\hline
+\myLeftBoldface{Title}&STRAYCOR: Stray-light Background Correction for HST ACS and WFC3\\
+\myLeftBoldface{Source of Support}&NASA/HST Archive\\
+\myLeftBoldface{Program POC}&STScI/AURA; (410) 338-4200; gms\_mail@stsci.edu\\
+\myLeftBoldface{Sci PI}&Alex Borlaff\\
+\myLeftBoldface{Admin PI}&Pamela Marcum\\
+\myLeftBoldface{Award Period}&(anticipated) 03/20/2023$-$03/20/2025\\
+\myLeftBoldface{Award Amount}&\$368,868\\
+\myLeftBoldface{FTE}&0.25, 0.25 (Years 1, 2, resp.)\\
+\hline
+\myLeftBoldface{Title}&Exploring the Origin of Lenticular Galaxies With Chandra/ACIS\\
+\myLeftBoldface{Source of Support}&NASA/Chandra Archive\\
+\myLeftBoldface{Program POC}&Michael McCarthy; mmcarthy@cfa.harvard.edu; 617-495-7262\\
+\myLeftBoldface{PI}&Alex Borlaff\\
+\myLeftBoldface{Admin PI}&Pamela Marcum\\
+\myLeftBoldface{Award Period}&01/20/2023$-$01/20/2024\\
+\myLeftBoldface{Award Amount}&\$215,800\\
+\myLeftBoldface{FTE}&0.15 (Year 1)\\
+\hline
+\multicolumn{2}{|c|}{\cellcolor{\mySectionColor}\color{\mySectionFontColor}\mySectionBoldface{Pending Grant Support }}\\
+\hline
+\myLeftBoldface{Title}&{\color{\myThisProposalColor}(this proposal) }WorPT Proposal Demo\\
+\myLeftBoldface{Source of Support}&NASA/123\\
+\myLeftBoldface{Program POC}&Cat Candice; ccandice@nasa.gov\\
+\myLeftBoldface{PI}&Dan Denton; University of CBA\\
+\myLeftBoldface{Sci PI}&Sally Smith, University of CBA\\
+\myLeftBoldface{Award Period}&04/01/2024$-$04/01/2026\\
+\myLeftBoldface{Award Amount}&\$360,000\\
+\myLeftBoldface{FTE}&0.2, 0.2 (Yrs 1,2 resp.)\\
+\hline
+\myLeftBoldface{Title}&ROSALIA: Roman's Sky Analyst for LSB Imaging \& Astronomy\\
+\myLeftBoldface{Source of Support}&NASA/Roman Research \& Support\\
+\myLeftBoldface{Program POC}&Dominic Benford; dominic.j.benford@nasa.gov\\
+\myLeftBoldface{Sci PI}&Alex Borlaff\\
+\myLeftBoldface{Admin PI}&Pamela Marcum\\
+\myLeftBoldface{Award Period}&09/01/2023$-$09/01/2027\\
+\myLeftBoldface{FTE}&0.25, 0.2, 0.2, 0.25 (Years 1,2,3,4 resp.)\\
 \hline
