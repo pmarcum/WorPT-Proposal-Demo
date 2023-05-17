@@ -7,6 +7,12 @@
 % additonal items specific to this document
 \fancyhead[L]{\color{WatermarkColor}EXAMPLES}
 \fancyhead[R]{\color{WatermarkColor}All of the \texttt{WorPT} Tables}
+% create the no-dollar sign to use in NOTANONschedule.tex to represent FTEs not covered in the proposal budget 
+\newcommand{\noDollarIcon}[4][-0.3][0.4mm][0.2][0.15]{{\raisebox{#1\normalbaselineskip}[0pt][0pt]{\begin{tikzpicture}
+   \draw[fill=white,draw=red,line width=#2] (0,0) circle[radius=#3];
+   \draw[line width=#2,red] node[midway,black]{\faDollar} (#4,#4) -- (-#4,-#4);
+   \draw[line width=#2,red] (#4,#4) -- (-#4,-#4);
+   \end{tikzpicture}}}}
 %....................................
 
 %      S T A R T  D O C U M E N T 
@@ -120,6 +126,21 @@ The most recent version of the \href{https://docs.google.com/spreadsheets/d/1J9s
 % ___________________________________________________
 \newpage
 \subsection{\textbf{Not} Anonymous Detailed Resource-Loaded Task Timeline w/ Assignments (``NOTANONschedule.tex'')}
+\def\myTaskTimelineColumnSize{\scriptsize } % Size of column label for Task Timeline
+\def\myTaskAssignmentsColumnSize{\scriptsize } % Size of column label for Task Assignments
+\def\myTotalFteColumnSize{\scriptsize } % Size of column label for Totaled FTEs
+\def\myYearColumnSize{\scriptsize } % Size of column label for "YR1", "YR2", etc. column labels
+\def\myTaskTitleColumnSize{\normalsize } % Size of column label for "TASK TITLES" column label
+\def\myQuarterColumnSize{\scriptsize } % Size of column label for "1", "2", "3", "4" quarter labels on columns
+\def\myIdWksColumnSize{\scriptsize } % Size of column label for "id wks"
+\def\mySigmaColumnSize{\large } % Size of Sigma symbol column label
+\def\myNoDollarColumnSize{{\raisebox{-0.3\normalbaselineskip}[0pt][0pt]{\begin{tikzpicture}  % Size of "no dollar" symbol column label
+   \draw[fill=white,draw=red,line width=0.4mm] (0,0) circle[radius=0.2];
+   \draw[line width=0.4mm,red] node[midway,black]{\faDollar} (0.15,0.15) -- (-0.15,-0.15);
+   \draw[line width=0.4mm,red] (0.15,0.15) -- (-0.15,-0.15);
+   \end{tikzpicture}}}}
+
+
 \addtocounter{table}{-1} %corrects double-counting of sidewaystable and longtable combination
 %\begin{sidewaystable}  %comment out if not needed
    \begingroup
