@@ -73,6 +73,12 @@ The most recent version of the \href{https://docs.google.com/spreadsheets/d/1J9s
 % ___________________________________________________
 \newpage
 \subsection{\textbf{Not} Anonymous HST-style FTE Table for Phase~II (``NOTANONhst.tex'')}
+% Block of code to be uncommented by removing the *first* percent-sign at the beginning of the following lines below (leave intentional comments with at least 1 percent sign to keep them commented!)
+% The next couple of lines define cell and font colors that can be changed if desired (keep this comment line commented-out!)
+\def\myHeaderColor{Blue} % Color of column headings
+\def\myLabelColor{White} % Color of font column headings
+\def\myLabelBoldface#1{\textbf{#1}} % Makes column labels bold-faced; change {\textbf{#1}} to {#1} or to other preference.
+%
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 {
    \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
@@ -190,13 +196,15 @@ Also see TABLE\,\ref{tab:isANONtasks} and \ref{tab:NOTANONschedule}
 % __________________________________________________________
 \newpage
 \subsection{\textbf{Not} Anonymous Current/Pending Info (``NOTANONcurrentPending.tex'')}
-
-\def\bannerColor{Blue} % Color of banner at top of each person's Current/Pending section
-\def\nameColor{White} % Color of font color for the name appearing at the top of each person's Current/Pending section
-\def\sectionColor{lightgray} % Color of separators ("Current Support" and "Pending Grant Support") within each Current/Pending section
-\def\sectionFontColor{Black} % Color of separators font ("Current Support" and "Pending Grant Support") within each Current/Pending section
-\def\thisProposalColor{NavyBlue} % Color of text "(this proposal)" listed as "pending" in the Current/Pending section
-\def\leftBoldface#1{#1} % Makes left column words bold-faced; change {\textbf{#1}} to {#1} or to other preference.
+% The next couple of lines define cell and font colors that can be changed if desired (keep this comment line commented-out!)
+\def\myBannerColor{Blue} % Color of banner at top of each person's Current/Pending section
+\def\myNameColor{White} % Color of font color for the name appearing at the top of each person's Current/Pending section
+\def\mySectionColor{lightgray} % Color of separators ("Current Support" and "Pending Grant Support") within each Current/Pending section
+\def\mySectionFontColor{Black} % Color of separators font ("Current Support" and "Pending Grant Support") within each Current/Pending section
+\def\myThisProposalColor{NavyBlue} % Color of text "(this proposal)" listed as "pending" in the Current/Pending section
+\def\myLeftBoldface#1{\textbf{#1}} % Makes left column words bold-faced; change {\textbf{#1}} to {#1} or to other preference.
+\def\mySectionBoldface#1{\textbf{#1}} % Makes section separator words (Current Support, Pending Grant Support) bold-faced; change {\textbf{#1}} to {#1} or to other preference.
+\def\myNameBoldface#1{\textbf{#1}} % Makes name in banner bold-faced; change {\textbf{#1}} to {#1} or to other preference.
 %
 \begin{longtable}{|l|p{5in}|}
    \expinput{do_NOT_manually_edit/NOTANONcurrentpending}
