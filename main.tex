@@ -146,13 +146,15 @@ The most recent version of the \href{https://docs.google.com/spreadsheets/d/1J9s
 \def\myDollarCaptionIcon{\dollarIcon{-0.3}{0.2}{0.015}\hspace{-0.3em}$=$}  % Size of green "dollar" symbol in the caption
 \def\myTaskCategoryLabel#1#2{{\normalsize\textbf\scshape{#1}}~{\normalsize\textbf{#2}}}  % Format of theTask Category labels
 \def\myTaskTitleLabel#1#2{~{\scriptsize{\textbf{\scshape{#1}}}}~{\color{mediumelectricblue}{\footnotesize\textbf{#2}}}}  % Format of theTask title labels listed under the cattegory
-\def\myFteSize{\small} % Size of the FTE numbers under the 3 Total FTE columns
+\def\myFteTotalFormat#1{\small #1} % Format of the 1st column under Total FTE  (the Sigma column)
+\def\myFteUnfundedFormat#1{\small #1} % Format of the 2n column under Total FTE  (the no-dollar column)
+\def\myFteFundedFormat#1{\small \color{blue} #1} % Format of the last column of FTE numbers under the "funded" column of TOTAL FTE
 \def\myTimelineColor{mediumelectricblue} % Color of the filled-in cells under TASK TIMELINE
-\def\myFundedFteColor{blue} % Color of the last column of FTE numbers under the "funded" column of TOTAL FTE
 \def\myFundedUsTeam#1{\small \color{blue} #1} % Format of funded US team members as their IDs should present under "TASK ASSIGNMENTS"
 \def\myUnfundedUsTeam#1{\small \color{black} #1} % Format of US team members NOT FUNDED through this proposal, as their IDs should present under "TASK ASSIGNMENTS"
 \def\myInternationalTeam#1{\small \color{red} #1} % Format of international team members as their IDs should present under "TASK ASSIGNMENTS"
 %
+
 \addtocounter{table}{-1} %corrects double-counting of sidewaystable and longtable combination
 %\begin{sidewaystable}  %comment out if not needed
   \begingroup
