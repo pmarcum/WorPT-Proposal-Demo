@@ -1,30 +1,30 @@
-%================= BEGIN INSTRUCTIONS =================
-%   H O W   T O   U S E   T H I S   F I L E
-% (1) download or connect to https://github.com/pmarcum/LaTex-Formatting and select the
-%        set of files (aas-style or general) that meet your situation, you can either download the files or link
-%        Overleaf to the needed files in the GitHub repository through URL, and then add the following to
-%        the preamble of your main paper
+%%================= BEGIN INSTRUCTIONS =================
+%%   H O W   T O   U S E   T H I S   F I L E
+%% (1) download or connect to https://github.com/pmarcum/LaTex-Formatting and select the
+%%        set of files (aas-style or general) that meet your situation, you can either download the files or link
+%%        Overleaf to the needed files in the GitHub repository through URL, and then add the following to
+%%        the preamble of your main paper
 %\usepackage{FUpackages}
 %\usepackage{FUformatting}
 %\usepackage{FUnewCommands} % not needed by WorPT files but generally useful
-%
-% (2) copy/paste the following into the main latex file where you want to put this table, and then uncomment the below lines by removing the first percent sign at the beginning of the line.
-%   IMPORTANT SHORTCUT:  You can toggle commenting / un-commenting across multiple lines within Overleaf by mouse-selecting the desired block of lines to un-comment (or comment), and then hitting: control slash ( [Ctrl] / )   ... or ...  command slash  ([command] /)  for a PC or Mac, resp.
-%        (Note that lines that should remain commented-out in the below block have 2 percent signs ... the first will be removed when you uncomment the whole block, but the second percent sign will remain as intended to retain that line as a true comment within the Latex document.)
-%
-% Block of code to be uncommented starts with next line below. The next couple of lines define cell and font colors that can be changed if desired.
-%\def\bannerColor{Blue} % Change to whatever color you want for the banner at top of each person's Current/Pending section
-%\def\nameColor{White} % Change to whatever color you want for the font color for the name appearing at the top of each person's Current/Pending section
-%\def\sectionColor{lightgray} % Change to whatever color you want for the colorof the separators ("Current Support" and "Pending Grant Support") within each Current/Pending section
-%\def\sectionFontColor{Black} % Change to whatever color you want for the font color of the separators ("Current Support" and "Pending Grant Support") within each Current/Pending section
-%\def\thisProposalColor{NavyBlue} % Change to whatever color you want for the font color of the title of THIS proposal that will be listed as "pending" in the Current/Pending section
-%\def\leftBoldface#1{\textbf{#1}} % Change the {\textbf{#1}} to {} if you do not want the words in the left column to be bold-faced
-%\def\thisProposalColor{NavyBlue} % Change to whatever color you want for the font color of the title of THIS proposal that will be listed as "pending" in the Current/Pending section
-%
+%%
+%% (2) copy/paste the following into the main latex file where you want to put this table, and then uncomment the below lines by removing the first percent sign at the beginning of the line.
+%%   IMPORTANT SHORTCUT:  You can toggle commenting / un-commenting across multiple lines within Overleaf by mouse-selecting the desired block of lines to un-comment (or comment), and then hitting: control slash ( [Ctrl] / )   ... or ...  command slash  ([command] /)  for a PC or Mac, resp.
+%%        (Note that lines that should remain commented-out in the below block have 2 percent signs ... the first will be removed when you uncomment the whole block, but the second percent sign will remain as intended to retain that line as a true comment within the Latex document.)
+%% > > > > > > > > > > > > > < < < < < < < < < < < < < <
+%% Block of code to be uncommented by removing the *first* percent-sign at the beginning of the following lines below (leave intentional comments with at least 1 percent sign to keep them commented!)
+%% The next couple of lines define cell and font colors that can be changed if desired (keep this comment line commented-out!)
+%\def\bannerColor{Blue} % Color of banner at top of each person's Current/Pending section
+%\def\nameColor{White} % Color of font color for the name appearing at the top of each person's Current/Pending section
+%\def\sectionColor{lightgray} % Color of separators ("Current Support" and "Pending Grant Support") within each Current/Pending section
+%\def\sectionFontColor{Black} % Color of separators font ("Current Support" and "Pending Grant Support") within each Current/Pending section
+%\def\thisProposalColor{NavyBlue} % Color of text "(this proposal)" listed as "pending" in the Current/Pending section
+%\def\leftBoldface#1{\textbf{#1}} % Makes left column words bold-faced; change {\textbf{#1}} to {} or to other preference.
+%%
 %\begin{longtable}{|l|p{5in}|}
 %   \expinput{do_NOT_manually_edit/NOTANONcurrentpending}
 %\end{longtable}
-%================ E N D   I N S T R U C T I O N S ===============
+%%================ E N D   I N S T R U C T I O N S =============== (leave this line commented out!)
 \hline
 \multicolumn{2}{|c|}{\cellcolor{\bannerColor}\color{\nameColor}\textbf{Dr. Daniel Dent{\'o}n (Principal Investigator)}}\\
 \hline
