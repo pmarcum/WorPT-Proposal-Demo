@@ -23,10 +23,18 @@
 %\def\myIdWksColumnSize{\scriptsize } % Size of column label for "id wks"
 %\def\mySigmaColumnIcon{\textbf{\large{$\Sigma$}}} % Size of Sigma symbol column label
 %\def\myNoDollarColumnIcon{\noDollarIcon{-0.4}{0.4mm}{0.2}{0.15}}  % Size of "no dollar" symbol column label
-%\def\myDollarColumnIcon{\dollarIcon{-0.4}{0.2}{0.015}}  % Size of "no dollar" symbol column label
-%\def\mySigmaCaptionIcon{\textbf{\large{$\Sigma$}}} % Size of Sigma symbol column label
-%\def\myNoDollarCaptionIcon{\noDollarIcon{-0.6}{0.4mm}{0.2}{0.15}}  % Size of "no dollar" symbol column label
-%\def\myDollarCaptionIcon{\dollarIcon{-0.6}{0.2}{0.015}}  % Size of "no dollar" symbol column label
+%\def\myDollarColumnIcon{\dollarIcon{-0.4}{0.2}{0.015}}  % Size of green "dollar" symbol column label
+%\def\mySigmaCaptionIcon{\textbf{\large{$\Sigma$}} $=$} % Size of Sigma symbol in the caption
+%\def\myNoDollarCaptionIcon{\noDollarIcon{-0.3}{0.4mm}{0.2}{0.15}\hspace{-0.3em}$=$}  % Size of "no dollar" symbol in the caption
+%\def\myDollarCaptionIcon{\dollarIcon{-0.3}{0.2}{0.015}\hspace{-0.3em}$=$}  % Size of green "dollar" symbol in the caption
+%\def\myTaskCategoryLabel#1#2{{\normalsize\textbf\scshape{#1}}~{\normalsize\textbf{#2}}}  % Format of theTask Category labels
+%\def\myTaskTitleLabel#1#2{~{\scriptsize{\textbf{\scshape{#1}}}~{\color{mediumelectricblue}{\footnotesize\textbf{#2}}}}  % Format of theTask title labels listed under the cattegory
+%\def\myFteSize {\small} % Size of the FTE numbers under the 3 Total FTE columns
+%\def\myTimelineColor{mediumelectricblue} % Color of the filled-in cells under TASK TIMELINE
+%\def\myFundedFteColor{blue} % Color of the last column of FTE numbers under the "funded" column of TOTAL FTE
+%\def\myFundedUsTeam#1{\small \color{blue} #1} % Format of funded US team members as their IDs should present under "TASK ASSIGNMENTS"
+%\def\myUnfundedUsTeam#1{\small \color{black} #1} % Format of US team members NOT FUNDED through this proposal, as their IDs should present under "TASK ASSIGNMENTS"
+%\def\myInternationalTeam#1{\small \color{red} #1} % Format of international team members as their IDs should present under "TASK ASSIGNMENTS"
 %%
 %\addtocounter{table}{-1} %corrects double-counting of sidewaystable and longtable combination
 %\begin{sidewaystable}  %comment out if not needed
@@ -78,60 +86,60 @@
 & {\myDollarColumnIcon} %\Col2 Total FTE
 \hline
 %beginning level 1 task
-{\normalsize\textbf\scshape{A}}~{\normalsize\textbf{Data and models preparation}}
-& {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} % mpty year quarters
+\myTaskCategoryLabel{A}{Data and models preparation}
+& {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} % empty year quarters
 &{} %empty task assignments
 &\tiny{}&\tiny{}&\tiny{}\\ %empty total FTEs
 %beginning level 2 task
-~{\scriptsize{\textbf{\scshape{A1}}}}~{\color{mediumelectricblue}{\footnotesize\textbf{Generate simulated data}}}
-&{\tiny\cellcolor{mediumelectricblue}}&{\tiny\cellcolor{mediumelectricblue}}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}
-&{ss\,8 {\small\color{blue}pm}\,{\small\color{blue}2} {\small\color{blue}dd}\,{\small\color{blue}4}}
-&{\small0.27}&{\small0.04}&{\small\color{blue}0.23}\\
+\myTaskTitleLabel{{A1}{Generate simulated data}
+&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}
+&{ss\,8 \myFundedUsTeam{pm}\,\myFundedUsTeam{2} \myFundedUsTeam{dd}\,\myFundedUsTeam{4}}
+{\myFteSize 0.27}&{\myFteSize 0.04}&{\myFteSize \color{myFundedFteColor}  0.23}\\
 %beginning level 2 task
-~{\scriptsize{\textbf{\scshape{A2}}}}~{\color{mediumelectricblue}{\footnotesize\textbf{Make emission maps}}}
-&{\tiny\cellcolor{mediumelectricblue}}&{\tiny\cellcolor{mediumelectricblue}}&{\tiny\cellcolor{mediumelectricblue}}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}
-&{{\small\color{blue}dd}\,{\small\color{blue}6} {\small\color{blue}ss}\,{\small\color{blue}6}}
-&{\small0.23}&{\small0.00}&{\small\color{blue}0.23}\\
+\myTaskTitleLabel{{A2}{Make emission maps}
+&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}
+&{\myFundedUsTeam{dd}\,\myFundedUsTeam{6} \myFundedUsTeam{ss}\,\myFundedUsTeam{6}}
+{\myFteSize 0.23}&{\myFteSize 0.00}&{\myFteSize \color{myFundedFteColor}  0.23}\\
 %beginning level 2 task
-~{\scriptsize{\textbf{\scshape{A3}}}}~{\color{mediumelectricblue}{\footnotesize\textbf{Incorporate thermal emission models}}}
-&{\tiny}&{\tiny}&{\tiny\cellcolor{mediumelectricblue}}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}
-&{{\small\color{blue}ss}\,{\small\color{blue}6} {\small\color{black}pm}\,{\small\color{black}4}}
-&{\small0.19}&{\small0.08}&{\small\color{blue}0.12}\\
+\myTaskTitleLabel{{A3}{Incorporate thermal emission models}
+&{\tiny}&{\tiny}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}
+&{\myFundedUsTeam{ss}\,\myFundedUsTeam{6} \myUnfundedUsTeam{pm}\,\myUnfundedUsTeam{4}}
+{\myFteSize 0.19}&{\myFteSize 0.08}&{\myFteSize \color{myFundedFteColor}  0.12}\\
 \hline
 %beginning level 1 task
-{\normalsize\textbf\scshape{B}}~{\normalsize\textbf{Application to archive}}
-& {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} % mpty year quarters
+\myTaskCategoryLabel{B}{Application to archive}
+& {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} % empty year quarters
 &{} %empty task assignments
 &\tiny{}&\tiny{}&\tiny{}\\ %empty total FTEs
 %beginning level 2 task
-~{\scriptsize{\textbf{\scshape{B1}}}}~{\color{mediumelectricblue}{\footnotesize\textbf{Determine fields of interest}}}
-&{\tiny}&{\tiny}&{\tiny\cellcolor{mediumelectricblue}}&{\tiny\cellcolor{mediumelectricblue}}&{\tiny\cellcolor{mediumelectricblue}}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}
-&{pm\,2 {\small\color{blue}dd}\,{\small\color{blue}1} {\small\color{blue}ss}\,{\small\color{blue}1} {\small\color{red}gg}\,{\small\color{red}4}}
-&{\small0.15}&{\small0.12}&{\small\color{blue}0.04}\\
+\myTaskTitleLabel{{B1}{Determine fields of interest}
+&{\tiny}&{\tiny}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}
+&{pm\,2 \myFundedUsTeam{dd}\,\myFundedUsTeam{1} \myFundedUsTeam{ss}\,\myFundedUsTeam{1} \myInternationalTeam{gg}\,\myInternationalTeam{4}}
+{\myFteSize 0.15}&{\myFteSize 0.12}&{\myFteSize \color{myFundedFteColor}  0.04}\\
 %beginning level 2 task
-~{\scriptsize{\textbf{\scshape{B2}}}}~{\color{mediumelectricblue}{\footnotesize\textbf{Reduction of image mosaics}}}
-&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny\cellcolor{mediumelectricblue}}&{\tiny\cellcolor{mediumelectricblue}}&{\tiny\cellcolor{mediumelectricblue}}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}
-&{{\small\color{blue}dd}\,{\small\color{blue}4} {\small\color{blue}ss}\,{\small\color{blue}3} {\small\color{red}gg}\,{\small\color{red}5}}
-&{\small0.23}&{\small0.10}&{\small\color{blue}0.13}\\
+\myTaskTitleLabel{{B2}{Reduction of image mosaics}
+&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}
+&{\myFundedUsTeam{dd}\,\myFundedUsTeam{4} \myFundedUsTeam{ss}\,\myFundedUsTeam{3} \myInternationalTeam{gg}\,\myInternationalTeam{5}}
+{\myFteSize 0.23}&{\myFteSize 0.10}&{\myFteSize \color{myFundedFteColor}  0.13}\\
 \hline
 %beginning level 1 task
-{\normalsize\textbf\scshape{C}}~{\normalsize\textbf{Documentation and publications}}
-& {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} % mpty year quarters
+\myTaskCategoryLabel{C}{Documentation and publications}
+& {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} % empty year quarters
 &{} %empty task assignments
 &\tiny{}&\tiny{}&\tiny{}\\ %empty total FTEs
 %beginning level 2 task
-~{\scriptsize{\textbf{\scshape{C1}}}}~{\color{mediumelectricblue}{\footnotesize\textbf{Code documentation \& verification}}}
-&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny\cellcolor{mediumelectricblue}}&{\tiny\cellcolor{mediumelectricblue}}&{\tiny\cellcolor{mediumelectricblue}}&{\tiny\cellcolor{mediumelectricblue}}&{\tiny}&{\tiny}&{\tiny}
-&{{\small\color{blue}ss}\,{\small\color{blue}8} {\small\color{blue}dd}\,{\small\color{blue}3} {\small\color{black}pm}\,{\small\color{black}6}}
-&{\small0.33}&{\small0.12}&{\small\color{blue}0.21}\\
+\myTaskTitleLabel{{C1}{Code documentation \& verification}
+&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny}&{\tiny}&{\tiny}
+&{\myFundedUsTeam{ss}\,\myFundedUsTeam{8} \myFundedUsTeam{dd}\,\myFundedUsTeam{3} \myUnfundedUsTeam{pm}\,\myUnfundedUsTeam{6}}
+{\myFteSize 0.33}&{\myFteSize 0.12}&{\myFteSize \color{myFundedFteColor}  0.21}\\
 %beginning level 2 task
-~{\scriptsize{\textbf{\scshape{C2}}}}~{\color{mediumelectricblue}{\footnotesize\textbf{Pub 1: pipeline and improved images}}}
-&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny\cellcolor{mediumelectricblue}}&{\tiny\cellcolor{mediumelectricblue}}&{\tiny\cellcolor{mediumelectricblue}}&{\tiny}&{\tiny}
-&{{\small\color{blue}dd}\,{\small\color{blue}4} {\small\color{blue}pm}\,{\small\color{blue}2} {\small\color{blue}ss}\,{\small\color{blue}4} {\small\color{red}gg}\,{\small\color{red}6}}
-&{\small0.31}&{\small0.12}&{\small\color{blue}0.19}\\
+\myTaskTitleLabel{{C2}{Pub 1: pipeline and improved images}
+&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny}&{\tiny}
+&{\myFundedUsTeam{dd}\,\myFundedUsTeam{4} \myFundedUsTeam{pm}\,\myFundedUsTeam{2} \myFundedUsTeam{ss}\,\myFundedUsTeam{4} \myInternationalTeam{gg}\,\myInternationalTeam{6}}
+{\myFteSize 0.31}&{\myFteSize 0.12}&{\myFteSize \color{myFundedFteColor}  0.19}\\
 %beginning level 2 task
-~{\scriptsize{\textbf{\scshape{C3}}}}~{\color{mediumelectricblue}{\footnotesize\textbf{Pub 2: galaxy identification}}}
-&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny\cellcolor{mediumelectricblue}}&{\tiny\cellcolor{mediumelectricblue}}&{\tiny\cellcolor{mediumelectricblue}}&{\tiny\cellcolor{mediumelectricblue}}
-&{{\small\color{blue}pm}\,{\small\color{blue}4} {\small\color{blue}dd}\,{\small\color{blue}3} {\small\color{blue}ss}\,{\small\color{blue}3} {\small\color{red}gg}\,{\small\color{red}6}}
-&{\small0.31}&{\small0.12}&{\small\color{blue}0.19}\\
+\myTaskTitleLabel{{C3}{Pub 2: galaxy identification}
+&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}
+&{\myFundedUsTeam{pm}\,\myFundedUsTeam{4} \myFundedUsTeam{dd}\,\myFundedUsTeam{3} \myFundedUsTeam{ss}\,\myFundedUsTeam{3} \myInternationalTeam{gg}\,\myInternationalTeam{6}}
+{\myFteSize 0.31}&{\myFteSize 0.12}&{\myFteSize \color{myFundedFteColor}  0.19}\\
 \hline
