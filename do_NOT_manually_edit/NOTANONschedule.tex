@@ -33,6 +33,7 @@
 %\def\myFteUnfundedFormat#1{{\small #1}} % Format of the 2n column under Total FTE  (the no-dollar column)
 %\def\myFteFundedFormat#1{{\small \color{blue} #1} % Format of the last column of FTE numbers under the "funded" column of TOTAL FTE
 %\def\myTimelineColor{mediumelectricblue} % Color of the filled-in cells under TASK TIMELINE
+%\def\myTimelineSize{\tiny} % Controls the width of the filled-in cells under TASK TIMELINE
 %\def\myFundedUsTeam#1{\small \color{blue} #1} % Format of funded US team members as their IDs should present under "TASK ASSIGNMENTS"
 %\def\myUnfundedUsTeam#1{\small \color{black} #1} % Format of US team members NOT FUNDED through this proposal, as their IDs should present under "TASK ASSIGNMENTS"
 %\def\myInternationalTeam#1{\small \color{red} #1} % Format of international team members as their IDs should present under "TASK ASSIGNMENTS"
@@ -90,20 +91,20 @@
 \myTaskCategoryLabel{A}{Data and models preparation}
 & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} % empty year quarters
 &{} %empty task assignments
-&\tiny{}&\tiny{}&\tiny{}\\ %empty total FTEs
+&\myTimelineSize{}&\myTimelineSize{}&\myTimelineSize{}\\ %empty total FTEs
 %beginning level 2 task
 \myTaskTitleLabel{A1}{Generate simulated data}
-&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}
+&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}
 &{ss\,8 \myFundedUsTeam{pm}\,\myFundedUsTeam{2} \myFundedUsTeam{dd}\,\myFundedUsTeam{4}}
 & \myFteTotalFormat{0.27} & \myFteUnfundedFormat{0.04} & \myFteFundedFormat{0.23}\\
 %beginning level 2 task
 \myTaskTitleLabel{A2}{Make emission maps}
-&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}
+&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}
 &{\myFundedUsTeam{dd}\,\myFundedUsTeam{6} \myFundedUsTeam{ss}\,\myFundedUsTeam{6}}
 & \myFteTotalFormat{0.23} & \myFteUnfundedFormat{0.00} & \myFteFundedFormat{0.23}\\
 %beginning level 2 task
 \myTaskTitleLabel{A3}{Incorporate thermal emission models}
-&{\tiny}&{\tiny}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}
+&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}
 &{\myFundedUsTeam{ss}\,\myFundedUsTeam{6} \myUnfundedUsTeam{pm}\,\myUnfundedUsTeam{4}}
 & \myFteTotalFormat{0.19} & \myFteUnfundedFormat{0.08} & \myFteFundedFormat{0.12}\\
 \hline
@@ -111,15 +112,15 @@
 \myTaskCategoryLabel{B}{Application to archive}
 & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} % empty year quarters
 &{} %empty task assignments
-&\tiny{}&\tiny{}&\tiny{}\\ %empty total FTEs
+&\myTimelineSize{}&\myTimelineSize{}&\myTimelineSize{}\\ %empty total FTEs
 %beginning level 2 task
 \myTaskTitleLabel{B1}{Determine fields of interest}
-&{\tiny}&{\tiny}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}
+&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}
 &{pm\,2 \myFundedUsTeam{dd}\,\myFundedUsTeam{1} \myFundedUsTeam{ss}\,\myFundedUsTeam{1} \myInternationalTeam{gg}\,\myInternationalTeam{4}}
 & \myFteTotalFormat{0.15} & \myFteUnfundedFormat{0.12} & \myFteFundedFormat{0.04}\\
 %beginning level 2 task
 \myTaskTitleLabel{B2}{Reduction of image mosaics}
-&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}
+&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}
 &{\myFundedUsTeam{dd}\,\myFundedUsTeam{4} \myFundedUsTeam{ss}\,\myFundedUsTeam{3} \myInternationalTeam{gg}\,\myInternationalTeam{5}}
 & \myFteTotalFormat{0.23} & \myFteUnfundedFormat{0.10} & \myFteFundedFormat{0.13}\\
 \hline
@@ -127,20 +128,20 @@
 \myTaskCategoryLabel{C}{Documentation and publications}
 & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} % empty year quarters
 &{} %empty task assignments
-&\tiny{}&\tiny{}&\tiny{}\\ %empty total FTEs
+&\myTimelineSize{}&\myTimelineSize{}&\myTimelineSize{}\\ %empty total FTEs
 %beginning level 2 task
 \myTaskTitleLabel{C1}{Code documentation \& verification}
-&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny}&{\tiny}&{\tiny}
+&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}
 &{\myFundedUsTeam{ss}\,\myFundedUsTeam{8} \myFundedUsTeam{dd}\,\myFundedUsTeam{3} \myUnfundedUsTeam{pm}\,\myUnfundedUsTeam{6}}
 & \myFteTotalFormat{0.33} & \myFteUnfundedFormat{0.12} & \myFteFundedFormat{0.21}\\
 %beginning level 2 task
 \myTaskTitleLabel{C2}{Pub 1: pipeline and improved images}
-&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny}&{\tiny}
+&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize}&{\myTimelineSize}
 &{\myFundedUsTeam{dd}\,\myFundedUsTeam{4} \myFundedUsTeam{pm}\,\myFundedUsTeam{2} \myFundedUsTeam{ss}\,\myFundedUsTeam{4} \myInternationalTeam{gg}\,\myInternationalTeam{6}}
 & \myFteTotalFormat{0.31} & \myFteUnfundedFormat{0.12} & \myFteFundedFormat{0.19}\\
 %beginning level 2 task
 \myTaskTitleLabel{C3}{Pub 2: galaxy identification}
-&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}&{\tiny\cellcolor{\myTimelineColor}}
+&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}
 &{\myFundedUsTeam{pm}\,\myFundedUsTeam{4} \myFundedUsTeam{dd}\,\myFundedUsTeam{3} \myFundedUsTeam{ss}\,\myFundedUsTeam{3} \myInternationalTeam{gg}\,\myInternationalTeam{6}}
 & \myFteTotalFormat{0.31} & \myFteUnfundedFormat{0.12} & \myFteFundedFormat{0.19}\\
 \hline
