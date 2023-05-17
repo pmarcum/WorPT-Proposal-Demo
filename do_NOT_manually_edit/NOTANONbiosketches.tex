@@ -1,33 +1,45 @@
-%======================================================
-%     H O W   T O   U S E   T H I S   F I L E
-% (1) download or connect to https://github.com/pmarcum/LaTex-Formatting and select the
-%        set of files (aas-style or general) that meet your situation, you can either download the files or link
-%        Overleaf to the needed files in the GitHub repository through URL, and then add the following to
-%        the preamble of your main paper
+%%================= BEGIN INSTRUCTIONS =================
+%%   H O W   T O   U S E   T H I S   F I L E
+%% (1) download or connect to https://github.com/pmarcum/LaTex-Formatting and select the
+%%        set of files (aas-style or general) that meet your situation, you can either download the files or link
+%%        Overleaf to the needed files in the GitHub repository through URL, and then add the following to
+%%        the preamble of your main paper
 %\usepackage{FUpackages}
 %\usepackage{FUformatting}
 %\usepackage{FUnewCommands} % not needed by WorPT files but generally useful
-% (2) type the following into the main latex file where you want to put this section of text (it is not a table):
+%%
+%% (2) copy/paste the following into the main latex file where you want to put this section of text (it is not a table), and then uncomment the below lines by removing the first percent sign at the beginning of the line
+%%   IMPORTANT SHORTCUT:  You can toggle commenting / un-commenting across multiple lines within Overleaf by mouse-selecting the desired block of lines to un-comment (or comment), and then hitting: control slash ( [Ctrl] / )   ... or ...  command slash  ([command] /)  for a PC or Mac, resp.
+%%        (Note that lines that should remain commented-out in the below block have 2 percent signs ... the first will be removed when you uncomment the whole block, but the second percent sign will remain as intended to retain that line as a true comment within the Latex document.)
+%% > > > > > > > > > > > > > < < < < < < < < < < < < < <
+%% Block of code to be uncommented by removing the *first* percent-sign at the beginning of the following lines below (leave intentional comments with at least 1 percent sign to keep them commented!)
+%% The next couple of lines define cell and font colors that can be changed if desired (keep this comment line commented-out!)
+%\def\myNameBoldface#1{\textbf{#1}} % Makes the name and role at the top of each person's biographical sketch bold-faced; change {\textbf{#1}} to {#1} or to other preference.
+%\def\myNameColor{Blue} % Color of the name and role at the top of each person's biographical sketch
+%\def\myNameSize{large} % SIze of the name and role at the top of each person's biographical sketch
+%\def\myLabelBoldface#1{\textbf{#1}} % Makes the category labels ("Edicuation", "Appointments", etc) in  each person's biographical sketch bold-faced; change {\textbf{#1}} to {#1} or to other preference.
+%\def\mySectionSpacing{\par \vspace{-0.5em}} % Vertical spacing between the categories within a person's biographical sketch
+%%
 %\clearpage  % or you might want to use \newpage or \pagebreak, whatever works best
 %\input{do_NOT_manually_edit/NOTANONbiosketches}
 %================ E N D   I N S T R U C T I O N S ===============
-\textbf{\color{Blue}\large Dr. Daniel Dent{\'o}n (Principal Investigator):}\\
+\myNameBoldface{\color{\myNameColor}\myNameSizeDr. Daniel Dent{\'o}n (Principal Investigator):}\\
 University of CBA
 \par \vspace{-0.5em}
-\textbf{Education}\\
+\myLabelBoldface{Education}\\
 01/01/2000$-$12/31/2003, University of XYZ, B.S., astronomy\\
 01/01/2004$-$12/31/2008, University of ABC, Ph.D., astrophysics
-\par \vspace{-0.5em}
-\textbf{Appointments}\\
+\mySectionSpacing
+\myLabelBoldface{Appointments}\\
 01/01/2012$-$present, professor, University of CBA\\
 01/03/2009$-$01/08/2011, postdoc, University of ZYX
-\par \vspace{-0.5em}
-\textbf{Additional Awards, Positions, Fellowships and Proposals}\\
+\mySectionSpacing
+\myLabelBoldface{Additional Awards, Positions, Fellowships and Proposals}\\
 01/05/2011, Best Researcher of the Year\\
 01/10/2011$-$01/10/2012, Awarded 100 hrs on Gigantic Telescope\\
 2023, Nobel Prize in Physics
-\par \vspace{-0.5em}
-\textbf{Publications relevant for the proposal:}\\
+\mySectionSpacing
+\myLabelBoldface{Publications relevant for the proposal:}\\
 {\scriptsize{$\bullet$}} Lopez-Rodriguez, E., Mao, S.A., Beck, R., et al. (inc. \textbf{Denton, D.}), 2022, "Extragalactic magnetism with SOFIA (SALSA Legacy Program) IV: Program overview and first results on the polarization fraction" (submitted to ApJ)\\
 {\scriptsize{$\bullet$}} Young, E.T., Herter, T.L., Gusten, R., et al. (inc. \textbf{Denton, D.}), 2021, "Early science results from SOFIA", 8444, 844410\\
 {\scriptsize{$\bullet$}} Miles, J.W., Helton, L.A, Sankrit, R., et al. (inc. \textbf{Denton, D.}), 2018, "Capabilities, performance, and status of the SOFIA science instrument suite", SPIA, 8867, 88670N\\
@@ -35,37 +47,37 @@ University of CBA
 {\scriptsize{$\bullet$}} Gehrz, R.D., Becklin, E.E., et al. (inc.\textbf{Denton, D.}), 2015, "Status of the Stratospheric Observatory for Infrared Astronomy (SOFIA)", Adv. in Space Research, 48, 1004\\
 {\scriptsize{$\bullet$}} \textbf{Denton, D.}, Appleton, P.N., Higdon, J.L, 2010, "Large Infrared and Optical Color Gradients in the Carwheel Ring Galaxy: Evidence fo rthe First Epoch of Star Formation in the Wake of an Expanding Ring", ApJ, 399, 57
 \medskip \hrule \vspace{5pt} \medskip
-\textbf{\color{Blue}\large Dr. Sally Smith (Science PI):}\\
+\myNameBoldface{\color{\myNameColor}\myNameSizeDr. Sally Smith (Science PI):}\\
 University of CBA
 \par \vspace{-0.5em}
-\textbf{Education}\\
+\myLabelBoldface{Education}\\
 01/01/2014$-$12/31/2020, University of lmn, Ph.D., astronomy\\
 01/01/2010$-$12/31/2014, University of abc, B.S., physics
-\par \vspace{-0.5em}
-\textbf{Appointments}\\
+\mySectionSpacing
+\myLabelBoldface{Appointments}\\
 01/01/2023$-$present, research fellow, University of CBA\\
 01/03/2020$-$01/08/2022, postdoc, University of ZYX
-\par \vspace{-0.5em}
-\textbf{Additional Awards, Positions, Fellowships and Proposals}\\
+\mySectionSpacing
+\myLabelBoldface{Additional Awards, Positions, Fellowships and Proposals}\\
 4333, Teaching assistant award\\
 01/10/2011$-$01/10/2012, Awarded 100 hrs on Gigantic Telescope
-\par \vspace{-0.5em}
-\textbf{Publications relevant for the proposal:}\\
+\mySectionSpacing
+\myLabelBoldface{Publications relevant for the proposal:}\\
 {\scriptsize{$\bullet$}} Lopez-Rodriguez, E., Mao, S.A., Beck, R., et al. (inc. \textbf{Smith, S.}), 2022, "Extragalactic magnetism with SOFIA (SALSA Legacy Program) IV: Program overview and first results on the polarization fraction" (submitted to ApJ)\\
 {\scriptsize{$\bullet$}} Young, E.T., Herter, T.L., Gusten, R., et al. (inc. \textbf{Smith, S.}), 2021, "Early science results from SOFIA", 8444, 844410\\
 {\scriptsize{$\bullet$}} Gehrz, R.D., Becklin, E.E., et al. (inc.\textbf{Smith, S.}), 2015, "Status of the Stratospheric Observatory for Infrared Astronomy (SOFIA)", Adv. in Space Research, 48, 1004\\
 {\scriptsize{$\bullet$}} \textbf{Smith, S.}, Appleton, P.N., Higdon, J.L, 2010, "Large Infrared and Optical Color Gradients in the Carwheel Ring Galaxy: Evidence fo rthe First Epoch of Star Formation in the Wake of an Expanding Ring", ApJ, 399, 57
 \medskip \hrule \vspace{5pt} \medskip
-\textbf{\color{Blue}\large Dr. Pamela M. Marcum (co-Investigator):}\\
+\myNameBoldface{\color{\myNameColor}\myNameSizeDr. Pamela M. Marcum (co-Investigator):}\\
 NASA ARC
 \par \vspace{-0.5em}
-\textbf{Education}\\
+\myLabelBoldface{Education}\\
 1994, University of Wisconsin, Ph.D., Astrophysics\\
 1989, Florida Institute of Technology, M.S., Space Science\\
 1989, Florida Institute of Technology, M.S., Physics\\
 1987, Florida Institute of Technology, B.S., Space Science
-\par \vspace{-0.5em}
-\textbf{Appointments}\\
+\mySectionSpacing
+\myLabelBoldface{Appointments}\\
 2016$-$present, research scientist, NASA Ames Research Center\\
 2020$-$2021, program officer (on detail), NASA HQ, Washington, D.C.\\
 2009$-$2016, SOFIA project scientist, NASA Ames Research Center\\
@@ -73,12 +85,12 @@ NASA ARC
 2003$-$2009, associate professor, Texas Christian University (Fort Worth, TX)\\
 1996$-$2002, assistant professor, Texas Christian University (Fort Worth, TX)\\
 1994$-$1996, postdoctoral fellow, University of Virginia
-\par \vspace{-0.5em}
-\textbf{Additional Awards, Positions, Fellowships and Proposals}\\
+\mySectionSpacing
+\myLabelBoldface{Additional Awards, Positions, Fellowships and Proposals}\\
 2021, VLA/21A-043,"Flares, breaks and warps in the outskirts of the HI and stellar disk of UGC11859", 9h, HI observations, JVLA C-array\\
 2020, VLA/20A-485, "Flares, warps and breaks in the outskirts of the HI and stellar disk of UGC11859", 4h (DDT), HI observations, JVLA C-array
-\par \vspace{-0.5em}
-\textbf{Publications relevant for the proposal:}\\
+\mySectionSpacing
+\myLabelBoldface{Publications relevant for the proposal:}\\
 {\scriptsize{$\bullet$}} Ashley, T., \textbf{Marcum, P.M.}, Alpaslan, M., Fanelli, M.N., Frost, J.D., 2019, "The Neutral Gas Properties of Extremely Isolated Early-type Galaxies III", AJ, 157, 158\\
 {\scriptsize{$\bullet$}} Alpaslan, M., Grootes, M.W., \textbf{Marcum, P.M.}, et al., 2016, "Galaxy And Mass Assembly (GAMA): Stellar mass growth of spiral galaxies in the cosmic web", MNRAS, 457, 2287\\
 {\scriptsize{$\bullet$}} van Driel, W., \textbf{Marcum, P.M.}, Gallagher, J.S., et al., 2001, "HI observations of loose galaxy groups I. Data and global properties", A\&A, 378, 370
