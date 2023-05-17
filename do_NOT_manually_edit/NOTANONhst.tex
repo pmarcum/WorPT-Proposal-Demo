@@ -1,13 +1,23 @@
-%======================================================
-%     H O W   T O   U S E   T H I S   F I L E
-% (1) download or connect to https://github.com/pmarcum/LaTex-Formatting and select the
-%        set of files (aas-style or general) that meet your situation, you can either download the files or link
-%        Overleaf to the needed files in the GitHub repository through URL, and then add the following to
-%        the preamble of your main paper
+%%================= BEGIN INSTRUCTIONS =================
+%%   H O W   T O   U S E   T H I S   F I L E
+%% (1) download or connect to https://github.com/pmarcum/LaTex-Formatting and select the
+%%        set of files (aas-style or general) that meet your situation, you can either download the files or link
+%%        Overleaf to the needed files in the GitHub repository through URL, and then add the following to
+%%        the preamble of your main paper
 %\usepackage{FUpackages}
 %\usepackage{FUformatting}
 %\usepackage{FUnewCommands} % not needed by WorPT files but generally useful
-% (2) type the following into the main latex file where you want to put this table:
+%%
+%% (2) copy/paste the following into the main latex file where you want to put this table, and then uncomment the below lines by removing the first percent sign at the beginning of the line.
+%%   IMPORTANT SHORTCUT:  You can toggle commenting / un-commenting across multiple lines within Overleaf by mouse-selecting the desired block of lines to un-comment (or comment), and then hitting: control slash ( [Ctrl] / )   ... or ...  command slash  ([command] /)  for a PC or Mac, resp.
+%%        (Note that lines that should remain commented-out in the below block have 2 percent signs ... the first will be removed when you uncomment the whole block, but the second percent sign will remain as intended to retain that line as a true comment within the Latex document.)
+%% > > > > > > > > > > > > > < < < < < < < < < < < < < <
+%% Block of code to be uncommented by removing the *first* percent-sign at the beginning of the following lines below (leave intentional comments with at least 1 percent sign to keep them commented!)
+%% The next couple of lines define cell and font colors that can be changed if desired (keep this comment line commented-out!)
+%\def\myHeaderColor{Blue} % Color of column headings
+%\def\myLabelColor{White} % Color of font column headings
+%\def\myLabelBoldface#1{\textbf{#1}} % Makes column labels bold-faced; change {\textbf{#1}} to {#1} or to other preference.
+%%
 %\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 %{
 %   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
@@ -22,8 +32,8 @@
 %      \expinput{do_NOT_manually_edit/NOTANONhst}
 %   \end{longtable}
 %}
-%======================================================
-\textbf{\cellcolor{Blue}\color{White}Contributor} & \textbf{\cellcolor{Blue}\color{White}Position} \newline{\textbf{\cellcolor{Blue}\color{White}Institution}\newline{\textbf{\cellcolor{Blue}\color{White}US/Foreign}}} & \textbf{\cellcolor{Blue}\color{White}Role} & \textbf{\cellcolor{Blue}\color{White}\$?} & \textbf{\cellcolor{Blue}\color{White}FTE}\\
+%%================ E N D   I N S T R U C T I O N S =============== (leave this line commented out!)
+\myLabelBoldface{\cellcolor{\myHeaderColor}\color{\myLabelColor}Contributor} & \myLabelBoldface{\cellcolor{\myHeaderColor}\color{\myLabelColor}Position} \newline{\myLabelBoldface{\cellcolor{\myHeaderColor}\color{\myLabelColor}Institution}\newline{\myLabelBoldface{\cellcolor{\myHeaderColor}\color{\myLabelColor}US/Foreign}}} & \myLabelBoldface{\cellcolor{\myHeaderColor}\color{\myLabelColor}Role} & \myLabelBoldface{\cellcolor{\myHeaderColor}\color{\myLabelColor}\$?} & \myLabelBoldface{\cellcolor{\myHeaderColor}\color{\myLabelColor}FTE}\\
 \hline\hline
 Dan J. Dent{\'{o}}n, III \newline{Principal Investigator} &  professor \newline{University of CBA} \newline{US} & will lead production of emission maps, image mosaic reduction, and paper~\#1; will assist with generating simulated data, identifying fields of interest, code documentation and with paper \#2. & Y & 0.45\hline
 Sally K. Smith \newline{Science PI} &  postdoc \newline{University of CBA} \newline{US} & will lead simulated data for model input and thermal model incorporation, and code documentation. and will assist with emission maps, image mosaics and field identification, and papers~1-2 writing. & Y & 0.75\hline
