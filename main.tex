@@ -8,11 +8,11 @@
 \fancyhead[L]{\color{WatermarkColor}EXAMPLES}
 \fancyhead[R]{\color{WatermarkColor}All of the \texttt{WorPT} Tables}
 % create the no-dollar sign to use in NOTANONschedule.tex to represent FTEs not covered in the proposal budget 
-\newcommand{\noDollarIcon}[4][-0.3][0.4mm][0.2][0.15]{{\raisebox{#1\normalbaselineskip}[0pt][0pt]{\begin{tikzpicture}
+\newcommand{\noDollarIcon}[4]{\raisebox{#1 normalbaselineskip}[0pt][0pt]{\begin{tikzpicture}
    \draw[fill=white,draw=red,line width=#2] (0,0) circle[radius=#3];
    \draw[line width=#2,red] node[midway,black]{\faDollar} (#4,#4) -- (-#4,-#4);
    \draw[line width=#2,red] (#4,#4) -- (-#4,-#4);
-   \end{tikzpicture}}}}
+   \end{tikzpicture}}}
 %....................................
 
 %      S T A R T  D O C U M E N T 
@@ -134,32 +134,32 @@ The most recent version of the \href{https://docs.google.com/spreadsheets/d/1J9s
 \def\myQuarterColumnSize{\scriptsize } % Size of column label for "1", "2", "3", "4" quarter labels on columns
 \def\myIdWksColumnSize{\scriptsize } % Size of column label for "id wks"
 \def\mySigmaColumnSize{\large } % Size of Sigma symbol column label
-\def\myNoDollarColumnSize{{\raisebox{-0.3\normalbaselineskip}[0pt][0pt]{\begin{tikzpicture}  % Size of "no dollar" symbol column label
-   \draw[fill=white,draw=red,line width=0.4mm] (0,0) circle[radius=0.2];
-   \draw[line width=0.4mm,red] node[midway,black]{\faDollar} (0.15,0.15) -- (-0.15,-0.15);
-   \draw[line width=0.4mm,red] (0.15,0.15) -- (-0.15,-0.15);
-   \end{tikzpicture}}}}
+\def\myNoDollarColumnIcon{\noDollarIcon{-0.3}{0.4mm}{0.2}{0.15} }  % Size of "no dollar" symbol column label
+
+\myNoDollarColumnIcon
 
 
-\addtocounter{table}{-1} %corrects double-counting of sidewaystable and longtable combination
-%\begin{sidewaystable}  %comment out if not needed
-   \begingroup
-      \setlength{\tabcolsep}{1pt}  % changes horizontal spacing between columns
-      \renewcommand{\arraystretch}{0.8} %changes vertical space between rows
-      \centerline{
-         \begin{minipage}{1.5\textwidth}  %wide table needs some of the margin?  change 1.5 to whatever
-            \begin{longtable} {|>{\raggedright\arraybackslash}p{3.1in} % title column
-               *{3}{|p{1ex}!{\color{lightgray}\vrule}*{2}{p{1ex}!{\color{lightgray}\vrule}}p{1ex}}%year
-               |>{\raggedright\arraybackslash}p{20ex}%task assignments (ID and \#Weeks)
-               |p{5ex}!{\color{lightgray}\vrule}p{5ex}!{\color{lightgray}\vrule}c|%TOTAL FTE columns
-               }
-               \expinput{do_NOT_manually_edit/NOTANONschedule}
-            \end{longtable}
-         \end{minipage}
-      }
-   \endgroup
-   \caption{\label{tab:NOTANONschedule} Resource-loaded project schedule, where: {\raisebox{-0.3\normalbaselineskip}[0pt][0pt]{\begin{tikzpicture} \draw[fill=white,draw=red,line width=0.4mm] (0,0) circle[radius=0.2]; \draw[line width=0.4mm,red] node[midway,black]{\faDollar} (0.15,0.15) -- (-0.15,-0.15);  \draw[line width=0.4mm,red] (0.15,0.15) -- (-0.15,-0.15);  \end{tikzpicture}}} Not funded by this grant,  {\raisebox{-0.3\normalbaselineskip}[0pt][0pt]{\begin{tikzpicture}  \draw[fill=green,draw=black] (0,0) circle[radius=0.2];  \draw[draw=green] (-0.015,0.015) -- (0.015,-0.015) node[midway]{\faDollar};  \end{tikzpicture}}} funded by this grant, {\textbf{\large{$\Sigma$}}} funded $+$ unfunded; Tasks are listed (left side), with duration of task activity indicated in blue-colored timelines  that measure quarter-years (1,2,3,4). Task assignments identify specific team members responsible for  implementation with associated work weeks, where color indicates institutional affiliation  (blue$=$funded/U.S., black$=$not funded/U.S., red=international). "Total FTE" (right side) are integrated work-weeks converted into FTE per task (1~FTE$=$12~months), displayed as "total",  "unfunded by this grant", and "funded by this grant", resp.  Asignment identities:  {\textbf{dd}}: Dan.Dent{\'{o}}n, {\textbf{gg}}: Gisella.Gala, {\textbf{pm}}: Pamela.Marcum, {\textbf{ss}}: Sally.Smith}
-%\end{sidewaystable}  % comment out if not used
+
+
+% \addtocounter{table}{-1} %corrects double-counting of sidewaystable and longtable combination
+% %\begin{sidewaystable}  %comment out if not needed
+%    \begingroup
+%       \setlength{\tabcolsep}{1pt}  % changes horizontal spacing between columns
+%       \renewcommand{\arraystretch}{0.8} %changes vertical space between rows
+%       \centerline{
+%          \begin{minipage}{1.5\textwidth}  %wide table needs some of the margin?  change 1.5 to whatever
+%             \begin{longtable} {|>{\raggedright\arraybackslash}p{3.1in} % title column
+%                *{3}{|p{1ex}!{\color{lightgray}\vrule}*{2}{p{1ex}!{\color{lightgray}\vrule}}p{1ex}}%year
+%                |>{\raggedright\arraybackslash}p{20ex}%task assignments (ID and \#Weeks)
+%                |p{5ex}!{\color{lightgray}\vrule}p{5ex}!{\color{lightgray}\vrule}c|%TOTAL FTE columns
+%                }
+%                \expinput{do_NOT_manually_edit/NOTANONschedule}
+%             \end{longtable}
+%          \end{minipage}
+%       }
+%    \endgroup
+%    \caption{\label{tab:NOTANONschedule} Resource-loaded project schedule, where: {\raisebox{-0.3\normalbaselineskip}[0pt][0pt]{\begin{tikzpicture} \draw[fill=white,draw=red,line width=0.4mm] (0,0) circle[radius=0.2]; \draw[line width=0.4mm,red] node[midway,black]{\faDollar} (0.15,0.15) -- (-0.15,-0.15);  \draw[line width=0.4mm,red] (0.15,0.15) -- (-0.15,-0.15);  \end{tikzpicture}}} Not funded by this grant,  {\raisebox{-0.3\normalbaselineskip}[0pt][0pt]{\begin{tikzpicture}  \draw[fill=green,draw=black] (0,0) circle[radius=0.2];  \draw[draw=green] (-0.015,0.015) -- (0.015,-0.015) node[midway]{\faDollar};  \end{tikzpicture}}} funded by this grant, {\textbf{\large{$\Sigma$}}} funded $+$ unfunded; Tasks are listed (left side), with duration of task activity indicated in blue-colored timelines  that measure quarter-years (1,2,3,4). Task assignments identify specific team members responsible for  implementation with associated work weeks, where color indicates institutional affiliation  (blue$=$funded/U.S., black$=$not funded/U.S., red=international). "Total FTE" (right side) are integrated work-weeks converted into FTE per task (1~FTE$=$12~months), displayed as "total",  "unfunded by this grant", and "funded by this grant", resp.  Asignment identities:  {\textbf{dd}}: Dan.Dent{\'{o}}n, {\textbf{gg}}: Gisella.Gala, {\textbf{pm}}: Pamela.Marcum, {\textbf{ss}}: Sally.Smith}
+% %\end{sidewaystable}  % comment out if not used
 
 % @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 % @@@@@@@@@@@@@@@@@ T A S K   A S S I G N M E N T S @@@@@@@@@@@@@@@@@@@@@@@@@@@@
