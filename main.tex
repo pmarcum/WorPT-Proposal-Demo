@@ -136,13 +136,12 @@ The most recent version of the \href{https://docs.google.com/spreadsheets/d/1J9s
 \def\myTaskCategoryBoldface#1{\textbf{#1}} % Bold-face the task category title; to remove boldface or change, replace \textbf{#1} with {#1}
 %
 \addtocounter{table}{-1} % corrects double-counting of longtable and table combination
-\addtocounter{table}{-1} % corrects double-counting of longtable and table combination
 \begin{table*}[h!] %table is needed so that table caption at bottom has same width as table
-   \renewcommand{\arraystretch}{0.7} %adjust to control vertical row separation/spacing
-   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing
-   \begin{longtable}{|p{2.8in}||c!{\color{lightgray}\vrule}c!{\color{lightgray}\vrule}!{\color{lightgray}\vrule}c!{\color{lightgray}\vrule}c||p{0.45in}!{\color{lightgray}\vrule}p{1.2in}|}
-      \expinput{do_NOT_manually_edit/isANONtasks}
-   \end{longtable}
+  \renewcommand{\arraystretch}{0.7} %adjust to control vertical row separation/spacing
+  \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing
+  \begin{longtable}{|p{2.7in}||c!{\color{\myYearQuarterLineColor}\vrule}c!{\color{myYearQuarterLineColor}\vrule}!{\color{myYearQuarterLineColor}\vrule}c!{\color{myYearQuarterLineColor}\vrule}c||p{0.45in}!{\color{myYearQuarterLineColor}\vrule}p{1.45in}|}
+     \expinput{do_NOT_manually_edit/isANONtasks}
+  \end{longtable}
    \caption{\label{tab:isANONtasks} \textbf{Task Timeline:} Team member roles, rightmost column, are cross-referenced with corresponding names in the non-anonymized personnel and work effort table.  {\color{red} \textbf{Paper~1:} Sample and methods for enhancing detectability of  low SB X-ray emission, presentation of emission maps, description of database and pipeline software (which will be released in a public repository at the time of paper submission). \textbf{Paper~2:} Methodologies for measuring the gas halo size and other gas properties, analyisis of the diffuse hot gas halos as functions of galaxy properties (environment, galaxy morphology, stellar mass, and SFR based on \Chandra, \Hubble, and \Spitzer\ observations, and the SED models from the GSWLC; application of multivariate mthods to ``baseline'' the gas halo sizes (Sect.\,\ref{Sec:Baseline}). \textbf{Note~1:} See Sec.\,\ref{Sec:Sample}.}}
 \end{table*}
 
