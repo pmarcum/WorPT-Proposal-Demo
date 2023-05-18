@@ -14,16 +14,16 @@
 %% > > > > > > > > > > > > > < < < < < < < < < < < < < <
 %% Block of code to be uncommented by removing the *first* percent-sign at the beginning of the following lines below (leave intentional comments with at least 1 percent sign to keep them commented!)
 %% The next couple of lines define cell and font colors that can be changed if desired (keep this comment line commented-out!)
-%\def\myNameLabelBoldface#1{\textbf{#1}} % Makes the "Name" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
-%\def\myRoleLabelBoldface#1{\textbf{#1}} % Makes the "Role" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
-%\def\myCommitmentLabelBoldface#1{\textbf{#1}} % Makes the "Commitment (FTE)" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
-%\def\myYearLabelBoldface#1{\textbf{#1}} % Makes the "Y1", "Y2", ...  column labels boldfaced; change{\textbf{#1}} to {#1} or to other preference.
-%\def\myTotalLabelBoldface#1{\textbf{#1}} % Makes the "Total" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
-%\def\mySectionBannerColor{Blue} % Color of the banners separating the 3 different sections.
-%\def\mySectionBannerFontColor{White} % Color of the words in the banners separating the 3 different sections.
-%\def\mySectionBannerBoldface#1{\textbf{#1}} % Boldface the text in the banners separating the 3 different sections; to remove boldface (or change to something else), replace \textbf{#1} with #1
-%\def\myTotalWorkEffortBoldface#1{\textbf{#1}} % Boldface the text in the line "Total .... Work Effort" at the end of each section; to remove boldface (or change to something else), replace \textbf{#1} with #1
-%\def\myTotalWorkEffortFontColor{Blue} % Color of the font in the line for "Total ... Work Effort" at the end of each section
+%\def\NameLabelBoldface#1{\textbf{#1}} % Makes the "Name" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+%\def\RoleLabelBoldface#1{\textbf{#1}} % Makes the "Role" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+%\def\CommitmentLabelBoldface#1{\textbf{#1}} % Makes the "Commitment (FTE)" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+%\def\YearLabelBoldface#1{\textbf{#1}} % Makes the "Y1", "Y2", ...  column labels boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+%\def\TotalLabelBoldface#1{\textbf{#1}} % Makes the "Total" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+%\def\SectionBannerColor{Blue} % Color of the banners separating the 3 different sections.
+%\def\SectionBannerFontColor{White} % Color of the words in the banners separating the 3 different sections.
+%\def\SectionBannerBoldface#1{\textbf{#1}} % Boldface the text in the banners separating the 3 different sections; to remove boldface (or change to something else), replace \textbf{#1} with #1
+%\def\TotalWorkEffortBoldface#1{\textbf{#1}} % Boldface the text in the line "Total .... Work Effort" at the end of each section; to remove boldface (or change to something else), replace \textbf{#1} with #1
+%\def\TotalWorkEffortFontColor{Blue} % Color of the font in the line for "Total ... Work Effort" at the end of each section
 %%
 % (2) type the following into the main latex file where you want to put this table:
 %{
@@ -36,25 +36,25 @@
 %}
 %%================ E N D   I N S T R U C T I O N S =============== (leave this line commented out!)
 \hline
-\multirow{2}{*}{\myNameLabelBoldface{Name}} & \multirow{2}{*}{\myRoleLabelBoldface{Role}} & \multicolumn{4}{c|}{\myCommitmentLabelBoldface{Commitment (FTE)}}\\
+\multirow{2}{*}{\NameLabelBoldface{Name}} & \multirow{2}{*}{\RoleLabelBoldface{Role}} & \multicolumn{4}{c|}{\CommitmentLabelBoldface{Commitment (FTE)}}\\
 \cline{3-6}
-{} & {} & \myYearLabelBoldface{Y1} & \myYearLabelBoldface{Y2} & \myYearLabelBoldface{Y3} & \myTotalLabelBoldface{Total}\\
-\multicolumn{6}{|c|}{\cellcolor{\mySectionBannerColor}\color{\mySectionBannerFontColor}\mySectionBannerBoldface{Work Efforts To Be Funded By This Proposal}}\\
+{} & {} & \YearLabelBoldface{Y1} & \YearLabelBoldface{Y2} & \YearLabelBoldface{Y3} & \TotalLabelBoldface{Total}\\
+\multicolumn{6}{|c|}{\cellcolor{\SectionBannerColor}\color{\SectionBannerFontColor}\SectionBannerBoldface{Work Efforts To Be Funded By This Proposal}}\\
 Dan J. Dent{\'{o}}n, III  & PI  & 0.20 & 0.15 & 0.10 & 0.45\\
 Sally K. Smith  & Sci-PI  & 0.36 & 0.20 & 0.15 & 0.71\\
 Gisella Z. Gala  & coll(1)  & 0.00 & 0.00 & 0.00 & 0.00\\
 Pamela M. Marcum  & co-I(1)  & 0.05 & 0.00 & 0.12 & 0.17\\
-\multicolumn{2}{|l}{\myTotalWorkEffortBoldface{\color{\myTotalWorkEffortFontColor}Total Funded Work Effort}} & \multicolumn{1}{c}{\color{\myTotalWorkEffortFontColor}0.61} & \multicolumn{1}{c}{\color{\myTotalWorkEffortFontColor}0.35} & \multicolumn{1}{c}{\color{\myTotalWorkEffortFontColor}0.37} & \multicolumn{1}{c|}{\color{\myTotalWorkEffortFontColor}1.33}\\
-\multicolumn{6}{|c|}{\cellcolor{\mySectionBannerColor}\color{\mySectionBannerFontColor}\mySectionBannerBoldface{Work Efforts Proposed but NOT to Be Funded By This Proposal}}\\
+\multicolumn{2}{|l}{\TotalWorkEffortBoldface{\color{\TotalWorkEffortFontColor}Total Funded Work Effort}} & \multicolumn{1}{c}{\color{\TotalWorkEffortFontColor}0.61} & \multicolumn{1}{c}{\color{\TotalWorkEffortFontColor}0.35} & \multicolumn{1}{c}{\color{\TotalWorkEffortFontColor}0.37} & \multicolumn{1}{c|}{\color{\TotalWorkEffortFontColor}1.33}\\
+\multicolumn{6}{|c|}{\cellcolor{\SectionBannerColor}\color{\SectionBannerFontColor}\SectionBannerBoldface{Work Efforts Proposed but NOT to Be Funded By This Proposal}}\\
 Dan J. Dent{\'{o}}n, III  & PI  & 0.00 & 0.00 & 0.00 & 0.00\\
 Sally K. Smith  & Sci-PI  & 0.04 & 0.00 & 0.00 & 0.04\\
 Gisella Z. Gala  & coll(1)  & 0.05 & 0.15 & 0.20 & 0.40\\
 Pamela M. Marcum  & co-I(1)  & 0.10 & 0.10 & 0.03 & 0.23\\
-\multicolumn{2}{|l}{\myTotalWorkEffortBoldface{\color{\myTotalWorkEffortFontColor}Total Unfunded Work Effort}} & \multicolumn{1}{c}{\color{\myTotalWorkEffortFontColor}0.19} & \multicolumn{1}{c}{\color{\myTotalWorkEffortFontColor}0.25} & \multicolumn{1}{c}{\color{\myTotalWorkEffortFontColor}0.23} & \multicolumn{1}{c|}{\color{\myTotalWorkEffortFontColor}0.67}\\
-\multicolumn{6}{|c|}{\cellcolor{\mySectionBannerColor}\color{\mySectionBannerFontColor}\mySectionBannerBoldface{Total Work Efforts Proposed (Funded $+$ Unfunded)}}\\
+\multicolumn{2}{|l}{\TotalWorkEffortBoldface{\color{\TotalWorkEffortFontColor}Total Unfunded Work Effort}} & \multicolumn{1}{c}{\color{\TotalWorkEffortFontColor}0.19} & \multicolumn{1}{c}{\color{\TotalWorkEffortFontColor}0.25} & \multicolumn{1}{c}{\color{\TotalWorkEffortFontColor}0.23} & \multicolumn{1}{c|}{\color{\TotalWorkEffortFontColor}0.67}\\
+\multicolumn{6}{|c|}{\cellcolor{\SectionBannerColor}\color{\SectionBannerFontColor}\SectionBannerBoldface{Total Work Efforts Proposed (Funded $+$ Unfunded)}}\\
 Dan J. Dent{\'{o}}n, III  & PI  & 0.20 & 0.15 & 0.10 & 0.45\\
 Sally K. Smith  & Sci-PI  & 0.40 & 0.20 & 0.15 & 0.75\\
 Gisella Z. Gala  & coll(1)  & 0.05 & 0.15 & 0.20 & 0.40\\
 Pamela M. Marcum  & co-I(1)  & 0.15 & 0.10 & 0.15 & 0.40\\
-\multicolumn{2}{|l}{\myTotalWorkEffortBoldface{\color{\myTotalWorkEffortFontColor}Total Funded $+$ Unfunded Work Effort}} & \multicolumn{1}{c}{\color{\myTotalWorkEffortFontColor}0.80} & \multicolumn{1}{c}{\color{\myTotalWorkEffortFontColor}0.60} & \multicolumn{1}{c}{\color{\myTotalWorkEffortFontColor}0.60} & \multicolumn{1}{c|}{\color{\myTotalWorkEffortFontColor}2.00}\\
+\multicolumn{2}{|l}{\TotalWorkEffortBoldface{\color{\TotalWorkEffortFontColor}Total Funded $+$ Unfunded Work Effort}} & \multicolumn{1}{c}{\color{\TotalWorkEffortFontColor}0.80} & \multicolumn{1}{c}{\color{\TotalWorkEffortFontColor}0.60} & \multicolumn{1}{c}{\color{\TotalWorkEffortFontColor}0.60} & \multicolumn{1}{c|}{\color{\TotalWorkEffortFontColor}2.00}\\
 \hline
