@@ -30,7 +30,7 @@
 %\begin{table*}[h!]
 %   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
 %   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
-%   \begin{tabular}{|lcl >{\myPerTripShading}c>{\myPerTripShading}c>{\myPerTripShading}l>{\myPerTripShading}l>{\myPerTripShading}ll|}
+%   \begin{tabular}{|lcl >{\columncolor[gray]{0.85}[\tabcolsep][7pt]}c>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}c>{\myPerTripShading}l>{\myPerTripShading}l>{\myPerTripShading}ll|}
 %       \expinput{do_NOT_manually_edit/isANONtravel}
 %    \end{tabular}
 %   \caption{\normalsize
@@ -51,7 +51,7 @@
 %\end{table*}
 %%================ E N D   I N S T R U C T I O N S =============== (leave this line commented out!)
 \multicolumn{9}{|@{}c@{}|}{\cellcolor{\myBannerColor}\color{\myBannerFontColor}\myBannerBoldface{Travel Cost Details}}\\  % top header line
-\multicolumn{3}{|c}{} & \multicolumn{5}{>{{\myPerTripShading}c}{\color{\myPerTripLabelFontColor}\emph{\textbf{per trip}}} & \\
+\multicolumn{3}{|c}{} & \multicolumn{5}{>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}c}{\color{\myPerTripLabelFontColor}\emph{\textbf{per trip}}} & \\
 \cline{4-8}
 \myYearTripsDestLabelBoldface{\color{\myYearTripsDestLabelFontColor}{Year}} & \myYearTripsDestLabelBoldface{\color{\myYearTripsDestLabelFontColor}{\#Trips}} & \myYearTripsDestLabelBoldface{\color{\myYearTripsDestLabelFontColor}{Dest.}} & \myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{Airfare}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{per}}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{Conf.}}} & {\myPerTripLabelBoldface{ \color{\myPerTripLabelFontColor}{Ground}}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{per}}} & \myTotalLabelBoldface{\color{\myTotalLabelFontColor}{Total}}\\ %middle header
 \myYearTripsDestLabelBoldface{} & \myYearTripsDestLabelBoldface{} & \myYearTripsDestLabelBoldface{} & {\myPerTripLabelBoldface{}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{diem}}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{Fee}}} & {\myPerTripLabelBoldface{ \color{\myPerTripLabelFontColor}{Transp.}}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{trip}}} & \\%bottom header line
