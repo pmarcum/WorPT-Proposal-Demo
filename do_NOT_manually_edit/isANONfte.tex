@@ -1,13 +1,28 @@
-%======================================================
-%     H O W   T O   U S E   T H I S   F I L E
-% (1) download or connect to https://github.com/pmarcum/LaTex-Formatting and select the
-%        set of files (aas-style or general) that meet your situation, you can either download the files or link
-%        Overleaf to the needed files in the GitHub repository through URL, and then add the following to
-%        the preamble of your main paper
+%%================= BEGIN INSTRUCTIONS =================
+%%   H O W   T O   U S E   T H I S   F I L E
+%% (1) download or connect to https://github.com/pmarcum/LaTex-Formatting and select the
+%%        set of files (aas-style or general) that meet your situation, you can either download the files or link
+%%        Overleaf to the needed files in the GitHub repository through URL, and then add the following to
+%%        the preamble of your main paper
 %\usepackage{FUpackages}
 %\usepackage{FUformatting}
 %\usepackage{FUnewCommands} % not needed by WorPT files but generally useful
-% (2) type the following into the main latex file where you want to put this table:
+%%
+%% (2) copy/paste the following into the main latex file where you want to put this section of text (it is not a table), and then uncomment the below lines by removing the first percent sign at the beginning of the line
+%%   IMPORTANT SHORTCUT:  You can toggle commenting / un-commenting across multiple lines within Overleaf by mouse-selecting the desired block of lines to un-comment (or comment), and then hitting: control slash ( [Ctrl] / )   ... or ...  command slash  ([command] /)  for a PC or Mac, resp.
+%%        (Note that lines that should remain commented-out in the below block have 2 percent signs ... the first will be removed when you uncomment the whole block, but the second percent sign will remain as intended to retain that line as a true comment within the Latex document.)
+%% > > > > > > > > > > > > > < < < < < < < < < < < < < <
+%% Block of code to be uncommented by removing the *first* percent-sign at the beginning of the following lines below (leave intentional comments with at least 1 percent sign to keep them commented!)
+%% The next couple of lines define cell and font colors that can be changed if desired (keep this comment line commented-out!)
+%\def\myRoleLabelBoldface#1{\textbf{#1}} % Makes the "Role" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+%\def\myCommitmentLabelBoldface#1{\textbf{#1}} % Makes the "Commitment (FTE)" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+%\def\myYearLabelBoldface#1{\textbf{#1}} % Makes the "Y1", "Y2", ...  column labels boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+%\def\myTotalLabelBoldface#1{\textbf{#1}} % Makes the "Total" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+%\def\mySectionBannerColor{Blue} % Color of the banners separating the 3 different sections.
+%\def\mySectionBannerFontColor{White} % Color of the words in the banners separating the 3 different sections.
+%\def\mySectionBannerBoldface#1{\textbf{#1}} % Boldface the text in the banners separating the 3 different sections; to remove boldface (or change to something else), replace \textbf{#1} with #1
+%\def\myTotalWorkEffortBoldface#1{\textbf{#1}} % Boldface the text in the line "Total .... Work Effort" at the end of each section; to remove boldface (or change to something else), replace \textbf{#1} with #1
+%\def\myTotalWorkEffortFontColor{Blue} % Color of the font in the line for "Total ... Work Effort" at the end of each section
 %{
 %   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
 %   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
@@ -16,26 +31,26 @@
 %      \caption{\label{tab:isANONfte} Details of work efforts per member to be funded for the present proposal; {\color{red}Detailed responsibilities, tied to tasks and science goals, are provided in Sec.\,\ref{Subsec:tmeline}.}}
 %   \end{longtable}
 % }
-%======================================================
+%%================ E N D   I N S T R U C T I O N S =============== (leave this line commented out!)
 \hline
-\multirow{2}{*}{\textbf{Role}} & \multicolumn{4}{c|}{\textbf{Commitment (FTE)}}\\
+\multirow{2}{*}{\myRoleLabelBoldface{Role}} & \multicolumn{4}{c|}{\myCommitmentLabelBoldface{Commitment (FTE)}}\\
 \cline{2-5}
-{} & \textbf{Y1} & \textbf{Y2} & \textbf{Y3} & \textbf{Total}\\
-\multicolumn{5}{|c|}{\cellcolor{Blue}\color{White}\textbf{Work Efforts To Be Funded By This Proposal}}\\
+{} & \myYearLabelBoldface{Y1} & \myYearLabelBoldface{Y2} & \myYearLabelBoldface{Y3} & \myYearTotalBoldface{Total}\\
+\multicolumn{5}{|c|}{\cellcolor{\mySectionBannerColor}\color{\mySectionBannerFontColor}\myTaskCategoryBoldface{Work Efforts To Be Funded By This Proposal}}\\
 PI  &  0.20 & 0.15 & 0.10 & 0.45\\
 Sci-PI  &  0.36 & 0.20 & 0.15 & 0.71\\
 coll(1)  &  0.00 & 0.00 & 0.00 & 0.00\\
 co-I(1)  &  0.05 & 0.00 & 0.12 & 0.17\\
-\multicolumn{1}{|l}{\textbf{\color{blue}Total Funded Work Effort}} & \multicolumn{1}{c}{\color{blue}0.61} & \multicolumn{1}{c}{\color{blue}0.35} & \multicolumn{1}{c}{\color{blue}0.37} & \multicolumn{1}{c|}{\color{blue}1.33}\\
-\multicolumn{5}{|c|}{\cellcolor{Blue}\color{White}\textbf{Work Efforts Proposed but NOT Funded By This Proposal}}\\
+\multicolumn{1}{|l}{\myTotalWorkEffortBoldface{\color{\myTotalWorkEffortFontColor}Total Funded Work Effort}} & \multicolumn{1}{c}{\color{\myTotalWorkEffortFontColor}0.61} & \multicolumn{1}{c}{\color{\myTotalWorkEffortFontColor}0.35} & \multicolumn{1}{c}{\color{\myTotalWorkEffortFontColor}0.37} & \multicolumn{1}{c|}{\color{\myTotalWorkEffortFontColor}1.33}\\
+\multicolumn{5}{|c|}{\cellcolor{\mySectionBannerColor}\color{\mySectionBannerFontColor}\mySectionBannerBoldface{Work Efforts Proposed but NOT Funded By This Proposal}}\\
 PI  &  0.00 & 0.00 & 0.00 & 0.00\\
 Sci-PI  &  0.04 & 0.00 & 0.00 & 0.04\\
 coll(1)  &  0.05 & 0.15 & 0.20 & 0.40\\
 co-I(1)  &  0.10 & 0.10 & 0.03 & 0.23\\
-\multicolumn{1}{|l}{\textbf{\color{blue}Total Unfunded Work Effort}} & \multicolumn{1}{c}{\color{blue}0.19} & \multicolumn{1}{c}{\color{blue}0.25} & \multicolumn{1}{c}{\color{blue}0.23} & \multicolumn{1}{c|}{\color{blue}0.67}\\
-\multicolumn{5}{|c|}{\cellcolor{Blue}\color{White}\textbf{Total Work Efforts Proposed (Funded $+$ Unfunded)}}\\
+\multicolumn{1}{|l}{\myTotalWorkEffortBoldface{\color{\myTotalWorkEffortFontColor}Total Unfunded Work Effort}} & \multicolumn{1}{c}{\color{\myTotalWorkEffortFontColor}0.19} & \multicolumn{1}{c}{\color{\myTotalWorkEffortFontColor}0.25} & \multicolumn{1}{c}{\color{\myTotalWorkEffortFontColor}0.23} & \multicolumn{1}{c|}{\color{\myTotalWorkEffortFontColor}0.67}\\
+\multicolumn{5}{|c|}{\cellcolor{\mySectionBannerColor}\color{\mySectionBannerFontColor}\mySectionBannerBoldface{Total Work Efforts Proposed (Funded $+$ Unfunded)}}\\
 PI  &  0.20 & 0.15 & 0.10 & 0.45\\
 Sci-PI  &  0.40 & 0.20 & 0.15 & 0.75\\
 coll(1)  &  0.05 & 0.15 & 0.20 & 0.40\\
 co-I(1)  &  0.15 & 0.10 & 0.15 & 0.40\\
-\multicolumn{1}{|l}{\textbf{\color{blue}Total Funded $+$ Unfunded Work Effort}} & \multicolumn{1}{c}{\color{blue}0.80} & \multicolumn{1}{c}{\color{blue}0.60} & \multicolumn{1}{c}{\color{blue}0.60} & \multicolumn{1}{c|}{\color{blue}2.00}\\ \hline
+\multicolumn{1}{|l}{\myTotalWorkEffortBoldface{\color{\myTotalWorkEffortFontColor}Total Funded $+$ Unfunded Work Effort}} & \multicolumn{1}{c}{\color{\myTotalWorkEffortFontColor}0.80} & \multicolumn{1}{c}{\color{\myTotalWorkEffortFontColor}0.60} & \multicolumn{1}{c}{\color{\myTotalWorkEffortFontColor}0.60} & \multicolumn{1}{c|}{\color{\myTotalWorkEffortFontColor}2.00}\\ \hline
