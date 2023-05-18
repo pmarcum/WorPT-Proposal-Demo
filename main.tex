@@ -300,10 +300,14 @@ Also see TABLE\,\ref{tab:isANONtasks} and \ref{tab:NOTANONschedule}
 % __________________________________________________________
 \newpage
 \subsection{\textbf{Anonymous} Travel Cost per Trip, Total Budget per Year (``isANONtravel.tex'')}
+
 \def\myBannerBoldface#1{\textbf{#1}} % Bold-face the font of the top banner "Travel Cost Details"; change {\textbf{#1}} to {#1} or to other preference.
 \def\myBannerColor{Blue} % Color of the top "Travel Cost Details" banner
 \def\myBannerFontColor{White} % Color of the words in the top "Travel Cost Details" banner
-\def\myPerTripShading{\columncolor[gray]{0.85}} % Color shading of the columns under the "per trip" section, where 2nd parameter is the opacity
+\def\myPerTripShading{>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}c} % Color shading of the columns under the "per trip" section, where 2nd parameter is the opacity
+
+
+
 \def\myYearTripsDestLabelFontColor{Blue} % Color of font of column labels for the "Year", "#TRips" and "Dest." columns
 \def\myTotalLabelFontColor{Blue} % Color of font of column label for the "Total" column
 \def\myPerTripLabelFontColor{Blue} % Color of font of column labels under the "per trip" section
@@ -316,8 +320,28 @@ The below table provides travel costs:
 \begin{table*}[h!]
   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
-  \begin{tabular}{|lcl >{{\myPerTripShading}[\tabcolsep][7pt]}c>{{\myPerTripShading}[\tabcolsep][7pt]}c>{{\myPerTripShading}[\tabcolsep][7pt]}l>{{\myPerTripShading}[\tabcolsep][7pt]}l>{{\myPerTripShading}[\tabcolsep][7pt]}ll|}
-      \expinput{do_NOT_manually_edit/isANONtravel}
+  \begin{tabular}{|lcl >{\myPerTripShading}c>{\myPerTripShading}c>{\myPerTripShading}l>{\myPerTripShading}l>{\myPerTripShading}ll|}
+
+
+  
+  \multicolumn{9}{|@{}c@{}|}{\cellcolor{\myBannerColor}
+  \color{\myBannerFontColor}\myBannerBoldface{Travel Cost Details}}\\  % top header line
+
+%\multicolumn{3}{|c}{} & \multicolumn{5}{>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}c}{\color{Blue}\emph{\textbf{per trip}}} & \\
+  
+\multicolumn{3}{|c}{} & \multicolumn{5}{\myPerTripShading}{\color{\myPerTripLabelFontColor}\emph{\textbf{per trip}}} & \\
+% \cline{4-8}
+% \myYearTripsDestLabelBoldface{\color{\myYearTripsDestLabelFontColor}{Year}} & \myYearTripsDestLabelBoldface{\color{\myYearTripsDestLabelFontColor}{\#Trips}} & \myYearTripsDestLabelBoldface{\color{\myYearTripsDestLabelFontColor}{Dest.}} & \myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{Airfare}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{per}}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{Conf.}}} & {\myPerTripLabelBoldface{ \color{\myPerTripLabelFontColor}{Ground}}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{per}}} & \myTotalLabelBoldface{\color{\myTotalLabelFontColor}{Total}}\\ %middle header
+% \myYearTripsDestLabelBoldface{} & \myYearTripsDestLabelBoldface{} & \myYearTripsDestLabelBoldface{} & {\myPerTripLabelBoldface{}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{diem}}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{Fee}}} & {\myPerTripLabelBoldface{ \color{\myPerTripLabelFontColor}{Transp.}}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{trip}}} & \\%bottom header line
+% \hline \hline
+% \myYearBoldface{Yr1} & 4 & {domestic} & {\$700} & {\$1,320} & {\$500} & {\$300} & {\$2,820} & {\$11,280}\\
+%  & 2 & {internat'l} & {\$1,750} & {\$1,600} & {\$800} & {\$500} & {\$4,650} & {\$9,300}\\\hline
+% \myYearBoldface{Yr2} & 6 & {domestic} & {\$700} & {\$1,320} & {\$500} & {\$300} & {\$2,820} & {\$16,920}\\
+%  & 2 & {internat'l} & {\$1,750} & {\$1,600} & {\$800} & {\$500} & {\$4,650} & {\$9,300}\\\hline
+% \myYearBoldface{Yr3} & 5 & {domestic} & {\$700} & {\$1,320} & {\$500} & {\$300} & {\$2,820} & {\$14,100}\\
+%  & 2 & {internat'l} & {\$1,750} & {\$1,600} & {\$800} & {\$500} & {\$4,650} & {\$9,300}\\\hline
+ 
+%       %\expinput{do_NOT_manually_edit/isANONtravel}
    \end{tabular}
   \caption{\normalsize
      \newline \newline
