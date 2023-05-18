@@ -56,15 +56,16 @@ The most recent version of the \href{https://docs.google.com/spreadsheets/d/1J9s
 % ___________________________________________________
 \newpage
 \subsection{\textbf{Anonymous} FTEs per Year per Team Member Role (``isANONfte.tex'')}
-\def\myRoleLabelBoldface#1{\textbf{#1}} % Makes the "Role" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
-\def\myCommitmentLabelBoldface#1{\textbf{#1}} % Makes the "Commitment (FTE)" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
-\def\myYearLabelBoldface#1{\textbf{#1}} % Makes the "Y1", "Y2", ...  column labels boldfaced; change{\textbf{#1}} to {#1} or to other preference.
-\def\myTotalLabelBoldface#1{\textbf{#1}} % Makes the "Total" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
-\def\mySectionBannerColor{Blue} % Color of the banners separating the 3 different sections.
-\def\mySectionBannerFontColor{White} % Color of the words in the banners separating the 3 different sections.
-\def\mySectionBannerBoldface#1{\textbf{#1}} % Boldface the text in the banners separating the 3 different sections; to remove boldface (or change to something else), replace \textbf{#1} with #1
-\def\myTotalWorkEffortBoldface#1{\textbf{#1}} % Boldface the text in the line "Total .... Work Effort" at the end of each section; to remove boldface (or change to something else), replace \textbf{#1} with #1
-\def\myTotalWorkEffortFontColor{Blue} % Color of the font in the line for "Total ... Work Effort" at the end of each section
+
+\def\RoleLabelBoldface#1{\textbf{#1}} % Makes the "Role" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+\def\CommitmentLabelBoldface#1{\textbf{#1}} % Makes the "Commitment (FTE)" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+\def\YearLabelBoldface#1{\textbf{#1}} % Makes the "Y1", "Y2", ...  column labels boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+\def\TotalLabelBoldface#1{\textbf{#1}} % Makes the "Total" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+\def\SectionBannerColor{Blue} % Color of the banners separating the 3 different sections.
+\def\SectionBannerFontColor{White} % Color of the words in the banners separating the 3 different sections.
+\def\SectionBannerBoldface#1{\textbf{#1}} % Boldface the text in the banners separating the 3 different sections; to remove boldface (or change to something else), replace \textbf{#1} with #1
+\def\TotalWorkEffortBoldface#1{\textbf{#1}} % Boldface the text in the line "Total .... Work Effort" at the end of each section; to remove boldface (or change to something else), replace \textbf{#1} with #1
+\def\TotalWorkEffortFontColor{Blue} % Color of the font in the line for "Total ... Work Effort" at the end of each section
 {
   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
@@ -136,18 +137,19 @@ The most recent version of the \href{https://docs.google.com/spreadsheets/d/1J9s
 % ___________________________________________________
 \newpage
 \subsection{\textbf{Anonymous} Task Start/Finish vs Role Assignment (``isANONtasks.tex'')}
-\def\myColumnLabelBoldface#1{\textbf{#1}} % Bold-faces the column headers; change {\textbf{#1}} to {#1} or to other preference.
-\def\myYearQuarterLineColor{lightgray} % Color of vertical lines in the year/quarter Start Finish timeline columns
-\def\myYearFontColor{Red} % Color of the year numbers under the "Y" columns in the Start Finish timeline
-\def\myTaskCategoryColor{Blue} % Color of the task category "banners"
-\def\myTaskCategoryFontColor{White} % Color of the task category title font
-\def\myTaskCategoryBoldface#1{\textbf{#1}} % Bold-face the task category title; to remove boldface or change, replace \textbf{#1} with {#1}
+
+\def\ColumnLabelBoldface#1{\textbf{#1}} % Bold-faces the column headers; change {\textbf{#1}} to {#1} or to other preference.
+\def\YearQuarterLineColor{lightgray} % Color of vertical lines in the year/quarter Start Finish timeline columns
+\def\YearFontColor{Red} % Color of the year numbers under the "Y" columns in the Start Finish timeline
+\def\TaskCategoryColor{Blue} % Color of the task category "banners"
+\def\TaskCategoryFontColor{White} % Color of the task category title font
+\def\TaskCategoryBoldface#1{\textbf{#1}} % Bold-face the task category title; to remove boldface or change, replace \textbf{#1} with {#1}
 %
 \addtocounter{table}{-1} % corrects double-counting of longtable and table combination
 \begin{table*}[h!] %table is needed so that table caption at bottom has same width as table
   \renewcommand{\arraystretch}{0.7} %adjust to control vertical row separation/spacing
   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing
-  \begin{longtable}{|p{2.8in}||c!{\color{\myYearQuarterLineColor}\vrule}c!{\color{\myYearQuarterLineColor}\vrule}!{\color{\myYearQuarterLineColor}\vrule}c!{\color{\myYearQuarterLineColor}\vrule}c||p{0.45in}!{\color{\myYearQuarterLineColor}\vrule}p{1.5in}|}
+  \begin{longtable}{|p{2.8in}||c!{\color{\YearQuarterLineColor}\vrule}c!{\color{\YearQuarterLineColor}\vrule}!{\color{\YearQuarterLineColor}\vrule}c!{\color{\YearQuarterLineColor}\vrule}c||p{0.45in}!{\color{\YearQuarterLineColor}\vrule}p{1.5in}|}
      \expinput{do_NOT_manually_edit/isANONtasks}
   \end{longtable}
   \caption{\label{tab:isANONtasks} \textbf{Task Timeline:} Team member roles, rightmost column, are cross-referenced with corresponding names in the non-anonymized personnel and work effort table.  {\color{red} \textbf{Paper~1:} Sample and methods for enhancing detectability of  low SB X-ray emission, presentation of emission maps, description of database and pipeline software (which will be released in a public repository at the time of paper submission). \textbf{Paper~2:} Methodologies for measuring the gas halo size and other gas properties, analyisis of the diffuse hot gas halos as functions of galaxy properties (environment, galaxy morphology, stellar mass, and SFR based on \Chandra, \Hubble, and \Spitzer\ observations, and the SED models from the GSWLC; application of multivariate mthods to ``baseline'' the gas halo sizes (Sect.\,\ref{Sec:Baseline}). \textbf{Note~1:} See Sec.\,\ref{Sec:Sample}.}}
@@ -263,12 +265,15 @@ Also see TABLE\,\ref{tab:isANONtasks} and \ref{tab:NOTANONschedule}
 % _____________________________________________________________________
 \newpage
 \subsection{\textbf{Not} Anonymous Biographical Sketches (``NOTANONbiosketches.tex'')}
-\def\myNameBoldface#1{\textbf{#1}} % Makes the name and role at the top of each person's biographical sketch bold-faced; change {\textbf{#1}} to {#1} or to other preference.
-\def\myNameColor{Blue} % Color of the name and role at the top of each person's biographical sketch
-\def\myNameSize{\large } % SIze of the name and role at the top of each person's biographical sketch
-\def\myLabelBoldface#1{\textbf{#1}} % Makes the category labels ("Edicuation", "Appointments", etc) in  each person's biographical sketch bold-faced; change {\textbf{#1}} to {#1} or to other preference.
-\def\mySectionSpacing{\par \vspace{-0.5em}} % Vertical spacing between the categories within a person's biographical sketch
-\def\myPublicationBullet{{\scriptsize{$\bullet$}} } % Symbol that goes in front of each item in publication list
+
+\def\NameBoldface#1{\textbf{#1}} % Makes the name and role at the top of each person's biographical sketch bold-faced; change {\textbf{#1}} to {#1} or to other preference.
+\def\NameColor{Blue} % Color of the name and role at the top of each person's biographical sketch
+\def\NameSize{\large } % SIze of the name and role at the top of each person's biographical sketch
+\def\LabelBoldface#1{\textbf{#1}} % Makes the category labels ("Edicuation", "Appointments", etc) in  each person's biographical sketch bold-faced; change {\textbf{#1}} to {#1} or to other preference.
+\def\SectionSpacing{\par \vspace{-0.5em}} % Vertical spacing between the categories within a person's biographical sketch
+\def\PublicationBullet{{\scriptsize{$\bullet$}} } % Symbol that goes in front of each item in publication list
+%
+\clearpage  % or you might want to use \newpage or \pagebreak, whatever works best
 \input{do_NOT_manually_edit/NOTANONbiosketches}
 
 % __________________________________________________________
@@ -276,19 +281,20 @@ Also see TABLE\,\ref{tab:isANONtasks} and \ref{tab:NOTANONschedule}
 % __________________________________________________________
 \newpage
 \subsection{\textbf{Not} Anonymous Current/Pending Info (``NOTANONcurrentPending.tex'')}
-% The next couple of lines define cell and font colors that can be changed if desired (keep this comment line commented-out!)
-\def\myBannerColor{Blue} % Color of banner at top of each person's Current/Pending section
-\def\myNameColor{White} % Color of font color for the name appearing at the top of each person's Current/Pending section
-\def\mySectionColor{lightgray} % Color of separators ("Current Support" and "Pending Grant Support") within each Current/Pending section
-\def\mySectionFontColor{Black} % Color of separators font ("Current Support" and "Pending Grant Support") within each Current/Pending section
-\def\myThisProposalColor{NavyBlue} % Color of text "(this proposal)" listed as "pending" in the Current/Pending section
-\def\myLeftBoldface#1{\textbf{#1}} % Makes left column words bold-faced; change {\textbf{#1}} to {#1} or to other preference.
-\def\mySectionBoldface#1{\textbf{#1}} % Makes section separator words (Current Support, Pending Grant Support) bold-faced; change {\textbf{#1}} to {#1} or to other preference.
-\def\myNameBoldface#1{\textbf{#1}} % Makes name in banner bold-faced; change {\textbf{#1}} to {#1} or to other preference.
+
+\def\BannerColor{Blue} % Color of banner at top of each person's Current/Pending section
+\def\NameColor{White} % Color of font color for the name appearing at the top of each person's Current/Pending section
+\def\SectionColor{lightgray} % Color of separators ("Current Support" and "Pending Grant Support") within each Current/Pending section
+\def\SectionFontColor{Black} % Color of separators font ("Current Support" and "Pending Grant Support") within each Current/Pending section
+\def\ThisProposalColor{NavyBlue} % Color of text "(this proposal)" listed as "pending" in the Current/Pending section
+\def\LeftBoldface#1{\textbf{#1}} % Makes left column words bold-faced; change {\textbf{#1}} to {#1} or to other preference.
+\def\SectionBoldface#1{\textbf{#1}} % Makes section separator words (Current Support, Pending Grant Support) bold-faced; change {\textbf{#1}} to {#1} or to other preference.
+\def\NameBoldface#1{\textbf{#1}} % Makes name in banner bold-faced; change {\textbf{#1}} to {#1} or to other preference.
 %
 \begin{longtable}{|l|p{5in}|}
-   \expinput{do_NOT_manually_edit/NOTANONcurrentpending}
+  \expinput{do_NOT_manually_edit/NOTANONcurrentpending}
 \end{longtable}
+
 % @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 % @@@@@@@@@@@@@@@@@@@ N O N   L A B O R   B U D G E T S @@@@@@@@@@@@@@@@@@@@@@@@@
 % @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -301,25 +307,25 @@ Also see TABLE\,\ref{tab:isANONtasks} and \ref{tab:NOTANONschedule}
 \newpage
 \subsection{\textbf{Anonymous} Travel Cost per Trip, Total Budget per Year (``isANONtravel.tex'')}
 
-\def\myBannerBoldface#1{\textbf{#1}} % Bold-face the font of the top banner "Travel Cost Details"; change {\textbf{#1}} to {#1} or to other preference.
-\def\myBannerColor{Blue} % Color of the top "Travel Cost Details" banner
-\def\myBannerFontColor{White} % Color of the words in the top "Travel Cost Details" banner
-\def\myPerTripShadingColor{gray} % Color of shading of the columns under the "per trip" section
-\def\myPerTripShadingOpacity{0.85} % Opacity of shading of the columns under the "per trip" section (0 - completely transparent, 1.0 - completely opaque)
-\def\myPerTripShadingMargin{7pt} % WIdth of margin to right of each shaded column under the "per trip" section. A white vertical line will show if this value is too small.
-\def\myYearTripsDestLabelFontColor{Blue} % Color of font of column labels for the "Year", "#TRips" and "Dest." columns
-\def\myTotalLabelFontColor{Blue} % Color of font of column label for the "Total" column
-\def\myPerTripLabelFontColor{Blue} % Color of font of column labels under the "per trip" section
-\def\myYearTripsDestBoldface#1{\textbf{#1}} % Bold-face the font of the column labels "Year", "#Trips", "Dest."; change {\textbf{#1}} to {#1} or to other preference.
-\def\myPerTripBoldface#1{\textbf{#1}} % Bold-face the font of the column labels under the "per trip" section; change {\textbf{#1}} to {#1} or to other preference.
-\def\myTotalBoldface#1{\textbf{#1}} % Bold-face the column label "Total",  change {\textbf{#1}} to {#1} or to other preference.
-\def\myYearBoldface#1{\textbf{#1}} % Bold-face the Year values "Yr1", "YR2", etc in the first column; change {\textbf{#1}} to {#1} or to other preference.
+\def\BannerBoldface#1{\textbf{#1}} % Bold-face the font of the top banner "Travel Cost Details"; change {\textbf{#1}} to {#1} or to other preference.
+\def\BannerColor{Blue} % Color of the top "Travel Cost Details" banner
+\def\BannerFontColor{White} % Color of the words in the top "Travel Cost Details" banner
+\def\PerTripShadingColor{gray} % Color of shading of the columns under the "per trip" section
+\def\PerTripShadingTransparency{0.85} % Transparency of shading of the columns under the "per trip" section (1.0 - completely transparent, 0.0 - completely opaque)
+\def\PerTripShadingMargin{7pt} % WIdth of margin to right of each shaded column under the "per trip" section. A white vertical line will show if this value is too small.
+\def\YearTripsDestLabelFontColor{Blue} % Color of font of column labels for the "Year", "#TRips" and "Dest." columns
+\def\TotalLabelFontColor{Blue} % Color of font of column label for the "Total" column
+\def\PerTripLabelFontColor{Blue} % Color of font of column labels under the "per trip" section
+\def\YearTripsDestBoldface#1{\textbf{#1}} % Bold-face the font of the column labels "Year", "#Trips", "Dest."; change {\textbf{#1}} to {#1} or to other preference.
+\def\PerTripBoldface#1{\textbf{#1}} % Bold-face the font of the column labels under the "per trip" section; change {\textbf{#1}} to {#1} or to other preference.
+\def\TotalBoldface#1{\textbf{#1}} % Bold-face the column label "Total",  change {\textbf{#1}} to {#1} or to other preference.
+\def\YearBoldface#1{\textbf{#1}} % Bold-face the Year values "Yr1", "YR2", etc in the first column; change {\textbf{#1}} to {#1} or to other preference.
 %
 The below table provides travel costs:
 \begin{table*}[h!]
   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
-  \begin{tabular}{|lcl >{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][\myPerTripShadingMargin]}c>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][\myPerTripShadingMargin]}c>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][\myPerTripShadingMargin]}l>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][\myPerTripShadingMargin]}l>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][\myPerTripShadingMargin]}ll|}
+  \begin{tabular}{|lcl >{\columncolor[\PerTripShadingColor]{\PerTripShadingTransparency}[\tabcolsep][\PerTripShadingMargin]}c>{\columncolor[\PerTripShadingColor]{\PerTripShadingTransparency}[\tabcolsep][\PerTripShadingMargin]}c>{\columncolor[\PerTripShadingColor]{\PerTripShadingTransparency}[\tabcolsep][\PerTripShadingMargin]}l>{\columncolor[\PerTripShadingColor]{\PerTripShadingTransparency}[\tabcolsep][\PerTripShadingMargin]}l>{\columncolor[\PerTripShadingColor]{\PerTripShadingTransparency}[\tabcolsep][\PerTripShadingMargin]}ll|}
       \expinput{do_NOT_manually_edit/isANONtravel}
    \end{tabular}
   \caption{\normalsize
