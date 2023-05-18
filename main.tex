@@ -305,6 +305,7 @@ Also see TABLE\,\ref{tab:isANONtasks} and \ref{tab:NOTANONschedule}
 \def\myBannerFontColor{White} % Color of the words in the top "Travel Cost Details" banner
 \def\myPerTripShadingColor{gray} % Color of shading of the columns under the "per trip" section
 \def\myPerTripShadingOpacity{0.85} % Opacity of shading of the columns under the "per trip" section (0 - completely transparent, 1.0 - completely opaque)
+\def\myPerTripShadingMargin{7pt} % WIdth of margin to right of each shaded column under the "per trip" section. A white vertical line will show if this value is too small.
 \def\myYearTripsDestLabelFontColor{Blue} % Color of font of column labels for the "Year", "#TRips" and "Dest." columns
 \def\myTotalLabelFontColor{Blue} % Color of font of column label for the "Total" column
 \def\myPerTripLabelFontColor{Blue} % Color of font of column labels under the "per trip" section
@@ -317,7 +318,7 @@ The below table provides travel costs:
 \begin{table*}[h!]
   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
-  \begin{tabular}{|lcl >{\mytest}c>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][7pt]}c>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][7pt]}l>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][7pt]}l>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][7pt]}ll|}
+  \begin{tabular}{|lcl >{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][\myPerTripShadingMargin]}c>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][myPerTripShadingMargin]}c>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][myPerTripShadingMargin]}l>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][myPerTripShadingMargin]}l>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][myPerTripShadingMargin]}ll|}
       \expinput{do_NOT_manually_edit/isANONtravel}
    \end{tabular}
   \caption{\normalsize
