@@ -56,13 +56,22 @@ The most recent version of the \href{https://docs.google.com/spreadsheets/d/1J9s
 % ___________________________________________________
 \newpage
 \subsection{\textbf{Anonymous} FTEs per Year per Team Member Role (``isANONfte.tex'')}
+\def\myRoleLabelBoldface#1{\textbf{#1}} % Makes the "Role" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+\def\myCommitmentLabelBoldface#1{\textbf{#1}} % Makes the "Commitment (FTE)" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+\def\myYearLabelBoldface#1{\textbf{#1}} % Makes the "Y1", "Y2", ...  column labels boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+\def\myTotalLabelBoldface#1{\textbf{#1}} % Makes the "Total" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+\def\mySectionBannerColor{Blue} % Color of the banners separating the 3 different sections.
+\def\mySectionBannerFontColor{White} % Color of the words in the banners separating the 3 different sections.
+\def\mySectionBannerBoldface#1{\textbf{#1}} % Boldface the text in the banners separating the 3 different sections; to remove boldface (or change to something else), replace \textbf{#1} with #1
+\def\myTotalWorkEffortBoldface#1{\textbf{#1}} % Boldface the text in the line "Total .... Work Effort" at the end of each section; to remove boldface (or change to something else), replace \textbf{#1} with #1
+\def\myTotalWorkEffortFontColor{Blue} % Color of the font in the line for "Total ... Work Effort" at the end of each section
 {
-   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
-   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
-   \begin{longtable}{|l|*{4}{c|}}
-      \expinput{do_NOT_manually_edit/isANONfte}
-      \caption{\label{tab:isANONfte} Details of work efforts per member to be funded for the present proposal; {\color{red}Detailed responsibilities, tied to tasks and science goals, are provided in Sec.\,\ref{Subsec:tmeline}.}}
-   \end{longtable}
+  \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
+  \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
+  \begin{longtable}{|l|*{4}{c|}}
+     \expinput{do_NOT_manually_edit/isANONfte}
+     \caption{\label{tab:isANONfte} Details of work efforts per member to be funded for the present proposal; {\color{red}Detailed responsibilities, tied to tasks and science goals, are provided in Sec.\,\ref{Subsec:tmeline}.}}
+  \end{longtable}
 }
 
 % ___________________________________________________
@@ -127,7 +136,6 @@ The most recent version of the \href{https://docs.google.com/spreadsheets/d/1J9s
 % ___________________________________________________
 \newpage
 \subsection{\textbf{Anonymous} Task Start/Finish vs Role Assignment (``isANONtasks.tex'')}
-
 \def\myColumnLabelBoldface#1{\textbf{#1}} % Bold-faces the column headers; change {\textbf{#1}} to {#1} or to other preference.
 \def\myYearQuarterLineColor{lightgray} % Color of vertical lines in the year/quarter Start Finish timeline columns
 \def\myYearFontColor{Red} % Color of the year numbers under the "Y" columns in the Start Finish timeline
@@ -139,13 +147,13 @@ The most recent version of the \href{https://docs.google.com/spreadsheets/d/1J9s
 \begin{table*}[h!] %table is needed so that table caption at bottom has same width as table
   \renewcommand{\arraystretch}{0.7} %adjust to control vertical row separation/spacing
   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing
-  \begin{longtable}{|p{2.7in}||c!{\color{\myYearQuarterLineColor}\vrule}c!{\color{myYearQuarterLineColor}\vrule}!{\color{myYearQuarterLineColor}\vrule}c!{\color{myYearQuarterLineColor}\vrule}c||p{0.45in}!{\color{myYearQuarterLineColor}\vrule}p{1.45in}|}
+  \begin{longtable}{|p{2.8in}||c!{\color{\myYearQuarterLineColor}\vrule}c!{\color{\myYearQuarterLineColor}\vrule}!{\color{\myYearQuarterLineColor}\vrule}c!{\color{\myYearQuarterLineColor}\vrule}c||p{0.45in}!{\color{\myYearQuarterLineColor}\vrule}p{1.5in}|}
      \expinput{do_NOT_manually_edit/isANONtasks}
   \end{longtable}
-   \caption{\label{tab:isANONtasks} \textbf{Task Timeline:} Team member roles, rightmost column, are cross-referenced with corresponding names in the non-anonymized personnel and work effort table.  {\color{red} \textbf{Paper~1:} Sample and methods for enhancing detectability of  low SB X-ray emission, presentation of emission maps, description of database and pipeline software (which will be released in a public repository at the time of paper submission). \textbf{Paper~2:} Methodologies for measuring the gas halo size and other gas properties, analyisis of the diffuse hot gas halos as functions of galaxy properties (environment, galaxy morphology, stellar mass, and SFR based on \Chandra, \Hubble, and \Spitzer\ observations, and the SED models from the GSWLC; application of multivariate mthods to ``baseline'' the gas halo sizes (Sect.\,\ref{Sec:Baseline}). \textbf{Note~1:} See Sec.\,\ref{Sec:Sample}.}}
+  \caption{\label{tab:isANONtasks} \textbf{Task Timeline:} Team member roles, rightmost column, are cross-referenced with corresponding names in the non-anonymized personnel and work effort table.  {\color{red} \textbf{Paper~1:} Sample and methods for enhancing detectability of  low SB X-ray emission, presentation of emission maps, description of database and pipeline software (which will be released in a public repository at the time of paper submission). \textbf{Paper~2:} Methodologies for measuring the gas halo size and other gas properties, analyisis of the diffuse hot gas halos as functions of galaxy properties (environment, galaxy morphology, stellar mass, and SFR based on \Chandra, \Hubble, and \Spitzer\ observations, and the SED models from the GSWLC; application of multivariate mthods to ``baseline'' the gas halo sizes (Sect.\,\ref{Sec:Baseline}). \textbf{Note~1:} See Sec.\,\ref{Sec:Sample}.}}
 \end{table*}
 
-% ___________________________________________________
+%___________________________________________________
 %           N O T  A N O N   t a s k   s c h e d u l e
 % ___________________________________________________
 \newpage
