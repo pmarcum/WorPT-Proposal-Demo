@@ -14,25 +14,25 @@
 %% > > > > > > > > > > > > > < < < < < < < < < < < < < <
 %% Block of code to be uncommented by removing the *first* percent-sign at the beginning of the following lines below (leave intentional comments with at least 1 percent sign to keep them commented!)
 %% The next couple of lines define cell and font colors that can be changed if desired (keep this comment line commented-out!)
-%\def\myBannerBoldface#1{\textbf{#1}} % Bold-face the font of the top banner "Travel Cost Details"; change {\textbf{#1}} to {#1} or to other preference.
-%\def\myBannerColor{Blue} % Color of the top "Travel Cost Details" banner
-%\def\myBannerFontColor{White} % Color of the words in the top "Travel Cost Details" banner
-%\def\myPerTripShadingColor{gray} % Color of shading of the columns under the "per trip" section
-%\def\myPerTripShadingOpacity{0.85} % Opacity of shading of the columns under the "per trip" section (0 - completely transparent, 1.0 - completely opaque)
-%\def\myPerTripShadingMargin{7pt} % WIdth of margin to right of each shaded column under the "per trip" section. A white vertical line will show if this value is too small.
-%\def\myYearTripsDestLabelFontColor{Blue} % Color of font of column labels for the "Year", "#TRips" and "Dest." columns
-%\def\myTotalLabelFontColor{Blue} % Color of font of column label for the "Total" column
-%\def\myPerTripLabelFontColor{Blue} % Color of font of column labels under the "per trip" section
-%\def\myYearTripsDestBoldface#1{\textbf{#1}} % Bold-face the font of the column labels "Year", "#Trips", "Dest."; change {\textbf{#1}} to {#1} or to other preference.
-%\def\myPerTripBoldface#1{\textbf{#1}} % Bold-face the font of the column labels under the "per trip" section; change {\textbf{#1}} to {#1} or to other preference.
-%\def\myTotalBoldface#1{\textbf{#1}} % Bold-face the column label "Total",  change {\textbf{#1}} to {#1} or to other preference.
-%\def\myYearBoldface#1{\textbf{#1}} % Bold-face the Year values "Yr1", "YR2", etc in the first column; change {\textbf{#1}} to {#1} or to other preference.
+%\def\BannerBoldface#1{\textbf{#1}} % Bold-face the font of the top banner "Travel Cost Details"; change {\textbf{#1}} to {#1} or to other preference.
+%\def\BannerColor{Blue} % Color of the top "Travel Cost Details" banner
+%\def\BannerFontColor{White} % Color of the words in the top "Travel Cost Details" banner
+%\def\PerTripShadingColor{gray} % Color of shading of the columns under the "per trip" section
+%\def\PerTripShadingTransparency{0.85} % Transparency of shading of the columns under the "per trip" section (1.0 - completely transparent, 0.0 - completely opaque)
+%\def\PerTripShadingMargin{7pt} % WIdth of margin to right of each shaded column under the "per trip" section. A white vertical line will show if this value is too small.
+%\def\YearTripsDestLabelFontColor{Blue} % Color of font of column labels for the "Year", "#TRips" and "Dest." columns
+%\def\TotalLabelFontColor{Blue} % Color of font of column label for the "Total" column
+%\def\PerTripLabelFontColor{Blue} % Color of font of column labels under the "per trip" section
+%\def\YearTripsDestBoldface#1{\textbf{#1}} % Bold-face the font of the column labels "Year", "#Trips", "Dest."; change {\textbf{#1}} to {#1} or to other preference.
+%\def\PerTripBoldface#1{\textbf{#1}} % Bold-face the font of the column labels under the "per trip" section; change {\textbf{#1}} to {#1} or to other preference.
+%\def\TotalBoldface#1{\textbf{#1}} % Bold-face the column label "Total",  change {\textbf{#1}} to {#1} or to other preference.
+%\def\YearBoldface#1{\textbf{#1}} % Bold-face the Year values "Yr1", "YR2", etc in the first column; change {\textbf{#1}} to {#1} or to other preference.
 %%
 %The below table provides travel costs:
 %\begin{table*}[h!]
 %   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
 %   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
-%   \begin{tabular}{|lcl >{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][\myPerTripShadingMargin]}c>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][\myPerTripShadingMargin]}c>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][\myPerTripShadingMargin]}l>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][\myPerTripShadingMargin]}l>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][\myPerTripShadingMargin]}ll|}
+%   \begin{tabular}{|lcl >{\columncolor[\PerTripShadingColor]{\PerTripShadingTransparency}[\tabcolsep][\PerTripShadingMargin]}c>{\columncolor[\PerTripShadingColor]{\PerTripShadingTransparency}[\tabcolsep][\PerTripShadingMargin]}c>{\columncolor[\PerTripShadingColor]{\PerTripShadingTransparency}[\tabcolsep][\PerTripShadingMargin]}l>{\columncolor[\PerTripShadingColor]{\PerTripShadingTransparency}[\tabcolsep][\PerTripShadingMargin]}l>{\columncolor[\PerTripShadingColor]{\PerTripShadingTransparency}[\tabcolsep][\PerTripShadingMargin]}ll|}
 %       \expinput{do_NOT_manually_edit/isANONtravel}
 %    \end{tabular}
 %   \caption{\normalsize
@@ -52,15 +52,15 @@
 %   \label{tab:isANONtravel}
 %\end{table*}
 %%================ E N D   I N S T R U C T I O N S =============== (leave this line commented out!)
-\multicolumn{9}{|@{}c@{}|}{\cellcolor{\myBannerColor}\color{\myBannerFontColor}\myBannerBoldface{Travel Cost Details}}\\  % top header line
-\multicolumn{3}{|c}{} & \multicolumn{5}{>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][\myPerTripShadingMargin]}c}{\color{\myPerTripLabelFontColor}\emph{\textbf{per trip}}} & \\
+\multicolumn{9}{|@{}c@{}|}{\cellcolor{\BannerColor}\color{\BannerFontColor}\BannerBoldface{Travel Cost Details}}\\  % top header line
+\multicolumn{3}{|c}{} & \multicolumn{5}{>{\columncolor[\PerTripShadingColor]{\PerTripShadingTransparency}[\tabcolsep][\PerTripShadingMargin]}c}{\color{\PerTripLabelFontColor}\emph{\textbf{per trip}}} & \\
 \cline{4-8}
-\myYearTripsDestLabelBoldface{\color{\myYearTripsDestLabelFontColor}{Year}} & \myYearTripsDestLabelBoldface{\color{\myYearTripsDestLabelFontColor}{\#Trips}} & \myYearTripsDestLabelBoldface{\color{\myYearTripsDestLabelFontColor}{Dest.}} & \myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{Airfare}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{per}}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{Conf.}}} & {\myPerTripLabelBoldface{ \color{\myPerTripLabelFontColor}{Ground}}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{per}}} & \myTotalLabelBoldface{\color{\myTotalLabelFontColor}{Total}}\\ %middle header
-\myYearTripsDestLabelBoldface{} & \myYearTripsDestLabelBoldface{} & \myYearTripsDestLabelBoldface{} & {\myPerTripLabelBoldface{}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{diem}}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{Fee}}} & {\myPerTripLabelBoldface{ \color{\myPerTripLabelFontColor}{Transp.}}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{trip}}} & \\%bottom header line
+\YearTripsDestLabelBoldface{\color{\YearTripsDestLabelFontColor}{Year}} & \YearTripsDestLabelBoldface{\color{\YearTripsDestLabelFontColor}{\#Trips}} & \YearTripsDestLabelBoldface{\color{\YearTripsDestLabelFontColor}{Dest.}} & \PerTripLabelBoldface{\color{\PerTripLabelFontColor}{Airfare}} & {\PerTripLabelBoldface{\color{\PerTripLabelFontColor}{per}}} & {\PerTripLabelBoldface{\color{\PerTripLabelFontColor}{Conf.}}} & {\PerTripLabelBoldface{ \color{\PerTripLabelFontColor}{Ground}}} & {\PerTripLabelBoldface{\color{\PerTripLabelFontColor}{per}}} & \TotalLabelBoldface{\color{\TotalLabelFontColor}{Total}}\\ %middle header
+\YearTripsDestLabelBoldface{} & \YearTripsDestLabelBoldface{} & \YearTripsDestLabelBoldface{} & {\PerTripLabelBoldface{}} & {\PerTripLabelBoldface{\color{\PerTripLabelFontColor}{diem}}} & {\PerTripLabelBoldface{\color{\PerTripLabelFontColor}{Fee}}} & {\PerTripLabelBoldface{ \color{\PerTripLabelFontColor}{Transp.}}} & {\PerTripLabelBoldface{\color{\PerTripLabelFontColor}{trip}}} & \\%bottom header line
 \hline \hline
-\myYearBoldface{Yr1} & 4 & {domestic} & {\$700} & {\$1,320} & {\$500} & {\$300} & {\$2,820} & {\$11,280}\\
+\YearBoldface{Yr1} & 4 & {domestic} & {\$700} & {\$1,320} & {\$500} & {\$300} & {\$2,820} & {\$11,280}\\
  & 2 & {internat'l} & {\$1,750} & {\$1,600} & {\$800} & {\$500} & {\$4,650} & {\$9,300}\\\hline
-\myYearBoldface{Yr2} & 6 & {domestic} & {\$700} & {\$1,320} & {\$500} & {\$300} & {\$2,820} & {\$16,920}\\
+\YearBoldface{Yr2} & 6 & {domestic} & {\$700} & {\$1,320} & {\$500} & {\$300} & {\$2,820} & {\$16,920}\\
  & 2 & {internat'l} & {\$1,750} & {\$1,600} & {\$800} & {\$500} & {\$4,650} & {\$9,300}\\\hline
-\myYearBoldface{Yr3} & 5 & {domestic} & {\$700} & {\$1,320} & {\$500} & {\$300} & {\$2,820} & {\$14,100}\\
+\YearBoldface{Yr3} & 5 & {domestic} & {\$700} & {\$1,320} & {\$500} & {\$300} & {\$2,820} & {\$14,100}\\
  & 2 & {internat'l} & {\$1,750} & {\$1,600} & {\$800} & {\$500} & {\$4,650} & {\$9,300}\\\hline
