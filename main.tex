@@ -303,7 +303,8 @@ Also see TABLE\,\ref{tab:isANONtasks} and \ref{tab:NOTANONschedule}
 \def\myBannerBoldface#1{\textbf{#1}} % Bold-face the font of the top banner "Travel Cost Details"; change {\textbf{#1}} to {#1} or to other preference.
 \def\myBannerColor{Blue} % Color of the top "Travel Cost Details" banner
 \def\myBannerFontColor{White} % Color of the words in the top "Travel Cost Details" banner
-\def\myPerTripShading{\columncolor[gray]{0.85}[\tabcolsep][7pt]} % Color shading of the columns under the "per trip" section, where 2nd parameter is the opacity
+\def\myPerTripShadingColor{gray} % Color of shading of the columns under the "per trip" section
+\def\myPerTripShadingOpacity{0.85} % Opacity of shading of the columns under the "per trip" section (0 - completely transparent, 1.0 - completely opaque)
 \def\myYearTripsDestLabelFontColor{Blue} % Color of font of column labels for the "Year", "#TRips" and "Dest." columns
 \def\myTotalLabelFontColor{Blue} % Color of font of column label for the "Total" column
 \def\myPerTripLabelFontColor{Blue} % Color of font of column labels under the "per trip" section
@@ -316,7 +317,7 @@ The below table provides travel costs:
 \begin{table*}[h!]
   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
-  \begin{tabular}{|lcl >{\columncolor[gray]{0.85}[\tabcolsep][7pt]}c>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}c>{\myPerTripShading}l>{\myPerTripShading}l>{\myPerTripShading}ll|}
+  \begin{tabular}{|lcl >{\mytest}c>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][7pt]}c>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][7pt]}l>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][7pt]}l>{\columncolor[\myPerTripShadingColor]{\myPerTripShadingOpacity}[\tabcolsep][7pt]}ll|}
       \expinput{do_NOT_manually_edit/isANONtravel}
    \end{tabular}
   \caption{\normalsize
@@ -335,7 +336,6 @@ The below table provides travel costs:
      All travel will be to present science results of this project at conferences and/or visits to home institutions of the team members for in-person collaboration. Note that above values above do not include institutional overhead.}
   \label{tab:isANONtravel}
 \end{table*}
-
 % _____________________________________________________________________
 %              A N O N O N O M O U S  n o n - l a b o r
 % _____________________________________________________________________
