@@ -1,6 +1,32 @@
-%======================================================
-%     H O W   T O   U S E   T H I S   F I L E
-% (1) type the following into the main latex file where you want to put this table:
+%%================= BEGIN INSTRUCTIONS =================
+%%   H O W   T O   U S E   T H I S   F I L E
+%% (1) download or connect to https://github.com/pmarcum/LaTex-Formatting and select the
+%%        set of files (aas-style or general) that meet your situation, you can either download the files or link
+%%        Overleaf to the needed files in the GitHub repository through URL, and then add the following to
+%%        the preamble of your main paper
+%\usepackage{FUpackages}
+%\usepackage{FUformatting}
+%\usepackage{FUnewCommands} % not needed by WorPT files but generally useful
+%%
+%% (2) copy/paste the following into the main latex file where you want to put this section of text (it is not a table), and then uncomment the below lines by removing the first percent sign at the beginning of the line
+%%   IMPORTANT SHORTCUT:  You can toggle commenting / un-commenting across multiple lines within Overleaf by mouse-selecting the desired block of lines to un-comment (or comment), and then hitting: control slash ( [Ctrl] / )   ... or ...  command slash  ([command] /)  for a PC or Mac, resp.
+%%        (Note that lines that should remain commented-out in the below block have 2 percent signs ... the first will be removed when you uncomment the whole block, but the second percent sign will remain as intended to retain that line as a true comment within the Latex document.)
+%% > > > > > > > > > > > > > < < < < < < < < < < < < < <
+%% Block of code to be uncommented by removing the *first* percent-sign at the beginning of the following lines below (leave intentional comments with at least 1 percent sign to keep them commented!)
+%% The next couple of lines define cell and font colors that can be changed if desired (keep this comment line commented-out!)
+%\def\BannerColor{Blue} % Color of the banner at the top "Equipment, Travel, Supplies, Page Charges"
+%\def\BannerFontColor{Blue} % Color of the text in the banner at the top "Equipment, Travel, Supplies, Page Charges"
+%\def\BannerBoldface#1{\textbf#1} % Bold-face the banner at the top "Equipment, Travel, Supplies, Page Charges"; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
+%\def\CostLabelColor{Blue} % Color of the "Cost Category" column label
+%\def\YearLabelColor{Blue} % Color of the "Y1", "Y2", etc  column labels
+%\def\TotalLabelColor{Blue} % Color of the "Total" column label
+%\def\ColumnBoldface#1{\textbf#1} % Bold-face the "Cost Category" and "Y1, Y2, ..." column labels; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
+%\def\TotalBoldface#1{\textbf#1} % Bold-face the "Total ..." column label; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
+%\def\fm1#1{\textbf#1} % Format for all budget amounts not under "Total" and not in the Travel's "domestic" and "international" break-outs; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
+%\def\fm2#1{\textit#1} % Format of budget amounts under the Travel's "domestic" and "international" break-outs that are not Total values; to remove format, replace {\textit#1} with {#1} or with other desired mark-up
+%\def\fm3#1{\textbf#1} % Format of budget amounts under Total that are not in the "Domestic" and "International" break-outs; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
+%\def\fm4#1{\textit#1} % Format of budget amounts under Total that are also under the "Domestic" or "International" break-outs; to remove format, replace {\textit#1} with {#1} or with other desired mark-up
+%%
 %Table\,\ref{tab:isANONnonlabor} shows rolled-up values for travel costs and other non-labor costs. Travel cost details, including costing assumptions used, are presented in Table\,\ref{tab:isANONtravel}.
 %\begin{table*}[h!]
 %   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
@@ -18,15 +44,15 @@
 %      {\color{red}\underline{\scshape{ Materials and Supplies}}: We request an annually-averaged budget of \$1,125 to cover purchase of disk space to back up our data products and miscellaneous office and IT supplies at PI and Science-PI home institution. The distribution of these funds is top-heavy at the beginning of the grant period, when such supplies will be needed most. The disk size of the data products will be approximately ~39~Gb per exposure: four \texttt{float32} extensions per CCD, corresponding to the \textbf{1)} Zodiacal-CIB background, \textbf{2)} in-field, and \textbf{3)} out-field stray-light, and \textbf{4)} thermal emission layers, plus one \texttt{binary} extension for the Solar System object trails (\emph{streak / no streak}), for a total of 18~4096$\times$4096 detector focal plane. Storage of these products will not be required, as they will be immediately produced by the pipeline on a exposure-by-exposure basis. End-to-end simulations shall not exceed 100~Gb, and they will be accessible to the community through a public internet server. Publication~IV will require the analysis of an area equivalent to 32 adjacent field of views, the equivalent of a sector of the \RST/WFI High Latitude Wide Area Survey, which corresponds to 128 exposures. Assuming an average exposure size of 9~Gb, plus $\sim$40~Gb for the background products, we project that we will require $\sim$10--15~Tb of disk space (including backups).}}
 %      \label{tab:isANONnonlabor}
 %\end{table*}
-%======================================================
+%%================ E N D   I N S T R U C T I O N S =============== (leave this line commented out!)
 \hline
-\multicolumn{5}{|@{}c@{}|}{\cellcolor{Blue}\color{white}\textbf{Equipment, Travel, Supplies, Page Charges}}\\  % top header line
-\textbf{\color{Blue}Cost Category} & \textbf{\color{Blue}Y1} & \textbf{\color{Blue}Y2} & \textbf{\color{Blue}Y3} & \textbf{\color{Blue}{Total}}\\ % second header line
+\multicolumn{5}{|@{}c@{}|}{\cellcolor{\BannerColor}\color{\BannerFontColor}\BannerBoldface{Equipment, Travel, Supplies, Page Charges}}\\  % top header line
+\ColumnBoldface{\color{\CostLabelColor}Cost Category} & \ColumnBoldface{\color{\YearLabelColor}Y1} & \ColumnBoldface{\color{\YearLabelColor}Y2} & \ColumnBoldface{\color{\YearLabelColor}Y3} & \TotalBoldface{\color{\TotalLabelColor}{Total}}\\ % second header line
 \hline
-\textbf{Equipment} & \textbf{\$1,200} & \textbf{\$2,300} & \textbf{\$1,700} & \textbf{\$5,200}\\
-\textbf{Travel} & \textbf{\$20,580} & \textbf{\$26,220} & \textbf{\$23,400} & \textbf{\$70,200}\\
-\textit{~~~Domestic} & \textit{\$11,280} & \textit{\$16,920} & \textit{\$14,100} & \textit{\$42,300}\\
-\textit{~~~International} & \textit{\$9,300} & \textit{\$9,300} & \textit{\$9,300} & \textit{\$27,900}\\
-\textbf{Materials \& Supplies} & \textbf{\$300} & \textbf{\$300} & \textbf{\$300} & \textbf{\$900}\\
-\textbf{Publication Costs} & \textbf{\$3,400} & \textbf{\$3,600} & \textbf{\$4,400} & \textbf{\$11,400}\\
+\textbf{Equipment} & \fm1{\$1,200} & \fm1{\$2,300} & \fm1{\$1,700} & \fm3{\$5,200}
+\textbf{Travel} & \fm1{\$20,580} & \fm1{\$26,220} & \fm1{\$23,400} & \fm3{\$70,200}
+\textit{~~~Domestic} & \fm2{\$11,280} & \fm2{\$16,920} & \fm2{\$14,100} & \fm4{\$42,300}
+\textit{~~~International} & \fm2{\$9,300} & \fm2{\$9,300} & \fm2{\$9,300} & \fm4{\$27,900}
+\textbf{Materials \& Supplies} & \fm1{\$300} & \fm1{\$300} & \fm1{\$300} & \fm3{\$900}
+\textbf{Publication Costs} & \fm1{\$3,400} & \fm1{\$3,600} & \fm1{\$4,400} & \fm3{\$11,400}
 \hline
