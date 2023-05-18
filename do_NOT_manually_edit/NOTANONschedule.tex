@@ -14,29 +14,29 @@
 %% > > > > > > > > > > > > > < < < < < < < < < < < < < <
 %% Block of code to be uncommented by removing the *first* percent-sign at the beginning of the following lines below (leave intentional comments with at least 1 percent sign to keep them commented!)
 %% The next couple of lines define cell and font colors that can be changed if desired (keep this comment line commented-out!)
-%\def\myTaskTimelineColumnSize{\scriptsize } % Size of column label for Task Timeline
-%\def\myTaskAssignmentsColumnSize{\scriptsize } % Size of column label for Task Assignments
-%\def\myTotalFteColumnSize{\scriptsize } % Size of column label for Totaled FTEs
-%\def\myYearColumnSize{\scriptsize } % Size of column label for "YR1", "YR2", etc. column labels
-%\def\myTaskTitleColumnSize{\normalsize } % Size of column label for "TASK TITLES" column label
-%\def\myQuarterColumnSize{\scriptsize } % Size of column label for "1", "2", "3", "4" quarter labels on columns
-%\def\myIdWksColumnSize{\scriptsize } % Size of column label for "id wks"
-%\def\mySigmaColumnIcon{\textbf{\large{$\Sigma$}}} % Size of Sigma symbol column label
-%\def\myNoDollarColumnIcon{\noDollarIcon{-0.4}{0.4mm}{0.2}{0.15}}  % Size of "no dollar" symbol column label
-%\def\myDollarColumnIcon{\dollarIcon{-0.4}{0.2}{0.015}}  % Size of green "dollar" symbol column label
-%\def\mySigmaCaptionIcon{\textbf{\large{$\Sigma$}} $=$} % Size of Sigma symbol in the caption
-%\def\myNoDollarCaptionIcon{\noDollarIcon{-0.3}{0.4mm}{0.2}{0.15}\hspace{-0.3em}$=$}  % Size of "no dollar" symbol in the caption
-%\def\myDollarCaptionIcon{\dollarIcon{-0.3}{0.2}{0.015}\hspace{-0.3em}$=$}  % Size of green "dollar" symbol in the caption
-%\def\myTaskCategoryLabel#1#2{{\normalsize\textbf\scshape{#1}}~{\normalsize\textbf{#2}}}  % Format of theTask Category labels
-%\def\myTaskTitleLabel#1#2{~{\scriptsize{\textbf{\scshape{#1}}}}~{\color{mediumelectricblue}{\footnotesize\textbf{#2}}}}  % Format of theTask title labels listed under the cattegory
-%\def\myFteTotalFormat#1{\small #1} % Format of the 1st column under Total FTE  (the Sigma column)
-%\def\myFteUnfundedFormat#1{\small #1} % Format of the 2n column under Total FTE  (the no-dollar column)
-%\def\myFteFundedFormat#1{\small \color{blue} #1} % Format of the last column of FTE numbers under the "funded" column of TOTAL FTE
-%\def\myTimelineColor{mediumelectricblue} % Color of the filled-in cells under TASK TIMELINE
-%\def\myTimelineSize{\tiny} % Controls the width of the filled-in cells under TASK TIMELINE
-%\def\myFundedUsTeam#1{\small \color{blue} #1} % Format of funded US team members as their IDs should present under "TASK ASSIGNMENTS"
-%\def\myUnfundedUsTeam#1{\small \color{black} #1} % Format of US team members NOT FUNDED through this proposal, as their IDs should present under "TASK ASSIGNMENTS"
-%\def\myInternationalTeam#1{\small \color{red} #1} % Format of international team members as their IDs should present under "TASK ASSIGNMENTS"
+%\def\TaskTimelineColumnSize{\scriptsize } % Size of column label for Task Timeline
+%\def\TaskAssignmentsColumnSize{\scriptsize } % Size of column label for Task Assignments
+%\def\TotalFteColumnSize{\scriptsize } % Size of column label for Totaled FTEs
+%\def\YearColumnSize{\scriptsize } % Size of column label for "YR1", "YR2", etc. column labels
+%\def\TaskTitleColumnSize{\normalsize } % Size of column label for "TASK TITLES" column label
+%\def\QuarterColumnSize{\scriptsize } % Size of column label for "1", "2", "3", "4" quarter labels on columns
+%\def\IdWksColumnSize{\scriptsize } % Size of column label for "id wks"
+%\def\SigmaColumnIcon{\textbf{\large{$\Sigma$}}} % Size of Sigma symbol column label
+%\def\NoDollarColumnIcon{\noDollarIcon{-0.4}{0.4mm}{0.2}{0.15}}  % Size of "no dollar" symbol column label
+%\def\DollarColumnIcon{\dollarIcon{-0.4}{0.2}{0.015}}  % Size of green "dollar" symbol column label
+%\def\SigmaCaptionIcon{\textbf{\large{$\Sigma$}} $=$} % Size of Sigma symbol in the caption
+%\def\NoDollarCaptionIcon{\noDollarIcon{-0.3}{0.4mm}{0.2}{0.15}\hspace{-0.3em}$=$}  % Size of "no dollar" symbol in the caption
+%\def\DollarCaptionIcon{\dollarIcon{-0.3}{0.2}{0.015}\hspace{-0.3em}$=$}  % Size of green "dollar" symbol in the caption
+%\def\TaskCategoryLabel#1#2{{\normalsize\textbf\scshape{#1}}~{\normalsize\textbf{#2}}}  % Format of theTask Category labels
+%\def\TaskTitleLabel#1#2{~{\scriptsize{\textbf{\scshape{#1}}}}~{\color{mediumelectricblue}{\footnotesize\textbf{#2}}}}  % Format of theTask title labels listed under the cattegory
+%\def\FteTotalFormat#1{\small #1} % Format of the 1st column under Total FTE  (the Sigma column)
+%\def\FteUnfundedFormat#1{\small #1} % Format of the 2n column under Total FTE  (the no-dollar column)
+%\def\FteFundedFormat#1{\small \color{blue} #1} % Format of the last column of FTE numbers under the "funded" column of TOTAL FTE
+%\def\TimelineColor{mediumelectricblue} % Color of the filled-in cells under TASK TIMELINE
+%\def\TimelineSize{\tiny} % Controls the width of the filled-in cells under TASK TIMELINE
+%\def\FundedUsTeam#1{\small \color{blue} #1} % Format of funded US team members as their IDs should present under "TASK ASSIGNMENTS"
+%\def\UnfundedUsTeam#1{\small \color{black} #1} % Format of US team members NOT FUNDED through this proposal, as their IDs should present under "TASK ASSIGNMENTS"
+%\def\InternationalTeam#1{\small \color{red} #1} % Format of international team members as their IDs should present under "TASK ASSIGNMENTS"
 %%
 %\addtocounter{table}{-1} %corrects double-counting of sidewaystable and longtable combination
 %\begin{sidewaystable}  %comment out if not needed
@@ -55,93 +55,93 @@
 %         \end{minipage}
 %      }
 %   \endgroup
-%   \caption{\label{tab:NOTANONschedule} Resource-loaded project schedule, where: \myNoDollarCaptionIcon Not funded by this grant,  \myDollarCaptionIcon funded by this grant, \mySigmaCaptionIcon funded $+$ unfunded; Tasks are listed (left side), with duration of task activity indicated in blue-colored timelines  that measure quarter-years (1,2,3,4). Task assignments identify specific team members responsible for  implementation with associated work weeks, where color indicates institutional affiliation  (blue$=$funded/U.S., black$=$not funded/U.S., red=international). "Total FTE" (right side) are integrated work-weeks converted into FTE per task (1~FTE$=$12~months), displayed as "total",  "unfunded by this grant", and "funded by this grant", resp.  Asignment identities:  {\textbf{dd}}: Dan~Dent{\'{o}}n, {\textbf{gg}}: Gisella~Gala, {\textbf{pm}}: Pamela~Marcum, {\textbf{ss}}: Sally~Smith}
+%   \caption{\label{tab:NOTANONschedule} Resource-loaded project schedule, where: \NoDollarCaptionIcon Not funded by this grant,  \DollarCaptionIcon funded by this grant, \SigmaCaptionIcon funded $+$ unfunded; Tasks are listed (left side), with duration of task activity indicated in blue-colored timelines  that measure quarter-years (1,2,3,4). Task assignments identify specific team members responsible for  implementation with associated work weeks, where color indicates institutional affiliation  (blue$=$funded/U.S., black$=$not funded/U.S., red=international). "Total FTE" (right side) are integrated work-weeks converted into FTE per task (1~FTE$=$12~months), displayed as "total",  "unfunded by this grant", and "funded by this grant", resp.  Asignment identities:  {\textbf{dd}}: Dan~Dent{\'{o}}n, {\textbf{gg}}: Gisella~Gala, {\textbf{pm}}: Pamela~Marcum, {\textbf{ss}}: Sally~Smith}
 %\end{sidewaystable}  % comment out if not used
 %%================ E N D   I N S T R U C T I O N S =============== (leave this line commented out!)
 \cline{2-13}
 % ----------------------- First / top line of headers
 \multicolumn{1}{c|}{} % title column
-& \multicolumn{12}{c|}{\myTaskTimelineColumnSize {TASK}} %schedule columns
+& \multicolumn{12}{c|}{\TaskTimelineColumnSize {TASK}} %schedule columns
 & \multicolumn{1}{c}{} %task assignment column
 & \multicolumn{3}{c}{}\\ % 3-column total fte
 \cline{14-17}
 % ------------------------- Second line of headers
 \multicolumn{1}{c|}{} % title column
-& \multicolumn{12}{c|}{\myTaskTimelineColumnSize {TIMELINE}} % schedule columns
-& \multicolumn{1}{c|}{\myTaskAssignmentsColumnSize {TASK}} %task assignments column
-& \multicolumn{3}{c|}{\myTotalFteColumnSize {TOTAL}}\\ % 3-column total fte
+& \multicolumn{12}{c|}{\TaskTimelineColumnSize {TIMELINE}} % schedule columns
+& \multicolumn{1}{c|}{\TaskAssignmentsColumnSize {TASK}} %task assignments column
+& \multicolumn{3}{c|}{\TotalFteColumnSize {TOTAL}}\\ % 3-column total fte
 \cline{2-13}
 % -------------------------  Third line of headers
 \multicolumn{1}{c|}{} %title column
-& \multicolumn{4}{c|}{\myYearColumnSize {YR1}} & \multicolumn{4}{c|}{\myYearColumnSize {YR2}} & \multicolumn{4}{c|}{\myYearColumnSize {YR3}}
-& \multicolumn{1}{c|}{\myTaskAssignmentsColumnSize {ASSIGNMENTS}} %task assignments in ID and \#week pairs
-& \multicolumn{3}{c|}{\myTotalFteColumnSize {FTE}}\\ % 3-column total fte
+& \multicolumn{4}{c|}{\YearColumnSize {YR1}} & \multicolumn{4}{c|}{\YearColumnSize {YR2}} & \multicolumn{4}{c|}{\YearColumnSize {YR3}}
+& \multicolumn{1}{c|}{\TaskAssignmentsColumnSize {ASSIGNMENTS}} %task assignments in ID and \#week pairs
+& \multicolumn{3}{c|}{\TotalFteColumnSize {FTE}}\\ % 3-column total fte
 \cline{1-1}
 % -------------------------  Forth line of headers
-\multicolumn{1}{|l|}{\myTaskTitleColumnSize {TASK TITLES}} % title column
-& \myQuarterColumnSize {1} & \myQuarterColumnSize {2} & \myQuarterColumnSize {3} & \myQuarterColumnSize {4} %Yr1
-& \myQuarterColumnSize {1} & \myQuarterColumnSize {2} & \myQuarterColumnSize {3} & \myQuarterColumnSize {4} %Yr2
-& \myQuarterColumnSize {1} & \myQuarterColumnSize {2} & \myQuarterColumnSize {3} & \myQuarterColumnSize {4} %Yr3
-& \multicolumn{1}{c|}{\myIdWksColumnSize {id~\#wks}} %task assignments in ID and \#week pairs
-& {\textbf{\mySigmaColumnSize {$\Sigma$}}} % Col1 Total FTE
-& {\myNoDollarColumnIcon } % Col2 Total FTE
-& {\myDollarColumnIcon} %\Col2 Total FTE
+\multicolumn{1}{|l|}{\TaskTitleColumnSize {TASK TITLES}} % title column
+& \QuarterColumnSize {1} & \QuarterColumnSize {2} & \QuarterColumnSize {3} & \QuarterColumnSize {4} %Yr1
+& \QuarterColumnSize {1} & \QuarterColumnSize {2} & \QuarterColumnSize {3} & \QuarterColumnSize {4} %Yr2
+& \QuarterColumnSize {1} & \QuarterColumnSize {2} & \QuarterColumnSize {3} & \QuarterColumnSize {4} %Yr3
+& \multicolumn{1}{c|}{\IdWksColumnSize {id~\#wks}} %task assignments in ID and \#week pairs
+& {\textbf{\SigmaColumnSize {$\Sigma$}}} % Col1 Total FTE
+& {\NoDollarColumnIcon } % Col2 Total FTE
+& {\DollarColumnIcon} %\Col2 Total FTE
 \hline
 %beginning level 1 task
-\myTaskCategoryLabel{A}{Data and models preparation}
+\TaskCategoryLabel{A}{Data and models preparation}
 & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} % empty year quarters
 &{} %empty task assignments
-&\myTimelineSize{}&\myTimelineSize{}&\myTimelineSize{}\\ %empty total FTEs
+&\TimelineSize{}&\TimelineSize{}&\TimelineSize{}\\ %empty total FTEs
 %beginning level 2 task
-\myTaskTitleLabel{A1}{Generate simulated data}
-&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}
-&{ss\,8 \myFundedUsTeam{pm}\,\myFundedUsTeam{2} \myFundedUsTeam{dd}\,\myFundedUsTeam{4}}
-& \myFteTotalFormat{0.27} & \myFteUnfundedFormat{0.04} & \myFteFundedFormat{0.23}\\
+\TaskTitleLabel{A1}{Generate simulated data}
+&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}
+&{ss\,8 \FundedUsTeam{pm}\,\FundedUsTeam{2} \FundedUsTeam{dd}\,\FundedUsTeam{4}}
+& \FteTotalFormat{0.27} & \FteUnfundedFormat{0.04} & \FteFundedFormat{0.23}\\
 %beginning level 2 task
-\myTaskTitleLabel{A2}{Make emission maps}
-&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}
-&{\myFundedUsTeam{dd}\,\myFundedUsTeam{6} \myFundedUsTeam{ss}\,\myFundedUsTeam{6}}
-& \myFteTotalFormat{0.23} & \myFteUnfundedFormat{0.00} & \myFteFundedFormat{0.23}\\
+\TaskTitleLabel{A2}{Make emission maps}
+&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}
+&{\FundedUsTeam{dd}\,\FundedUsTeam{6} \FundedUsTeam{ss}\,\FundedUsTeam{6}}
+& \FteTotalFormat{0.23} & \FteUnfundedFormat{0.00} & \FteFundedFormat{0.23}\\
 %beginning level 2 task
-\myTaskTitleLabel{A3}{Incorporate thermal emission models}
-&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}
-&{\myFundedUsTeam{ss}\,\myFundedUsTeam{6} \myUnfundedUsTeam{pm}\,\myUnfundedUsTeam{4}}
-& \myFteTotalFormat{0.19} & \myFteUnfundedFormat{0.08} & \myFteFundedFormat{0.12}\\
+\TaskTitleLabel{A3}{Incorporate thermal emission models}
+&{\TimelineSize}&{\TimelineSize}&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}
+&{\FundedUsTeam{ss}\,\FundedUsTeam{6} \UnfundedUsTeam{pm}\,\UnfundedUsTeam{4}}
+& \FteTotalFormat{0.19} & \FteUnfundedFormat{0.08} & \FteFundedFormat{0.12}\\
 \hline
 %beginning level 1 task
-\myTaskCategoryLabel{B}{Application to archive}
+\TaskCategoryLabel{B}{Application to archive}
 & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} % empty year quarters
 &{} %empty task assignments
-&\myTimelineSize{}&\myTimelineSize{}&\myTimelineSize{}\\ %empty total FTEs
+&\TimelineSize{}&\TimelineSize{}&\TimelineSize{}\\ %empty total FTEs
 %beginning level 2 task
-\myTaskTitleLabel{B1}{Determine fields of interest}
-&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}
-&{pm\,2 \myFundedUsTeam{dd}\,\myFundedUsTeam{1} \myFundedUsTeam{ss}\,\myFundedUsTeam{1} \myInternationalTeam{gg}\,\myInternationalTeam{4}}
-& \myFteTotalFormat{0.15} & \myFteUnfundedFormat{0.12} & \myFteFundedFormat{0.04}\\
+\TaskTitleLabel{B1}{Determine fields of interest}
+&{\TimelineSize}&{\TimelineSize}&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}
+&{pm\,2 \FundedUsTeam{dd}\,\FundedUsTeam{1} \FundedUsTeam{ss}\,\FundedUsTeam{1} \InternationalTeam{gg}\,\InternationalTeam{4}}
+& \FteTotalFormat{0.15} & \FteUnfundedFormat{0.12} & \FteFundedFormat{0.04}\\
 %beginning level 2 task
-\myTaskTitleLabel{B2}{Reduction of image mosaics}
-&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}
-&{\myFundedUsTeam{dd}\,\myFundedUsTeam{4} \myFundedUsTeam{ss}\,\myFundedUsTeam{3} \myInternationalTeam{gg}\,\myInternationalTeam{5}}
-& \myFteTotalFormat{0.23} & \myFteUnfundedFormat{0.10} & \myFteFundedFormat{0.13}\\
+\TaskTitleLabel{B2}{Reduction of image mosaics}
+&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}
+&{\FundedUsTeam{dd}\,\FundedUsTeam{4} \FundedUsTeam{ss}\,\FundedUsTeam{3} \InternationalTeam{gg}\,\InternationalTeam{5}}
+& \FteTotalFormat{0.23} & \FteUnfundedFormat{0.10} & \FteFundedFormat{0.13}\\
 \hline
 %beginning level 1 task
-\myTaskCategoryLabel{C}{Documentation and publications}
+\TaskCategoryLabel{C}{Documentation and publications}
 & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} & {} % empty year quarters
 &{} %empty task assignments
-&\myTimelineSize{}&\myTimelineSize{}&\myTimelineSize{}\\ %empty total FTEs
+&\TimelineSize{}&\TimelineSize{}&\TimelineSize{}\\ %empty total FTEs
 %beginning level 2 task
-\myTaskTitleLabel{C1}{Code documentation \& verification}
-&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}
-&{\myFundedUsTeam{ss}\,\myFundedUsTeam{8} \myFundedUsTeam{dd}\,\myFundedUsTeam{3} \myUnfundedUsTeam{pm}\,\myUnfundedUsTeam{6}}
-& \myFteTotalFormat{0.33} & \myFteUnfundedFormat{0.12} & \myFteFundedFormat{0.21}\\
+\TaskTitleLabel{C1}{Code documentation \& verification}
+&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}
+&{\FundedUsTeam{ss}\,\FundedUsTeam{8} \FundedUsTeam{dd}\,\FundedUsTeam{3} \UnfundedUsTeam{pm}\,\UnfundedUsTeam{6}}
+& \FteTotalFormat{0.33} & \FteUnfundedFormat{0.12} & \FteFundedFormat{0.21}\\
 %beginning level 2 task
-\myTaskTitleLabel{C2}{Pub 1: pipeline and improved images}
-&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize}&{\myTimelineSize}
-&{\myFundedUsTeam{dd}\,\myFundedUsTeam{4} \myFundedUsTeam{pm}\,\myFundedUsTeam{2} \myFundedUsTeam{ss}\,\myFundedUsTeam{4} \myInternationalTeam{gg}\,\myInternationalTeam{6}}
-& \myFteTotalFormat{0.31} & \myFteUnfundedFormat{0.12} & \myFteFundedFormat{0.19}\\
+\TaskTitleLabel{C2}{Pub 1: pipeline and improved images}
+&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize}&{\TimelineSize}
+&{\FundedUsTeam{dd}\,\FundedUsTeam{4} \FundedUsTeam{pm}\,\FundedUsTeam{2} \FundedUsTeam{ss}\,\FundedUsTeam{4} \InternationalTeam{gg}\,\InternationalTeam{6}}
+& \FteTotalFormat{0.31} & \FteUnfundedFormat{0.12} & \FteFundedFormat{0.19}\\
 %beginning level 2 task
-\myTaskTitleLabel{C3}{Pub 2: galaxy identification}
-&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}&{\myTimelineSize\cellcolor{\myTimelineColor}}
-&{\myFundedUsTeam{pm}\,\myFundedUsTeam{4} \myFundedUsTeam{dd}\,\myFundedUsTeam{3} \myFundedUsTeam{ss}\,\myFundedUsTeam{3} \myInternationalTeam{gg}\,\myInternationalTeam{6}}
-& \myFteTotalFormat{0.31} & \myFteUnfundedFormat{0.12} & \myFteFundedFormat{0.19}\\
+\TaskTitleLabel{C3}{Pub 2: galaxy identification}
+&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize}&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize\cellcolor{\TimelineColor}}&{\TimelineSize\cellcolor{\TimelineColor}}
+&{\FundedUsTeam{pm}\,\FundedUsTeam{4} \FundedUsTeam{dd}\,\FundedUsTeam{3} \FundedUsTeam{ss}\,\FundedUsTeam{3} \InternationalTeam{gg}\,\InternationalTeam{6}}
+& \FteTotalFormat{0.31} & \FteUnfundedFormat{0.12} & \FteFundedFormat{0.19}\\
 \hline
