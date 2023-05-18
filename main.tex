@@ -81,23 +81,24 @@ The most recent version of the \href{https://docs.google.com/spreadsheets/d/1J9s
 \newpage
 \subsection{\textbf{Not} Anonymous FTEs per Year Per Named Team Member Role  (``NONANONfte.tex'')}
 
-\def\myNameLabelBoldface#1{\textbf{#1}} % Makes the "Name" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
-\def\myRoleLabelBoldface#1{\textbf{#1}} % Makes the "Role" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
-\def\myCommitmentLabelBoldface#1{\textbf{#1}} % Makes the "Commitment (FTE)" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
-\def\myYearLabelBoldface#1{\textbf{#1}} % Makes the "Y1", "Y2", ...  column labels boldfaced; change{\textbf{#1}} to {#1} or to other preference.
-\def\myTotalLabelBoldface#1{\textbf{#1}} % Makes the "Total" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
-\def\mySectionBannerColor{Blue} % Color of the banners separating the 3 different sections.
-\def\mySectionBannerFontColor{White} % Color of the words in the banners separating the 3 different sections.
-\def\mySectionBannerBoldface#1{\textbf{#1}} % Boldface the text in the banners separating the 3 different sections; to remove boldface (or change to something else), replace \textbf{#1} with #1
-\def\myTotalWorkEffortBoldface#1{\textbf{#1}} % Boldface the text in the line "Total .... Work Effort" at the end of each section; to remove boldface (or change to something else), replace \textbf{#1} with #1
-\def\myTotalWorkEffortFontColor{Blue} % Color of the font in the line for "Total ... Work Effort" at the end of each section
+\def\NameLabelBoldface#1{\textbf{#1}} % Makes the "Name" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+\def\RoleLabelBoldface#1{\textbf{#1}} % Makes the "Role" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+\def\CommitmentLabelBoldface#1{\textbf{#1}} % Makes the "Commitment (FTE)" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+\def\YearLabelBoldface#1{\textbf{#1}} % Makes the "Y1", "Y2", ...  column labels boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+\def\TotalLabelBoldface#1{\textbf{#1}} % Makes the "Total" column label boldfaced; change{\textbf{#1}} to {#1} or to other preference.
+\def\SectionBannerColor{Blue} % Color of the banners separating the 3 different sections.
+\def\SectionBannerFontColor{White} % Color of the words in the banners separating the 3 different sections.
+\def\SectionBannerBoldface#1{\textbf{#1}} % Boldface the text in the banners separating the 3 different sections; to remove boldface (or change to something else), replace \textbf{#1} with #1
+\def\TotalWorkEffortBoldface#1{\textbf{#1}} % Boldface the text in the line "Total .... Work Effort" at the end of each section; to remove boldface (or change to something else), replace \textbf{#1} with #1
+\def\TotalWorkEffortFontColor{Blue} % Color of the font in the line for "Total ... Work Effort" at the end of each section
+%
 {
-   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
-   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
-   \begin{longtable}{|l|l|*{4}{c|}}
-      \expinput{do_NOT_manually_edit/NOTANONfte}
-      \caption{\label{tab:NOTANONfte} FTE/WYE for all team members.}
-   \end{longtable}
+  \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
+  \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
+  \begin{longtable}{|l|l|*{4}{c|}}
+     \expinput{do_NOT_manually_edit/NOTANONfte}
+     \caption{\label{tab:NOTANONfte} FTE/WYE for all team members.}
+  \end{longtable}
 }
 
 % ___________________________________________________
@@ -105,25 +106,24 @@ The most recent version of the \href{https://docs.google.com/spreadsheets/d/1J9s
 % ___________________________________________________
 \newpage
 \subsection{\textbf{Not} Anonymous HST-style FTE Table for Phase~II (``NOTANONhst.tex'')}
-% Block of code to be uncommented by removing the *first* percent-sign at the beginning of the following lines below (leave intentional comments with at least 1 percent sign to keep them commented!)
-% The next couple of lines define cell and font colors that can be changed if desired (keep this comment line commented-out!)
-\def\myHeaderColor{Blue} % Color of column headings
-\def\myLabelColor{White} % Color of font column headings
-\def\myLabelBoldface#1{\textbf{#1}} % Makes column labels bold-faced; change {\textbf{#1}} to {#1} or to other preference.
+
+\def\HeaderColor{Blue} % Color of column headings
+\def\LabelColor{White} % Color of font column headings
+\def\LabelBoldface#1{\textbf{#1}} % Makes column labels bold-faced; change {\textbf{#1}} to {#1} or to other preference.
 %
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 {
-   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
-   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
-   \begin{longtable}{
-      |L{1.8in}!{\color{lightgray}\vrule}L{1.3in}!{\color{lightgray}\vrule}L{2.5in}!{\color{lightgray}\vrule}p{0.10in}!{\color{lightgray}\vrule}p{0.28in}|
-      }
-      \caption{Work Effort for All Team Members \label{tab:NOTANONhst}}\\
-      \multicolumn{5}{l}{\textbf{Program \#:} HST-xx-xxxxx (Cycle XX)}\\
+  \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
+  \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
+  \begin{longtable}{
+     |L{1.8in}!{\color{lightgray}\vrule}L{1.3in}!{\color{lightgray}\vrule}L{2.5in}!{\color{lightgray}\vrule}p{0.10in}!{\color{lightgray}\vrule}p{0.28in}|
+     }
+     \caption{Work Effort for All Team Members \label{tab:NOTANONhst}}\\
+     \multicolumn{5}{l}{\textbf{Program \#:} HST-xx-xxxxx (Cycle XX)}\\
 
-      \multicolumn{5}{l}{\textbf{Science PI:} Dr. Sally Smith}\\
-      \expinput{do_NOT_manually_edit/NOTANONhst}
-   \end{longtable}
+     \multicolumn{5}{l}{\textbf{Science PI:} Dr. Sally Smith}\\
+     \expinput{do_NOT_manually_edit/NOTANONhst}
+  \end{longtable}
 }
 
 % @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -161,40 +161,40 @@ The most recent version of the \href{https://docs.google.com/spreadsheets/d/1J9s
 \newpage
 \subsection{\textbf{Not} Anonymous Detailed Resource-Loaded Task Timeline w/ Assignments (``NOTANONschedule.tex'')}
 
-\def\myTaskTimelineColumnSize{\scriptsize } % Size of column label for Task Timeline
-\def\myTaskAssignmentsColumnSize{\scriptsize } % Size of column label for Task Assignments
-\def\myTotalFteColumnSize{\scriptsize } % Size of column label for Totaled FTEs
-\def\myYearColumnSize{\scriptsize } % Size of column label for "YR1", "YR2", etc. column labels
-\def\myTaskTitleColumnSize{\normalsize } % Size of column label for "TASK TITLES" column label
-\def\myQuarterColumnSize{\scriptsize } % Size of column label for "1", "2", "3", "4" quarter labels on columns
-\def\myIdWksColumnSize{\scriptsize } % Size of column label for "id wks"
-\def\mySigmaColumnIcon{\textbf{\large{$\Sigma$}}} % Size of Sigma symbol column label
-\def\myNoDollarColumnIcon{\noDollarIcon{-0.4}{0.4mm}{0.2}{0.15}}  % Size of "no dollar" symbol column label
-\def\myDollarColumnIcon{\dollarIcon{-0.4}{0.2}{0.015}}  % Size of green "dollar" symbol column label
-\def\mySigmaCaptionIcon{\textbf{\large{$\Sigma$}} $=$} % Size of Sigma symbol in the caption
-\def\myNoDollarCaptionIcon{\noDollarIcon{-0.3}{0.4mm}{0.2}{0.15}\hspace{-0.3em}$=$}  % Size of "no dollar" symbol in the caption
-\def\myDollarCaptionIcon{\dollarIcon{-0.3}{0.2}{0.015}\hspace{-0.3em}$=$}  % Size of green "dollar" symbol in the caption
-\def\myTaskCategoryLabel#1#2{{\normalsize\textbf\scshape{#1}}~{\normalsize\textbf{#2}}}  % Format of theTask Category labels
-\def\myTaskTitleLabel#1#2{~{\scriptsize{\textbf{\scshape{#1}}}}~{\color{mediumelectricblue}{\footnotesize\textbf{#2}}}}  % Format of theTask title labels listed under the cattegory
-\def\myFteTotalFormat#1{\small #1} % Format of the 1st column under Total FTE  (the Sigma column)
-\def\myFteUnfundedFormat#1{\small #1} % Format of the 2n column under Total FTE  (the no-dollar column)
-\def\myFteFundedFormat#1{\small \color{blue} #1} % Format of the last column of FTE numbers under the "funded" column of TOTAL FTE
-\def\myTimelineColor{mediumelectricblue} % Color of the filled-in cells under TASK TIMELINE
-\def\myTimelineSize{\tiny} % Controls the width of the filled-in cells under TASK TIMELINE
-\def\myFundedUsTeam#1{\small \color{blue} #1} % Format of funded US team members as their IDs should present under "TASK ASSIGNMENTS"
-\def\myUnfundedUsTeam#1{\small \color{black} #1} % Format of US team members NOT FUNDED through this proposal, as their IDs should present under "TASK ASSIGNMENTS"
-\def\myInternationalTeam#1{\small \color{red} #1} % Format of international team members as their IDs should present under "TASK ASSIGNMENTS"
-
+\def\TaskTimelineColumnSize{\scriptsize } % Size of column label for Task Timeline
+\def\TaskAssignmentsColumnSize{\scriptsize } % Size of column label for Task Assignments
+\def\TotalFteColumnSize{\scriptsize } % Size of column label for Totaled FTEs
+\def\YearColumnSize{\scriptsize } % Size of column label for "YR1", "YR2", etc. column labels
+\def\TaskTitleColumnSize{\normalsize } % Size of column label for "TASK TITLES" column label
+\def\QuarterColumnSize{\scriptsize } % Size of column label for "1", "2", "3", "4" quarter labels on columns
+\def\IdWksColumnSize{\scriptsize } % Size of column label for "id wks"
+\def\SigmaColumnIcon{\textbf{\large{$\Sigma$}}} % Size of Sigma symbol column label
+\def\NoDollarColumnIcon{\noDollarIcon{-0.4}{0.4mm}{0.2}{0.15}}  % Size of "no dollar" symbol column label
+\def\DollarColumnIcon{\dollarIcon{-0.4}{0.2}{0.015}}  % Size of green "dollar" symbol column label
+\def\SigmaCaptionIcon{\textbf{\large{$\Sigma$}} $=$} % Size of Sigma symbol in the caption
+\def\NoDollarCaptionIcon{\noDollarIcon{-0.3}{0.4mm}{0.2}{0.15}\hspace{-0.3em}$=$}  % Size of "no dollar" symbol in the caption
+\def\DollarCaptionIcon{\dollarIcon{-0.3}{0.2}{0.015}\hspace{-0.3em}$=$}  % Size of green "dollar" symbol in the caption
+\def\TaskCategoryLabel#1#2{{\normalsize\textbf\scshape{#1}}~{\normalsize\textbf{#2}}}  % Format of theTask Category labels
+\def\TaskTitleLabel#1#2{~{\scriptsize{\textbf{\scshape{#1}}}}~{\color{mediumelectricblue}{\footnotesize\textbf{#2}}}}  % Format of theTask title labels listed under the cattegory
+\def\FteTotalFormat#1{\small #1} % Format of the 1st column under Total FTE  (the Sigma column)
+\def\FteUnfundedFormat#1{\small #1} % Format of the 2n column under Total FTE  (the no-dollar column)
+\def\FteFundedFormat#1{\small \color{blue} #1} % Format of the last column of FTE numbers under the "funded" column of TOTAL FTE
+\def\TimelineColor{mediumelectricblue} % Color of the filled-in cells under TASK TIMELINE
+\def\TimelineSize{\tiny} % Controls the width of the filled-in cells under TASK TIMELINE
+\def\FundedUsTeam#1{\small \color{blue} #1} % Format of funded US team members as their IDs should present under "TASK ASSIGNMENTS"
+\def\UnfundedUsTeam#1{\small \color{black} #1} % Format of US team members NOT FUNDED through this proposal, as their IDs should present under "TASK ASSIGNMENTS"
+\def\InternationalTeam#1{\small \color{red} #1} % Format of international team members as their IDs should present under "TASK ASSIGNMENTS"
+%
 \addtocounter{table}{-1} %corrects double-counting of sidewaystable and longtable combination
 %\begin{sidewaystable}  %comment out if not needed
   \begingroup
      \setlength{\tabcolsep}{1pt}  % changes horizontal spacing between columns
-     \renewcommand{\arraystretch}{0.9} %changes vertical space between rows
+     \renewcommand{\arraystretch}{0.8} %changes vertical space between rows
      \centerline{
         \begin{minipage}{1.5\textwidth}  %wide table needs some of the margin?  change 1.5 to whatever
            \begin{longtable} {|>{\raggedright\arraybackslash}p{3.0in} % title column
               *{3}{|p{1ex}!{\color{lightgray}\vrule}*{2}{p{1ex}!{\color{lightgray}\vrule}}p{1ex}}%year
-              |>{\raggedright\arraybackslash}p{19ex}%task assignments (ID and \#Weeks)
+              |>{\raggedright\arraybackslash}p{20ex}%task assignments (ID and \#Weeks)
               |p{5ex}!{\color{lightgray}\vrule}p{5ex}!{\color{lightgray}\vrule}c|%TOTAL FTE columns
               }
               \expinput{do_NOT_manually_edit/NOTANONschedule}
@@ -202,9 +202,8 @@ The most recent version of the \href{https://docs.google.com/spreadsheets/d/1J9s
         \end{minipage}
      }
   \endgroup
-  \caption{\label{tab:NOTANONschedule} Resource-loaded project schedule, where: \myNoDollarCaptionIcon Not funded by this grant,  \myDollarCaptionIcon funded by this grant, \mySigmaCaptionIcon funded $+$ unfunded; Tasks are listed (left side), with duration of task activity indicated in blue-colored timelines  that measure quarter-years (1,2,3,4). Task assignments identify specific team members responsible for  implementation with associated work weeks, where color indicates institutional affiliation  (blue$=$funded/U.S., black$=$not funded/U.S., red=international). "Total FTE" (right side) are integrated work-weeks converted into FTE per task (1~FTE$=$12~months), displayed as "total",  "unfunded by this grant", and "funded by this grant", resp.  Asignment identities:  {\textbf{dd}}: Dan~Dent{\'{o}}n, {\textbf{gg}}: Gisella~Gala, {\textbf{pm}}: Pamela~Marcum, {\textbf{ss}}: Sally~Smith}
-% %\end{sidewaystable}  % comment out if not used
-%================ E N D   I N S T R U C T I O N S =============== (leave this line 
+  \caption{\label{tab:NOTANONschedule} Resource-loaded project schedule, where: \NoDollarCaptionIcon Not funded by this grant,  \DollarCaptionIcon funded by this grant, \SigmaCaptionIcon funded $+$ unfunded; Tasks are listed (left side), with duration of task activity indicated in blue-colored timelines  that measure quarter-years (1,2,3,4). Task assignments identify specific team members responsible for  implementation with associated work weeks, where color indicates institutional affiliation  (blue$=$funded/U.S., black$=$not funded/U.S., red=international). "Total FTE" (right side) are integrated work-weeks converted into FTE per task (1~FTE$=$12~months), displayed as "total",  "unfunded by this grant", and "funded by this grant", resp.  Asignment identities:  {\textbf{dd}}: Dan~Dent{\'{o}}n, {\textbf{gg}}: Gisella~Gala, {\textbf{pm}}: Pamela~Marcum, {\textbf{ss}}: Sally~Smith}
+%\end{sidewaystable}  % comment out if not used
 
 
 % @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -221,24 +220,25 @@ Also see TABLE\,\ref{tab:isANONtasks} and \ref{tab:NOTANONschedule}
 % ___________________________________________________
 \newpage
 \subsection{\textbf{Not} Anonymous Simple Task List w/ Named Team Responsibilities (no FTEs) (``NOTANONtasks.tex'')}
-\def\myHeaderColor{Blue} % Color of column headings
-\def\myLabelColor{White} % Color of font column headings
-\def\myLabelBoldface#1{\textbf{#1}} % Makes column labels bold-faced; change {\textbf{#1}} to {#1} or to other preference.
-\def\mySectionColor{gray!40} % Color of section labels giving the Task category names, e.g., "Task A: ...."
-\def\myTaskColor{Black} % Color of task category label, e.g. "Task A: ...."
-\def\myTaskBoldface#1{\textbf{#1}} % Makes the task category labels bold-faced; change {\textbf{#1}} to {#1} or to other preference.
+
+\def\HeaderColor{Blue} % Color of column headings
+\def\LabelColor{White} % Color of font column headings
+\def\LabelBoldface#1{\textbf{#1}} % Makes column labels bold-faced; change {\textbf{#1}} to {#1} or to other preference.
+\def\SectionColor{gray!40} % Color of section labels giving the Task category names, e.g., "Task A: ...."
+\def\TaskColor{Black} % Color of task category label, e.g. "Task A: ...."
+\def\TaskBoldface#1{\textbf{#1}} % Makes the task category labels bold-faced; change {\textbf{#1}} to {#1} or to other preference.
 %
 \addtocounter{table}{-1}  % corrects double-counting by table and longtable combination
 \begin{table}[h]
-   \renewcommand{\arraystretch}{1}  % changes vertical space bet/ rows
-   \setlength{\tabcolsep}{1pt}  % changes horizontal spacing bet/ columns
-   \centerline{
-      \begin{minipage}{1.0\textwidth} % wide table needs to use some of the margins? comment out, change the 1.5
-         \begin{longtable} {|p{3.9in}||c!{\color{gray!40}\vrule}c!{\color{gray!40} \vrule}!{\color{gray!40}\vrule}c!{\color{gray!40}\vrule}c||l!{\color{gray!40}\vrule}p{0.3in}|}
-            \expinput{do_NOT_manually_edit/NOTANONtasks}
-         \end{longtable}
-      \end{minipage}
-   } %close \centerline
+  \renewcommand{\arraystretch}{1}  % changes vertical space bet/ rows
+  \setlength{\tabcolsep}{1pt}  % changes horizontal spacing bet/ columns
+  \centerline{
+     \begin{minipage}{1.0\textwidth} % wide table needs to use some of the margins? comment out, change the 1.5
+        \begin{longtable} {|p{3.9in}||c!{\color{gray!40}\vrule}c!{\color{gray!40} \vrule}!{\color{gray!40}\vrule}c!{\color{gray!40}\vrule}c||l!{\color{gray!40}\vrule}p{0.3in}|}
+           \expinput{do_NOT_manually_edit/NOTANONtasks}
+        \end{longtable}
+     \end{minipage}
+  } %close \centerline
   \caption{Task Management and Team Responsibilities \label{tab:NOTANONtasks}}
   \begin{tablenotes}[flushleft] The tasks ({\color{red}gray} headers) and sub-tasks (left), with specific assignments for the roles of task lead (middle) and expertise / analysis assistance (right).  \end{tablenotes}
 \end{table}
@@ -248,8 +248,8 @@ Also see TABLE\,\ref{tab:isANONtasks} and \ref{tab:NOTANONschedule}
 % _____________________________________________________________________
 \newpage
 \subsection{\textbf{Not} Anonymous Team Summary Role Descriptions  (``NOTANONteamSummaries.tex'')}
-% The next couple of lines define cell and font colors that can be changed if desired (keep this comment line commented-out!)
-\def\myNameBoldface#1{\textbf{#1}} % Makes the name and role at the beginning of each paragraph bold-faced; change {\textbf{#1}} to {#1} or to other preference.
+
+\def\NameBoldface#1{\textbf{#1}} % Makes the name and role at the beginning of each paragraph bold-faced; change {\textbf{#1}} to {#1} or to other preference.
 %
 %\clearpage
 \input{do_NOT_manually_edit/NOTANONteamSummaries}
