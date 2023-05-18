@@ -14,12 +14,12 @@
 %% > > > > > > > > > > > > > < < < < < < < < < < < < < <
 %% Block of code to be uncommented by removing the *first* percent-sign at the beginning of the following lines below (leave intentional comments with at least 1 percent sign to keep them commented!)
 %% The next couple of lines define cell and font colors that can be changed if desired (keep this comment line commented-out!)
-%\def\myHeaderColor{Blue} % Color of column headings
-%\def\myLabelColor{White} % Color of font column headings
-%\def\myLabelBoldface#1{\textbf{#1}} % Makes column labels bold-faced; change {\textbf{#1}} to {#1} or to other preference.
-%\def\mySectionColor{gray!40} % Color of section labels giving the Task category names, e.g., "Task A: ...."
-%\def\myTaskColor{Black} % Color of task category label, e.g. "Task A: ...."
-%\def\myTaskBoldface#1{\textbf{#1}} % Makes the task category labels bold-faced; change {\textbf{#1}} to {#1} or to other preference.
+%\def\HeaderColor{Blue} % Color of column headings
+%\def\LabelColor{White} % Color of font column headings
+%\def\LabelBoldface#1{\textbf{#1}} % Makes column labels bold-faced; change {\textbf{#1}} to {#1} or to other preference.
+%\def\SectionColor{gray!40} % Color of section labels giving the Task category names, e.g., "Task A: ...."
+%\def\TaskColor{Black} % Color of task category label, e.g. "Task A: ...."
+%\def\TaskBoldface#1{\textbf{#1}} % Makes the task category labels bold-faced; change {\textbf{#1}} to {#1} or to other preference.
 %%
 %\addtocounter{table}{-1}  % corrects double-counting by table and longtable combination
 %\begin{table}[h]
@@ -37,9 +37,9 @@
 %\end{table}
 %%================ E N D   I N S T R U C T I O N S =============== (leave this line commented out!)
 \hline
-\myLabelBoldface{\cellcolor{\myHeaderColor}\color{\myLabelColor}Tasks} & \myLabelBoldface{\cellcolor{\myHeaderColor}\color{\myLabelColor}Lead}  &\myLabelBoldface{\cellcolor{\myHeaderColor}\color{\myLabelColor}Expertise}\\
+\LabelBoldface{\cellcolor{\HeaderColor}\color{\LabelColor}Tasks} & \LabelBoldface{\cellcolor{\HeaderColor}\color{\LabelColor}Lead}  &\LabelBoldface{\cellcolor{\HeaderColor}\color{\LabelColor}Expertise}\\
 \hline
-\multicolumn{3}{|c|}{\cellcolor{\mySectionColor}\color{\myTaskColor}\myTaskBoldface{Task A: Data and models preparation}}\\
+\multicolumn{3}{|c|}{\cellcolor{\SectionColor}\color{\TaskColor}\TaskBoldface{Task A: Data and models preparation}}\\
 \hline
 A1: {Generate simulated data} & Smith & Dent{\'{o}}n, Marcum\\
 \hline
@@ -47,13 +47,13 @@ A2: {Make emission maps} & Dent{\'{o}}n & Smith\\
 \hline
 A3: {Incorporate thermal emission models} & Smith & Marcum\\
 \hline
-\multicolumn{3}{|c|}{\cellcolor{\mySectionColor}\color{\myTaskColor}\myTaskBoldface{Task B: Application to archive}}\\
+\multicolumn{3}{|c|}{\cellcolor{\SectionColor}\color{\TaskColor}\TaskBoldface{Task B: Application to archive}}\\
 \hline
 B1: {Determine fields of interest} & Marcum & Smith, Dent{\'{o}}n, Gala\\
 \hline
 B2: {Reduction of image mosaics} & Dent{\'{o}}n & Smith, Gala\\
 \hline
-\multicolumn{3}{|c|}{\cellcolor{\mySectionColor}\color{\myTaskColor}\myTaskBoldface{Task C: Documentation and publications}}\\
+\multicolumn{3}{|c|}{\cellcolor{\SectionColor}\color{\TaskColor}\TaskBoldface{Task C: Documentation and publications}}\\
 \hline
 C1: {Code documentation \& verification} & Smith & Marcum, Dent{\'{o}}n\\
 \hline
