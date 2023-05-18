@@ -1,11 +1,36 @@
-%======================================================
-%     H O W   T O   U S E   T H I S   F I L E
-% (1) type the following into the main latex file where you want to put this table:
+%%================= BEGIN INSTRUCTIONS =================
+%%   H O W   T O   U S E   T H I S   F I L E
+%% (1) download or connect to https://github.com/pmarcum/LaTex-Formatting and select the
+%%        set of files (aas-style or general) that meet your situation, you can either download the files or link
+%%        Overleaf to the needed files in the GitHub repository through URL, and then add the following to
+%%        the preamble of your main paper
+%\usepackage{FUpackages}
+%\usepackage{FUformatting}
+%\usepackage{FUnewCommands} % not needed by WorPT files but generally useful
+%%
+%% (2) copy/paste the following into the main latex file where you want to put this section of text (it is not a table), and then uncomment the below lines by removing the first percent sign at the beginning of the line
+%%   IMPORTANT SHORTCUT:  You can toggle commenting / un-commenting across multiple lines within Overleaf by mouse-selecting the desired block of lines to un-comment (or comment), and then hitting: control slash ( [Ctrl] / )   ... or ...  command slash  ([command] /)  for a PC or Mac, resp.
+%%        (Note that lines that should remain commented-out in the below block have 2 percent signs ... the first will be removed when you uncomment the whole block, but the second percent sign will remain as intended to retain that line as a true comment within the Latex document.)
+%% > > > > > > > > > > > > > < < < < < < < < < < < < < <
+%% Block of code to be uncommented by removing the *first* percent-sign at the beginning of the following lines below (leave intentional comments with at least 1 percent sign to keep them commented!)
+%% The next couple of lines define cell and font colors that can be changed if desired (keep this comment line commented-out!)
+%\def\myBannerBoldface#1{\textbf{#1}} % Bold-face the font of the top banner "Travel Cost Details"; change {\textbf{#1}} to {#1} or to other preference.
+%\def\myBannerColor{Blue} % Color of the top "Travel Cost Details" banner
+%\def\myBannerFontColor{White} % Color of the words in the top "Travel Cost Details" banner
+%\def\myPerTripShading{\columncolor[gray]{0.85} % Color shading of the columns under the "per trip" section, where 2nd parameter is the opacity
+%\def\myYearTripsDestLabelFontColor{Blue} % Color of font of column labels for the "Year", "#TRips" and "Dest." columns
+%\def\myTotalLabelFontColor{Blue} % Color of font of column label for the "Total" column
+%\def\myPerTripLabelFontColor{Blue} % Color of font of column labels under the "per trip" section
+%\def\myYearTripsDestBoldface#1{\textbf{#1}} % Bold-face the font of the column labels "Year", "#Trips", "Dest."; change {\textbf{#1}} to {#1} or to other preference.
+%\def\myPerTripBoldface#1{\textbf{#1}} % Bold-face the font of the column labels under the "per trip" section; change {\textbf{#1}} to {#1} or to other preference.
+%\def\myTotalBoldface#1{\textbf{#1}} % Bold-face the column label "Total",  change {\textbf{#1}} to {#1} or to other preference.
+%\def\myYearBoldface#1{\textbf{#1}} % Bold-face the Year values "Yr1", "YR2", etc in the first column; change {\textbf{#1}} to {#1} or to other preference.
+%%
 %The below table provides travel costs:
 %\begin{table*}[h!]
 %   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
 %   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
-%   \begin{tabular}{|lcl >{\columncolor[gray]{0.85}[\tabcolsep][7pt]}c>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}c>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}l>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}l>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}ll|}
+%   \begin{tabular}{|lcl >{{\myPerTripShading}[\tabcolsep][7pt]}c>{{\myPerTripShading}[\tabcolsep][7pt]}c>{{\myPerTripShading}[\tabcolsep][7pt]}l>{{\myPerTripShading}[\tabcolsep][7pt]}l>{{\myPerTripShading}[\tabcolsep][7pt]}ll|}
 %       \expinput{do_NOT_manually_edit/isANONtravel}
 %    \end{tabular}
 %   \caption{\normalsize
@@ -24,16 +49,16 @@
 %      All travel will be to present science results of this project at conferences and/or visits to home institutions of the team members for in-person collaboration. Note that above values above do not include institutional overhead.}
 %   \label{tab:isANONtravel}
 %\end{table*}
-%======================================================
-\multicolumn{9}{|@{}c@{}|}{\cellcolor{Blue}\color{White}\textbf{Travel Cost Details}}\\  % top header line
-\multicolumn{3}{|c}{} & \multicolumn{5}{>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}c}{\color{Blue}\emph{\textbf{per trip}}} & \\
+%%================ E N D   I N S T R U C T I O N S =============== (leave this line commented out!)
+\multicolumn{9}{|@{}c@{}|}{\cellcolor{\myBannerColor}\color{\myBannerFontColor}\myBannerBoldface{Travel Cost Details}}\\  % top header line
+\multicolumn{3}{|c}{} & \multicolumn{5}{>{{\myPerTripShading}[\tabcolsep][7pt]}c}{\color{\myPerTripLabelFontColor}\emph{\textbf{per trip}}} & \\
 \cline{4-8}
-\textbf{\color{Blue}{Year}} & \textbf{\color{Blue}{\#Trips}} & \textbf{\color{Blue}{Dest.}} & \textbf{\color{Blue}{Airfare}} & {\textbf{\color{Blue}{per}}} & {\textbf{\color{Blue}{Conf.}}} & {\textbf{ \color{Blue}{Ground}}} & {\textbf{\color{Blue}{per}}} & \textbf{\color{Blue}{Total}}\\ %middle header
-\textbf{} & \textbf{} & \textbf{} & {\textbf{}} & {\textbf{\color{Blue}{diem}}} & {\textbf{\color{Blue}{Fee}}} & {\textbf{ \color{Blue}{Transp.}}} & {\textbf{\color{Blue}{trip}}} & \\%bottom header line
+\myYearTripsDestLabelBoldface{\color{\myYearTripsDestLabelFontColor}{Year}} & \myYearTripsDestLabelBoldface{\color{\myYearTripsDestLabelFontColor}{\#Trips}} & \myYearTripsDestLabelBoldface{\color{\myYearTripsDestLabelFontColor}{Dest.}} & \myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{Airfare}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{per}}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{Conf.}}} & {\myPerTripLabelBoldface{ \color{\myPerTripLabelFontColor}{Ground}}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{per}}} & \myTotalLabelBoldface{\color{\myTotalLabelFontColor}{Total}}\\ %middle header
+\myYearTripsDestLabelBoldface{} & \myYearTripsDestLabelBoldface{} & \myYearTripsDestLabelBoldface{} & {\myPerTripLabelBoldface{}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{diem}}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{Fee}}} & {\myPerTripLabelBoldface{ \color{\myPerTripLabelFontColor}{Transp.}}} & {\myPerTripLabelBoldface{\color{\myPerTripLabelFontColor}{trip}}} & \\%bottom header line
 \hline \hline
-\textbf{Yr1} & 4 & {domestic} & {\$700} & {\$1,320} & {\$500} & {\$300} & {\$2,820} & {\$11,280}\\
+\myYearBoldface{Yr1} & 4 & {domestic} & {\$700} & {\$1,320} & {\$500} & {\$300} & {\$2,820} & {\$11,280}\\
  & 2 & {internat'l} & {\$1,750} & {\$1,600} & {\$800} & {\$500} & {\$4,650} & {\$9,300}\\\hline
-\textbf{Yr2} & 6 & {domestic} & {\$700} & {\$1,320} & {\$500} & {\$300} & {\$2,820} & {\$16,920}\\
+\myYearBoldface{Yr2} & 6 & {domestic} & {\$700} & {\$1,320} & {\$500} & {\$300} & {\$2,820} & {\$16,920}\\
  & 2 & {internat'l} & {\$1,750} & {\$1,600} & {\$800} & {\$500} & {\$4,650} & {\$9,300}\\\hline
-\textbf{Yr3} & 5 & {domestic} & {\$700} & {\$1,320} & {\$500} & {\$300} & {\$2,820} & {\$14,100}\\
+\myYearBoldface{Yr3} & 5 & {domestic} & {\$700} & {\$1,320} & {\$500} & {\$300} & {\$2,820} & {\$14,100}\\
  & 2 & {internat'l} & {\$1,750} & {\$1,600} & {\$800} & {\$500} & {\$4,650} & {\$9,300}\\\hline
