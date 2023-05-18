@@ -300,29 +300,42 @@ Also see TABLE\,\ref{tab:isANONtasks} and \ref{tab:NOTANONschedule}
 % __________________________________________________________
 \newpage
 \subsection{\textbf{Anonymous} Travel Cost per Trip, Total Budget per Year (``isANONtravel.tex'')}
+\def\myBannerBoldface#1{\textbf{#1}} % Bold-face the font of the top banner "Travel Cost Details"; change {\textbf{#1}} to {#1} or to other preference.
+\def\myBannerColor{Blue} % Color of the top "Travel Cost Details" banner
+\def\myBannerFontColor{White} % Color of the words in the top "Travel Cost Details" banner
+\def\myPerTripShading{\columncolor[gray]{0.85}} % Color shading of the columns under the "per trip" section, where 2nd parameter is the opacity
+\def\myYearTripsDestLabelFontColor{Blue} % Color of font of column labels for the "Year", "#TRips" and "Dest." columns
+\def\myTotalLabelFontColor{Blue} % Color of font of column label for the "Total" column
+\def\myPerTripLabelFontColor{Blue} % Color of font of column labels under the "per trip" section
+\def\myYearTripsDestBoldface#1{\textbf{#1}} % Bold-face the font of the column labels "Year", "#Trips", "Dest."; change {\textbf{#1}} to {#1} or to other preference.
+\def\myPerTripBoldface#1{\textbf{#1}} % Bold-face the font of the column labels under the "per trip" section; change {\textbf{#1}} to {#1} or to other preference.
+\def\myTotalBoldface#1{\textbf{#1}} % Bold-face the column label "Total",  change {\textbf{#1}} to {#1} or to other preference.
+\def\myYearBoldface#1{\textbf{#1}} % Bold-face the Year values "Yr1", "YR2", etc in the first column; change {\textbf{#1}} to {#1} or to other preference.
+%
 The below table provides travel costs:
 \begin{table*}[h!]
-   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
-   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
-   \begin{tabular}{|lcl >{\columncolor[gray]{0.85}[\tabcolsep][7pt]}c>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}c>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}l>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}l>{\columncolor[gray]{0.85}[\tabcolsep][7pt]}ll|}
-       \expinput{do_NOT_manually_edit/isANONtravel}
-    \end{tabular}
-   \caption{\normalsize
-      \newline \newline
-      \textbf{Notes and assumptions}:
-      \newline \newline
-      While final destinations are not known at this time, domestic and international costs are estimated based on values taken from NASA Travel Guidebook using historical averages for a 5-- and 5--day conference for U.S. and European cities, resp.,  likely to host topical meetings aligned with the science of the proposed work. Domestic lodging and per diem rates are set by the GSA; international lodging and per diem are set by the Dept. of State (note that M\&IE is included in the per diem values shown here).
-      \newline \newline\noindent {\color{red} Yrs~1-2 funds will be used to present pre-publication findings at science conferences and potentially to fund trips for collaboration with team members (i.e., NASA/GSFC).}
-      \newline \newline\underline{\scshape{domestic}}: per diem$+$M\&IE, car rental/day   at \$264 and \$60, resp.
-      \newline \newline\underline{\scshape{international}}: per diem$+$M\&IE, public transport/day estimated at \$320 and \$100, resp.
-      \newline \newline \underline{\scshape{Travel Per Team Member}} (summed over 3-year grant):\newline
-      \smallIndent \textbf{PI:} 5 domestic trips; 2 intern'l trips;\newline
-      \smallIndent \textbf{co-I(1):} 4 domestic trips; 1 intern'l trips;\newline
-      \smallIndent \textbf{Sci-PI:} 6 domestic trips; 3 intern'l trips;\newline
-      \newline
-      All travel will be to present science results of this project at conferences and/or visits to home institutions of the team members for in-person collaboration. Note that above values above do not include institutional overhead.}
-   \label{tab:isANONtravel}
+  \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
+  \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
+  \begin{tabular}{|lcl >{{\myPerTripShading}[\tabcolsep][7pt]}c>{{\myPerTripShading}[\tabcolsep][7pt]}c>{{\myPerTripShading}[\tabcolsep][7pt]}l>{{\myPerTripShading}[\tabcolsep][7pt]}l>{{\myPerTripShading}[\tabcolsep][7pt]}ll|}
+      \expinput{do_NOT_manually_edit/isANONtravel}
+   \end{tabular}
+  \caption{\normalsize
+     \newline \newline
+     \textbf{Notes and assumptions}:
+     \newline \newline
+     While final destinations are not known at this time, domestic and international costs are estimated based on values taken from NASA Travel Guidebook using historical averages for a 5-- and 5--day conference for U.S. and European cities, resp.,  likely to host topical meetings aligned with the science of the proposed work. Domestic lodging and per diem rates are set by the GSA; international lodging and per diem are set by the Dept. of State (note that M\&IE is included in the per diem values shown here).
+     \newline \newline\noindent {\color{red} Yrs~1-2 funds will be used to present pre-publication findings at science conferences and potentially to fund trips for collaboration with team members (i.e., NASA/GSFC).}
+     \newline \newline\underline{\scshape{domestic}}: per diem$+$M\&IE, car rental/day   at \$264 and \$60, resp.
+     \newline \newline\underline{\scshape{international}}: per diem$+$M\&IE, public transport/day estimated at \$320 and \$100, resp.
+     \newline \newline \underline{\scshape{Travel Per Team Member}} (summed over 3-year grant):\newline
+     \smallIndent \textbf{PI:} 5 domestic trips; 2 intern'l trips;\newline
+     \smallIndent \textbf{co-I(1):} 4 domestic trips; 1 intern'l trips;\newline
+     \smallIndent \textbf{Sci-PI:} 6 domestic trips; 3 intern'l trips;\newline
+     \newline
+     All travel will be to present science results of this project at conferences and/or visits to home institutions of the team members for in-person collaboration. Note that above values above do not include institutional overhead.}
+  \label{tab:isANONtravel}
 \end{table*}
+
 
 % _____________________________________________________________________
 %              A N O N O N O M O U S  n o n - l a b o r
