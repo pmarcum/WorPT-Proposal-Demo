@@ -21,11 +21,13 @@
 %\def\YearLabelColor{Blue} % Color of the "Y1", "Y2", etc  column labels
 %\def\TotalLabelColor{Blue} % Color of the "Total" column label
 %\def\ColumnBoldface#1{\textbf{#1}} % Bold-face the "Cost Category" and "Y1, Y2, ..." column labels; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
-%\def\TotalBoldface#1{\textbf{#1}} % Bold-face the "Total ..." column label; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
-%\def\fmtA#1{\textbf{#1}} % Format for all budget amounts not under "Total" and not in the Travel's "domestic" and "international" break-outs; to remove boldface, replace {\textbf{#1}} with {#1} or with other desired mark-up
-%\def\fmtB#1{\textit{#1}} % Format of budget amounts under the Travel's "domestic" and "international" break-outs that are not Total values; to remove format, replace {\textit{#1}} with {#1} or with other desired mark-up
-%\def\fmtC#1{\textbf{#1}} % Format of budget amounts under Total that are not in the "Domestic" and "International" break-outs; to remove boldface, replace {\textbf{#1}} with {#1} or with other desired mark-up
-%\def\fmtD#1{\textit{#1}} % Format of budget amounts under Total that are also under the "Domestic" or "International" break-outs; to remove format, replace {\textit{#1}} with {#1} or with other desired mark-up
+%\def\TotalBoldface#1{\textbf{#1}} % Bold-face the "Total ..." column label; to remove boldface, replace {\textbf{#1}} with {#1} or with other desired mark-up
+%\def\fmtA#1{\textbf{#1}} % Format for listed budget items (except for Travel's "domestic" and "international" break-out lines); to remove boldface, replace {\textbf{#1}} with {#1} or with other desired mark-up
+%\def\fmtB#1{\textit{#1}} % Format for the Travel's "domestic" and "international" items;  to remove, replace {\textit{#1}} with {#1} or with other desired mark-up
+%\def\fmtC#1{\textbf{#1}} % Format for all budget amounts not under "Total" and not in the Travel's "domestic" and "international" break-outs; to remove boldface, replace {\textbf{#1}} with {#1} or with other desired mark-up
+%\def\fmtD#1{\textit{#1}} % Format of budget amounts under the Travel's "domestic" and "international" break-outs that are not Total values; to remove format, replace {\textit{#1}} with {#1} or with other desired mark-up
+%\def\fmtE#1{\textbf{#1}} % Format of budget amounts under Total that are not in the "Domestic" and "International" break-outs; to remove boldface, replace {\textbf{#1}} with {#1} or with other desired mark-up
+%\def\fmtF#1{\textit{#1}} % Format of budget amounts under Total that are also under the "Domestic" or "International" break-outs; to remove format, replace {\textit{#1}} with {#1} or with other desired mark-up
 %%
 %Table\,\ref{tab:isANONnonlabor} shows rolled-up values for travel costs and other non-labor costs. Travel cost details, including costing assumptions used, are presented in Table\,\ref{tab:isANONtravel}.
 %\begin{table*}[h!]
@@ -49,10 +51,10 @@
 \multicolumn{5}{|@{}c@{}|}{\cellcolor{\BannerColor}\color{\BannerFontColor}\BannerBoldface{Equipment, Travel, Supplies, Page Charges}}\\  % top header line
 {\color{\CostLabelColor}\ColumnBoldface{Cost Category}} & {\color{\YearLabelColor}\ColumnBoldface{Y1}} & {\color{\YearLabelColor}\ColumnBoldface{Y2}} & {\color{\YearLabelColor}\ColumnBoldface{Y3}} & {\color{\TotalLabelColor}\TotalBoldface{Total}}\\ % second header line
 \hline
-\textbf{Equipment} & \fmtA{\$1,200} & \fmtA{\$2,300} & \fmtA{\$1,700} & \fmtC{\$5,200}\\
-\textbf{Travel} & \fmtA{\$20,580} & \fmtA{\$26,220} & \fmtA{\$23,400} & \fmtC{\$70,200}\\
-\textit{~~~Domestic} & \fmtB{\$11,280} & \fmtB{\$16,920} & \fmtB{\$14,100} & \fmtD{\$42,300}\\
-\textit{~~~International} & \fmtB{\$9,300} & \fmtB{\$9,300} & \fmtB{\$9,300} & \fmtD{\$27,900}\\
-\textbf{Materials \& Supplies} & \fmtA{\$300} & \fmtA{\$300} & \fmtA{\$300} & \fmtC{\$900}\\
-\textbf{Publication Costs} & \fmtA{\$3,400} & \fmtA{\$3,600} & \fmtA{\$4,400} & \fmtC{\$11,400}\\
+mtA{Equipment} & \$1,200 & \$2,300 & \$1,700 & mtE{\$5,200}\
+mtA{Travel} & \$20,580 & \$26,220 & \$23,400 & mtE{\$70,200}\
+mtA{~~~Domestic} & \$11,280 & \$16,920 & \$14,100 & mtE{\$42,300}\
+mtA{~~~International} & \$9,300 & \$9,300 & \$9,300 & mtE{\$27,900}\
+mtA{Materials \& Supplies} & \$300 & \$300 & \$300 & mtE{\$900}\
+mtA{Publication Costs} & \$3,400 & \$3,600 & \$4,400 & mtE{\$11,400}\
 \hline
