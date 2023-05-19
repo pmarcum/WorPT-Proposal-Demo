@@ -15,7 +15,7 @@
 %% Block of code to be uncommented by removing the *first* percent-sign at the beginning of the following lines below (leave intentional comments with at least 1 percent sign to keep them commented!)
 %% The next couple of lines define cell and font colors that can be changed if desired (keep this comment line commented-out!)
 %\def\BannerColor{Blue} % Color of the banner at the top "Equipment, Travel, Supplies, Page Charges"
-%\def\BannerFontColor{Blue} % Color of the text in the banner at the top "Equipment, Travel, Supplies, Page Charges"
+%\def\BannerFontColor{White} % Color of the text in the banner at the top "Equipment, Travel, Supplies, Page Charges"
 %\def\BannerBoldface#1{\textbf#1} % Bold-face the banner at the top "Equipment, Travel, Supplies, Page Charges"; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
 %\def\CostLabelColor{Blue} % Color of the "Cost Category" column label
 %\def\YearLabelColor{Blue} % Color of the "Y1", "Y2", etc  column labels
@@ -47,7 +47,7 @@
 %%================ E N D   I N S T R U C T I O N S =============== (leave this line commented out!)
 \hline
 \multicolumn{5}{|@{}c@{}|}{\cellcolor{\BannerColor}\color{\BannerFontColor}\BannerBoldface{Equipment, Travel, Supplies, Page Charges}}\\  % top header line
-{\ColumnBoldface{\color{\CostLabelColor}{Cost Category}}} & {\ColumnBoldface{\color{\YearLabelColor}{Y1}}} & {\ColumnBoldface{\color{\YearLabelColor}{Y2}}} & {\ColumnBoldface{\color{\YearLabelColor}{Y3}}} & {\TotalBoldface{\color{\TotalLabelColor}{Total}}}\\ % second header line
+{\color{\CostLabelColor}\ColumnBoldface{Cost Category}} & {\color{\YearLabelColor}\ColumnBoldface{Y1}} & {\color{\YearLabelColor}\ColumnBoldface{Y2}} & {\color{\YearLabelColor}\ColumnBoldface{Y3}} & {\color{\TotalLabelColor}\TotalBoldface{Total}}\\ % second header line
 \hline
 \textbf{Equipment} & \fm1{\$1,200} & \fm1{\$2,300} & \fm1{\$1,700} & \fm3{\$5,200}
 \textbf{Travel} & \fm1{\$20,580} & \fm1{\$26,220} & \fm1{\$23,400} & \fm3{\$70,200}
