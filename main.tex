@@ -352,7 +352,7 @@ The below table provides travel costs:
 \subsection{\textbf{Anonymous} Non-Labor Budget w/ Rolled-up Travel Summary (``isANONnonlabor.tex'')}
 
 \def\BannerColor{Blue} % Color of the banner at the top "Equipment, Travel, Supplies, Page Charges"
-\def\BannerFontColor{Blue} % Color of the text in the banner at the top "Equipment, Travel, Supplies, Page Charges"
+\def\BannerFontColor{White} % Color of the text in the banner at the top "Equipment, Travel, Supplies, Page Charges"
 \def\BannerBoldface#1{\textbf#1} % Bold-face the banner at the top "Equipment, Travel, Supplies, Page Charges"; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
 \def\CostLabelColor{Blue} % Color of the "Cost Category" column label
 \def\YearLabelColor{Blue} % Color of the "Y1", "Y2", etc  column labels
@@ -369,7 +369,35 @@ Table\,\ref{tab:isANONnonlabor} shows rolled-up values for travel costs and othe
   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
   \setlength{\tabcolsep}{5pt} %adjust to control horizontal column separation/spacing, comment-out if not needed
   \begin{tabular}{|l|*{4}{c|}}
-     \expinput{do_NOT_manually_edit/isANONnonlabor}
+%     \expinput{do_NOT_manually_edit/isANONnonlabor}
+
+
+\hline
+\multicolumn{5}{|@{}c@{}|}{\cellcolor{\BannerColor}\color{\BannerFontColor}\BannerBoldface{Equipment, Travel, Supplies, Page Charges}}\\  % top header line
+\hline
+{\color{\CostLabelColor}\BannerBoldface{Cost Category}} & {\color{\YearLabelColor}\BannerBoldface{Y1}} & {\textbf{\color{\YearLabelColor}{Y2}}} & {\textbf{\color{\YearLabelColor}{Y3}}} & {\color{\TotalLabelColor}\TotalBoldface{Total}}\\ % second header line
+%\textbf{\color{Blue}Cost Category} & \textbf{\color{Blue}Y1} & \textbf{\color{Blue}Y2} & \textbf{\color{Blue}Y3} & \textbf{\color{Blue}{Total}}\\ % second header line
+\hline
+\textbf{Equipment} & \textbf{\$1,000} & \textbf{\$500} & \textbf{\$500} & \textbf{\$2,000}\\
+\textbf{Travel} & \textbf{\$61,590} & \textbf{\$36,510} & \textbf{\$7,470} & \textbf{\$105,570}\\
+\textit{~~~Domestic} & \textit{\$19,740} & \textit{\$22,560} & \textit{\$2,820} & \textit{\$45,120}\\
+\textit{~~~International} & \textit{\$41,850} & \textit{\$13,950} & \textit{\$4,650} &  \textit{\$60,450}\\
+\textbf{Materials \& Supplies} & \textbf{\$200} & \textbf{\$200} & \textbf{\$200} & \textbf{\$600}\\
+\textbf{Publication Costs} & \textbf{\$2,400} & \textbf{\$2,400} & \textbf{\$4,800} &\textbf{\$9,600}\\
+\hline
+
+
+% \hline
+% \hline
+% \textbf{Equipment} & \fm1{\$1,200} & \fm1{\$2,300} & \fm1{\$1,700} & \fm3{\$5,200}
+% \textbf{Travel} & \fm1{\$20,580} & \fm1{\$26,220} & \fm1{\$23,400} & \fm3{\$70,200}
+% \textit{~~~Domestic} & \fm2{\$11,280} & \fm2{\$16,920} & \fm2{\$14,100} & \fm4{\$42,300}
+% \textit{~~~International} & \fm2{\$9,300} & \fm2{\$9,300} & \fm2{\$9,300} & \fm4{\$27,900}
+% \textbf{Materials \& Supplies} & \fm1{\$300} & \fm1{\$300} & \fm1{\$300} & \fm3{\$900}
+% \textbf{Publication Costs} & \fm1{\$3,400} & \fm1{\$3,600} & \fm1{\$4,400} & \fm3{\$11,400}
+% \hline
+
+
   \end{tabular}
   \caption{\normalsize
      \newline \newline
