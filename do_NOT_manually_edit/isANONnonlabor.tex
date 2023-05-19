@@ -22,10 +22,10 @@
 %\def\TotalLabelColor{Blue} % Color of the "Total" column label
 %\def\ColumnBoldface#1{\textbf#1} % Bold-face the "Cost Category" and "Y1, Y2, ..." column labels; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
 %\def\TotalBoldface#1{\textbf#1} % Bold-face the "Total ..." column label; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
-%\def\fm1#1{\textbf#1} % Format for all budget amounts not under "Total" and not in the Travel's "domestic" and "international" break-outs; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
-%\def\fm2#1{\textit#1} % Format of budget amounts under the Travel's "domestic" and "international" break-outs that are not Total values; to remove format, replace {\textit#1} with {#1} or with other desired mark-up
-%\def\fm3#1{\textbf#1} % Format of budget amounts under Total that are not in the "Domestic" and "International" break-outs; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
-%\def\fm4#1{\textit#1} % Format of budget amounts under Total that are also under the "Domestic" or "International" break-outs; to remove format, replace {\textit#1} with {#1} or with other desired mark-up
+%\def\fmtA#1{\textbf#1} % Format for all budget amounts not under "Total" and not in the Travel's "domestic" and "international" break-outs; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
+%\def\fmtB#1{\textit#1} % Format of budget amounts under the Travel's "domestic" and "international" break-outs that are not Total values; to remove format, replace {\textit#1} with {#1} or with other desired mark-up
+%\def\fmtC#1{\textbf#1} % Format of budget amounts under Total that are not in the "Domestic" and "International" break-outs; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
+%\def\fmtD#1{\textit#1} % Format of budget amounts under Total that are also under the "Domestic" or "International" break-outs; to remove format, replace {\textit#1} with {#1} or with other desired mark-up
 %%
 %Table\,\ref{tab:isANONnonlabor} shows rolled-up values for travel costs and other non-labor costs. Travel cost details, including costing assumptions used, are presented in Table\,\ref{tab:isANONtravel}.
 %\begin{table*}[h!]
@@ -49,10 +49,10 @@
 \multicolumn{5}{|@{}c@{}|}{\cellcolor{\BannerColor}\color{\BannerFontColor}\BannerBoldface{Equipment, Travel, Supplies, Page Charges}}\\  % top header line
 {\color{\CostLabelColor}\ColumnBoldface{Cost Category}} & {\color{\YearLabelColor}\ColumnBoldface{Y1}} & {\color{\YearLabelColor}\ColumnBoldface{Y2}} & {\color{\YearLabelColor}\ColumnBoldface{Y3}} & {\color{\TotalLabelColor}\TotalBoldface{Total}}\\ % second header line
 \hline
-\textbf{Equipment} & \fm1{\$1,200} & \fm1{\$2,300} & \fm1{\$1,700} & \fm3{\$5,200}\\
-\textbf{Travel} & \fm1{\$20,580} & \fm1{\$26,220} & \fm1{\$23,400} & \fm3{\$70,200}\\
-\textit{~~~Domestic} & \fm2{\$11,280} & \fm2{\$16,920} & \fm2{\$14,100} & \fm3{\$42,300}\\
-\textit{~~~International} & \fm2{\$9,300} & \fm2{\$9,300} & \fm2{\$9,300} & \fm3{\$27,900}\\
-\textbf{Materials \& Supplies} & \fm1{\$300} & \fm1{\$300} & \fm1{\$300} & \fm3{\$900}\\
-\textbf{Publication Costs} & \fm1{\$3,400} & \fm1{\$3,600} & \fm1{\$4,400} & \fm3{\$11,400}\\
+\textbf{Equipment} & \fmtA{\$1,200} & \fmtA{\$2,300} & \fmtA{\$1,700} & \fmtC{\$5,200}\\
+\textbf{Travel} & \fmtA{\$20,580} & \fmtA{\$26,220} & \fmtA{\$23,400} & \fmtC{\$70,200}\\
+\textit{~~~Domestic} & \fmtB{\$11,280} & \fmtB{\$16,920} & \fmtB{\$14,100} & \fmtD{\$42,300}\\
+\textit{~~~International} & \fmtB{\$9,300} & \fmtB{\$9,300} & \fmtB{\$9,300} & \fmtD{\$27,900}\\
+\textbf{Materials \& Supplies} & \fmtA{\$300} & \fmtA{\$300} & \fmtA{\$300} & \fmtC{\$900}\\
+\textbf{Publication Costs} & \fmtA{\$3,400} & \fmtA{\$3,600} & \fmtA{\$4,400} & \fmtC{\$11,400}\\
 \hline
