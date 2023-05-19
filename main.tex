@@ -353,17 +353,22 @@ The below table provides travel costs:
 
 \def\BannerColor{Blue} % Color of the banner at the top "Equipment, Travel, Supplies, Page Charges"
 \def\BannerFontColor{White} % Color of the text in the banner at the top "Equipment, Travel, Supplies, Page Charges"
-\def\BannerBoldface#1{\textbf#1} % Bold-face the banner at the top "Equipment, Travel, Supplies, Page Charges"; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
+\def\BannerBoldface#1{\textbf{#1}} % Bold-face the banner at the top "Equipment, Travel, Supplies, Page Charges"; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
 \def\CostLabelColor{Blue} % Color of the "Cost Category" column label
 \def\YearLabelColor{Blue} % Color of the "Y1", "Y2", etc  column labels
 \def\TotalLabelColor{Blue} % Color of the "Total" column label
-\def\ColumnBoldface#1{\textbf#1} % Bold-face the "Cost Category" and "Y1, Y2, ..." column labels; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
-\def\TotalBoldface#1{\textbf#1} % Bold-face the "Total ..." column label; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
-\def\fm1#1{\textbf#1} % Format for all budget amounts not under "Total" and not in the Travel's "domestic" and "international" break-outs; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
-\def\fm2#1{\textit#1} % Format of budget amounts under the Travel's "domestic" and "international" break-outs that are not Total values; to remove format, replace {\textit#1} with {#1} or with other desired mark-up
-\def\fm3#1{\textbf#1} % Format of budget amounts under Total that are not in the "Domestic" and "International" break-outs; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
-\def\fm4#1{\textit#1} % Format of budget amounts under Total that are also under the "Domestic" or "International" break-outs; to remove format, replace {\textit#1} with {#1} or with other desired mark-up
+\def\ColumnBoldface#1{\textbf{#1}} % Bold-face the "Cost Category" and "Y1, Y2, ..." column labels; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
+\def\TotalBoldface#1{\textbf{#1}} % Bold-face the "Total ..." column label; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
+\def\fmA#1{\textbf{#1}} % Format for all budget amounts not under "Total" and not in the Travel's "domestic" and "international" break-outs; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
+\def\fmB#1{\textit{#1}} % Format of budget amounts under the Travel's "domestic" and "international" break-outs that are not Total values; to remove format, replace {\textit#1} with {#1} or with other desired mark-up
+\def\fmC#1{\textbf{#1}} % Format of budget amounts under Total that are not in the "Domestic" and "International" break-outs; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
+\def\fm4#1{\textit{#1}} % Format of budget amounts under Total that are also under the "Domestic" or "International" break-outs; to remove format, replace {\textit#1} with {#1} or with other desired mark-up
 %
+\fmA{test1} \textbf{test1}
+\fmB{test2}
+\fm3{test3} \testbf{test3}
+\fm4{test4}
+
 Table\,\ref{tab:isANONnonlabor} shows rolled-up values for travel costs and other non-labor costs. Travel cost details, including costing assumptions used, are presented in Table\,\ref{tab:isANONtravel}.
 \begin{table*}[h!]
   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
