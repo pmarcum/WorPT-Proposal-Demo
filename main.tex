@@ -176,14 +176,14 @@ The most recent version of the \href{https://docs.google.com/spreadsheets/d/1J9s
 \def\DollarCaptionIcon{\dollarIcon{-0.3}{0.2}{0.015}\hspace{-0.3em}$=$}  % Size of green "dollar" symbol in the caption
 \def\TaskCategoryLabel#1#2{{\normalsize\textbf\scshape{#1}}~{\normalsize\textbf{#2}}}  % Format of theTask Category labels
 \def\TaskTitleLabel#1#2{~{\scriptsize{\textbf{\scshape{#1}}}}~{\color{mediumelectricblue}{\footnotesize\textbf{#2}}}}  % Format of theTask title labels listed under the cattegory
-\def\FteTotalFormat#1{\small #1} % Format of the 1st column under Total FTE  (the Sigma column)
-\def\FteUnfundedFormat#1{\small #1} % Format of the 2n column under Total FTE  (the no-dollar column)
-\def\FteFundedFormat#1{\small \color{blue} #1} % Format of the last column of FTE numbers under the "funded" column of TOTAL FTE
+\def\FteTotalFormat#1{{\small{#1}}} % Format of the 1st column under Total FTE  (the Sigma column)
+\def\FteUnfundedFormat#1{{\small{#1}}} % Format of the 2n column under Total FTE  (the no-dollar column)
+\def\FteFundedFormat#1{{\small \color{blue}{1}}} % Format of the last column of FTE numbers under the "funded" column of TOTAL FTE
 \def\TimelineColor{mediumelectricblue} % Color of the filled-in cells under TASK TIMELINE
 \def\TimelineSize{\tiny} % Controls the width of the filled-in cells under TASK TIMELINE
-\def\FundedUsTeam#1{\small \color{blue} #1} % Format of funded US team members as their IDs should present under "TASK ASSIGNMENTS"
-\def\UnfundedUsTeam#1{\small \color{black} #1} % Format of US team members NOT FUNDED through this proposal, as their IDs should present under "TASK ASSIGNMENTS"
-\def\InternationalTeam#1{\small \color{red} #1} % Format of international team members as their IDs should present under "TASK ASSIGNMENTS"
+\def\FundedUsTeam#1{{\small \color{blue}{#1}}} % Format of funded US team members as their IDs should present under "TASK ASSIGNMENTS"
+\def\UnfundedUsTeam#1{{\small \color{black}{#1}}} % Format of US team members NOT FUNDED through this proposal, as their IDs should present under "TASK ASSIGNMENTS"
+\def\InternationalTeam#1{{\small \color{red}{#1}}} % Format of international team members as their IDs should present under "TASK ASSIGNMENTS"
 %
 \addtocounter{table}{-1} %corrects double-counting of sidewaystable and longtable combination
 %\begin{sidewaystable}  %comment out if not needed
@@ -353,22 +353,17 @@ The below table provides travel costs:
 
 \def\BannerColor{Blue} % Color of the banner at the top "Equipment, Travel, Supplies, Page Charges"
 \def\BannerFontColor{White} % Color of the text in the banner at the top "Equipment, Travel, Supplies, Page Charges"
-\def\BannerBoldface#1{\textbf{#1}} % Bold-face the banner at the top "Equipment, Travel, Supplies, Page Charges"; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
+\def\BannerBoldface#1{\textbf{#1}} % Bold-face the banner at the top "Equipment, Travel, Supplies, Page Charges"; to remove boldface, replace {\textbf{#1}} with {#1} or with other desired mark-up
 \def\CostLabelColor{Blue} % Color of the "Cost Category" column label
 \def\YearLabelColor{Blue} % Color of the "Y1", "Y2", etc  column labels
 \def\TotalLabelColor{Blue} % Color of the "Total" column label
 \def\ColumnBoldface#1{\textbf{#1}} % Bold-face the "Cost Category" and "Y1, Y2, ..." column labels; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
 \def\TotalBoldface#1{\textbf{#1}} % Bold-face the "Total ..." column label; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
-\def\fmA#1{\textbf{#1}} % Format for all budget amounts not under "Total" and not in the Travel's "domestic" and "international" break-outs; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
-\def\fmB#1{\textit{#1}} % Format of budget amounts under the Travel's "domestic" and "international" break-outs that are not Total values; to remove format, replace {\textit#1} with {#1} or with other desired mark-up
-\def\fmC#1{\textbf{#1}} % Format of budget amounts under Total that are not in the "Domestic" and "International" break-outs; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
-\def\fm4#1{\textit{#1}} % Format of budget amounts under Total that are also under the "Domestic" or "International" break-outs; to remove format, replace {\textit#1} with {#1} or with other desired mark-up
+\def\fmtA#1{\textbf{#1}} % Format for all budget amounts not under "Total" and not in the Travel's "domestic" and "international" break-outs; to remove boldface, replace {\textbf#1} with {#1} or with other desired mark-up
+\def\fmtB#1{\textit{#1}} % Format of budget amounts under the Travel's "domestic" and "international" break-outs that are not Total values; to remove format, replace {\textit{#1}} with {#1} or with other desired mark-up
+\def\fmtC#1{\textbf{#1}} % Format of budget amounts under Total that are not in the "Domestic" and "International" break-outs; to remove boldface, replace {\textbf{#1}} with {#1} or with other desired mark-up
+\def\fmtD#1{\textit{#1}} % Format of budget amounts under Total that are also under the "Domestic" or "International" break-outs; to remove format, replace {\textit{#1}} with {#1} or with other desired mark-up
 %
-\fmA{test1} \textbf{test1}
-\fmB{test2}
-\fm3{test3} \testbf{test3}
-\fm4{test4}
-
 Table\,\ref{tab:isANONnonlabor} shows rolled-up values for travel costs and other non-labor costs. Travel cost details, including costing assumptions used, are presented in Table\,\ref{tab:isANONtravel}.
 \begin{table*}[h!]
   \renewcommand{\arraystretch}{1.0} %adjust to control vertical row separation/spacing, comment-out if not needed
